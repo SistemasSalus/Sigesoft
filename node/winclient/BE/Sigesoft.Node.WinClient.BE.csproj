@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF8E51F3-510E-4E90-9627-0AD3E9CB8F5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sigesoft.Node.WinClient.BE</RootNamespace>
+    <AssemblyName>Sigesoft.Node.WinClient.BE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\Antecedentes.cs" />
+    <Compile Include="Custom\AntecedentesList.cs" />
+    <Compile Include="Custom\AudiometriaList.cs" />
+    <Compile Include="Custom\AudiometriaUserControlList.cs" />
+    <Compile Include="Custom\AuxiliaryExamList.cs" />
+    <Compile Include="Custom\AuthorizedPersonList.cs" />
+    <Compile Include="Custom\BlackListList.cs" />
+    <Compile Include="Custom\CalendarInterfaceLS.cs" />
+    <Compile Include="Custom\ComponentFieldValuesRecommendationList.cs" />
+    <Compile Include="Custom\CIE10List.cs" />
+    <Compile Include="Custom\AreaList.cs" />
+    <Compile Include="Custom\AttentionInAreaList.cs" />
+    <Compile Include="Custom\AutorizationList.cs" />
+    <Compile Include="Custom\CalendarList.cs" />
+    <Compile Include="Custom\Component.cs" />
+    <Compile Include="Custom\ComponentFieldsList.cs" />
+    <Compile Include="Custom\ComponentFieldValues.cs" />
+    <Compile Include="Custom\ComponentFieldValuesRestrictionList.cs" />
+    <Compile Include="Custom\DxFrecuenteDetalleList.cs" />
+    <Compile Include="Custom\DxFrecuenteList.cs" />
+    <Compile Include="Custom\EstadoComponentes.cs" />
+    <Compile Include="Custom\ImprimirTicket.cs" />
+    <Compile Include="Custom\InterfaceBS.cs" />
+    <Compile Include="Custom\Matriz.cs" />
+    <Compile Include="Custom\multimediafileList.cs" />
+    <Compile Include="Custom\PacienteAgendado.cs" />
+    <Compile Include="Custom\ReportCertificadoCovid.cs" />
+    <Compile Include="Custom\ReporteExcelCovid19.cs" />
+    <Compile Include="Custom\ReportFichaErgonometrica.cs" />
+    <Compile Include="Custom\ReportInformePsicologicoOcupacional.cs" />
+    <Compile Include="Custom\ReportMusculoEsqueletico2.cs" />
+    <Compile Include="Custom\DiagnosticosRecomendaciones.cs" />
+    <Compile Include="Custom\DiagnosticosRecomendacionesList.cs" />
+    <Compile Include="Custom\DiagnosticRepositoryList.cs" />
+    <Compile Include="Custom\DiagnosticsByAgeGroup.cs" />
+    <Compile Include="Custom\DiagnosticsByGender.cs" />
+    <Compile Include="Custom\DiagnosticsByGroupOccupation.cs" />
+    <Compile Include="Custom\DiagnosticsByOffice.cs" />
+    <Compile Include="Custom\DiseasesList.cs" />
+    <Compile Include="Custom\FamilyMedicalAntecedentsList.cs" />
+    <Compile Include="Custom\Formulate.cs" />
+    <Compile Include="Custom\Group.cs" />
+    <Compile Include="Custom\GesList.cs" />
+    <Compile Include="Custom\HistoryList.cs" />
+    <Compile Include="Custom\KeyTagControl.cs" />
+    <Compile Include="Custom\LocationList.cs" />
+    <Compile Include="Custom\LogList.cs" />
+    <Compile Include="Custom\MasterRecommendationRestricctionList.cs" />
+    <Compile Include="Custom\MedicalExamFieldList.cs" />
+    <Compile Include="Custom\MedicalExamList.cs" />
+    <Compile Include="Custom\MedicationList.cs" />
+    <Compile Include="Custom\MovementDetailList.cs" />
+    <Compile Include="Custom\ReportMusculoEsqueletico1.cs" />
+    <Compile Include="Custom\NodeOrganizationLoactionWarehouseList.cs" />
+    <Compile Include="Custom\NoxiousHabitsList.cs" />
+    <Compile Include="Custom\OftalmologiaList.cs" />
+    <Compile Include="Custom\OrganizationList.cs" />
+    <Compile Include="Custom\GroupOccupationList.cs" />
+    <Compile Include="Custom\OccupationList.cs" />
+    <Compile Include="Custom\MedicalExamFieldValuesList.cs" />
+    <Compile Include="Custom\MedicalExamFieldsList.cs" />
+    <Compile Include="Custom\PersonMedicalHistoryList.cs" />
+    <Compile Include="Custom\ProcedureByServiceList.cs" />
+    <Compile Include="Custom\ProtocolComponentList.cs" />
+    <Compile Include="Custom\ProtocolList.cs" />
+    <Compile Include="Custom\ProtocolSystemUSerExternalList.cs" />
+    <Compile Include="Custom\PsychologicalExam.cs" />
+    <Compile Include="Custom\PsychologicalExamDetail.cs" />
+    <Compile Include="Custom\PsychologicalInterpretation.cs" />
+    <Compile Include="Custom\RecomendationList.cs" />
+    <Compile Include="Custom\ReportAlturaEstructural.cs" />
+    <Compile Include="Custom\ReportAseguradora.cs" />
+    <Compile Include="Custom\ReportConsentimiento.cs" />
+    <Compile Include="Custom\ReportCuestionarioEspirometria.cs" />
+    <Compile Include="Custom\ReportEsfuerzoFisico.cs" />
+    <Compile Include="Custom\ReportEvaGinecologico.cs" />
+    <Compile Include="Custom\ReportEvaluacionPsicolaboralPersonal.cs" />
+    <Compile Include="Custom\ReportHistoriaOcupacionalList.cs" />
+    <Compile Include="Custom\ReportInformeEspirometria.cs" />
+    <Compile Include="Custom\ReportInformeRadiografico.cs" />
+    <Compile Include="Custom\ReportOdontograma.cs" />
+    <Compile Include="Custom\ReportOftalmologia.cs" />
+    <Compile Include="Custom\ReportOsteo.cs" />
+    <Compile Include="Custom\ReportOsteoMuscular.cs" />
+    <Compile Include="Custom\ReportProduccionProfesional.cs" />
+    <Compile Include="Custom\ReportRadiologico.cs" />
+    <Compile Include="Custom\ReportTamizajeDermatologico.cs" />
+    <Compile Include="Custom\RestrictedWarehouseProfileList.cs" />
+    <Compile Include="Custom\RestrictionByDiagnosticList.cs" />
+    <Compile Include="Custom\RestrictionList.cs" />
+    <Compile Include="Custom\RoleNodeComponentProfileList.cs" />
+    <Compile Include="Custom\RoleNodeList.cs" />
+    <Compile Include="Custom\SedeEmpresa.cs" />
+    <Compile Include="Custom\Seguimiento.cs" />
+    <Compile Include="Custom\SeguimientoDetalle.cs" />
+    <Compile Include="Custom\ServiceComponentFieldsList.cs" />
+    <Compile Include="Custom\ServiceComponentFieldValuesList.cs" />
+    <Compile Include="Custom\ServiceComponentList.cs" />
+    <Compile Include="Custom\ServiceComponentMultimediaFileList.cs" />
+    <Compile Include="Custom\ServiceComponentShort.cs" />
+    <Compile Include="Custom\ServiceData.cs" />
+    <Compile Include="Custom\ServiceOrderList.cs" />
+    <Compile Include="Custom\ServiceShort.cs" />
+    <Compile Include="Custom\Servicios.cs" />
+    <Compile Include="Custom\SupplierList.cs" />
+    <Compile Include="Custom\SystemUserList.cs" />
+    <Compile Include="Custom\PacientList.cs" />
+    <Compile Include="Custom\PersonList.cs" />
+    <Compile Include="Custom\ProductList.cs" />
+    <Compile Include="Custom\ProductWarehouseList.cs" />
+    <Compile Include="Custom\MovementList.cs" />
+    <Compile Include="Custom\DataHierarchyList.cs" />
+    <Compile Include="Custom\TargetFieldOfCalculate.cs" />
+    <Compile Include="Custom\TrabajadoresServicioBE.cs" />
+    <Compile Include="Custom\TypeOfEEPList.cs" />
+    <Compile Include="Custom\UsuarioCovid19BE.cs" />
+    <Compile Include="Custom\ValorComponenteList.cs" />
+    <Compile Include="Custom\JerarquiaServicioCamposValores.cs" />
+    <Compile Include="Custom\WorkerData.cs" />
+    <Compile Include="Custom\WorkstationDangersList.cs" />
+    <Compile Include="Custom\OrdenReportes.cs" />
+    <Compile Include="Custom\ListaCovid19.cs" />
+    <Compile Include="Generated\applicationhierarchyDto.cs" />
+    <Compile Include="Generated\areaDto.cs" />
+    <Compile Include="Generated\atenderpacientecategoriaResultDto.cs" />
+    <Compile Include="Generated\attentioninareacomponentDto.cs" />
+    <Compile Include="Generated\attentioninareaDto.cs" />
+    <Compile Include="Generated\authorizedpersonDto.cs" />
+    <Compile Include="Generated\auxiliaryexamDto.cs" />
+    <Compile Include="Generated\background_comprar_registro_activoResultDto.cs" />
+    <Compile Include="Generated\blacklistpersonDto.cs" />
+    <Compile Include="Generated\brandDto.cs" />
+    <Compile Include="Generated\buscar_pacienteResultDto.cs" />
+    <Compile Include="Generated\calendarDto.cs" />
+    <Compile Include="Generated\campaniascovidDto.cs" />
+    <Compile Include="Generated\cie10Dto.cs" />
+    <Compile Include="Generated\clinicaDto.cs" />
+    <Compile Include="Generated\componentDto.cs" />
+    <Compile Include="Generated\componentfieldDto.cs" />
+    <Compile Include="Generated\componentfieldsDto.cs" />
+    <Compile Include="Generated\componentfieldvaluesDto.cs" />
+    <Compile Include="Generated\componentfieldvaluesrecommendationDto.cs" />
+    <Compile Include="Generated\componentfieldvaluesrestrictionDto.cs" />
+    <Compile Include="Generated\covidDto.cs" />
+    <Compile Include="Generated\datahierarchyDto.cs" />
+    <Compile Include="Generated\deploymentfileDto.cs" />
+    <Compile Include="Generated\diagnosticrepositoryDto.cs" />
+    <Compile Include="Generated\diseasesDto.cs" />
+    <Compile Include="Generated\drz_bs300readResultDto.cs" />
+    <Compile Include="Generated\dxfrecuentedetalleDto.cs" />
+    <Compile Include="Generated\dxfrecuenteDto.cs" />
+    <Compile Include="Generated\employeeDto.cs" />
+    <Compile Include="Generated\employercompanyDto.cs" />
+    <Compile Include="Generated\empresasempleadorasDto.cs" />
+    <Compile Include="Generated\familymedicalantecedentsDto.cs" />
+    <Compile Include="Generated\gesDto.cs" />
+    <Compile Include="Generated\getallcampaniascovidResultDto.cs" />
+    <Compile Include="Generated\getpositivoscovidResultDto.cs" />
+    <Compile Include="Generated\getservicespagedandfilteredfullnodeResultDto.cs" />
+    <Compile Include="Generated\groupoccupationDto.cs" />
+    <Compile Include="Generated\hcactualizadoDto.cs" />
+    <Compile Include="Generated\headcountDto.cs" />
+    <Compile Include="Generated\historyDto.cs" />
+    <Compile Include="Generated\interfacebc300Dto.cs" />
+    <Compile Include="Generated\interfaceesoDto.cs" />
+    <Compile Include="Generated\locationDto.cs" />
+    <Compile Include="Generated\logDto.cs" />
+    <Compile Include="Generated\loginexternoDto.cs" />
+    <Compile Include="Generated\masterrecommendationrestricctionDto.cs" />
+    <Compile Include="Generated\medicationDto.cs" />
+    <Compile Include="Generated\movementdetailDto.cs" />
+    <Compile Include="Generated\movementDto.cs" />
+    <Compile Include="Generated\multimediafileDto.cs" />
+    <Compile Include="Generated\nodedatabasestatusDto.cs" />
+    <Compile Include="Generated\nodeDto.cs" />
+    <Compile Include="Generated\nodeorganizationlocationprofileDto.cs" />
+    <Compile Include="Generated\nodeorganizationlocationwarehouseprofileDto.cs" />
+    <Compile Include="Generated\nodeorganizationprofileDto.cs" />
+    <Compile Include="Generated\nodeserviceprofileDto.cs" />
+    <Compile Include="Generated\nodesyncstatusDto.cs" />
+    <Compile Include="Generated\noxioushabitsDto.cs" />
+    <Compile Include="Generated\obteneragendaporcategoriaResultDto.cs" />
+    <Compile Include="Generated\obtenerdetalladoserviciosResultDto.cs" />
+    <Compile Include="Generated\obtenerestadoxcomponentesResultDto.cs" />
+    <Compile Include="Generated\obtenerhojatrabajolabResultDto.cs" />
+    <Compile Include="Generated\obtenerresultados_webxsystemuserResultDto.cs" />
+    <Compile Include="Generated\obtenerserviciosResultDto.cs" />
+    <Compile Include="Generated\obtenerserviciosxpacienteResultDto.cs" />
+    <Compile Include="Generated\occupationDto.cs" />
+    <Compile Include="Generated\ordenreporteDto.cs" />
+    <Compile Include="Generated\organizationDto.cs" />
+    <Compile Include="Generated\pacientDto.cs" />
+    <Compile Include="Generated\pacientmultimediadataDto.cs" />
+    <Compile Include="Generated\personDto.cs" />
+    <Compile Include="Generated\personmedicalhistoryDto.cs" />
+    <Compile Include="Generated\portaluseraccessDto.cs" />
+    <Compile Include="Generated\portaluserDto.cs" />
+    <Compile Include="Generated\portaluserpermissionDto.cs" />
+    <Compile Include="Generated\procedurebyserviceDto.cs" />
+    <Compile Include="Generated\productDto.cs" />
+    <Compile Include="Generated\productsformigrationDto.cs" />
+    <Compile Include="Generated\productwarehouseDto.cs" />
+    <Compile Include="Generated\professionalDto.cs" />
+    <Compile Include="Generated\protocolcomponentDto.cs" />
+    <Compile Include="Generated\protocolDto.cs" />
+    <Compile Include="Generated\protocolregcovidDto.cs" />
+    <Compile Include="Generated\protocolsystemuserDto.cs" />
+    <Compile Include="Generated\recommendationDto.cs" />
+    <Compile Include="Generated\regcovid_background_servicios_anterioresResultDto.cs" />
+    <Compile Include="Generated\regcovid_delete_brandResultDto.cs" />
+    <Compile Include="Generated\regcovid_get_empresas_empleadorasResultDto.cs" />
+    <Compile Include="Generated\regcovid_get_nodesResultDto.cs" />
+    <Compile Include="Generated\regcovid_get_protocolidResultDto.cs" />
+    <Compile Include="Generated\regcovid_get_sedesResultDto.cs" />
+    <Compile Include="Generated\regcovid_get_systemparametersResultDto.cs" />
+    <Compile Include="Generated\regcovid_get_values_componentResultDto.cs" />
+    <Compile Include="Generated\regcovid_get_worker_from_hcactualizadoResultDto.cs" />
+    <Compile Include="Generated\regcovid_indicadoresResultDto.cs" />
+    <Compile Include="Generated\regcovid_list_servicesResultDto.cs" />
+    <Compile Include="Generated\regcovid_list_services_foradminResultDto.cs" />
+    <Compile Include="Generated\regcovid_positivosenviadosreg_vs_positivosrecividosvigResult1Dto.cs" />
+    <Compile Include="Generated\regcovid_positivosenviadosreg_vs_positivosrecividosvigResultDto.cs" />
+    <Compile Include="Generated\regcovid_scheduleworkerResultDto.cs" />
+    <Compile Include="Generated\regcovid_select_brandResultDto.cs" />
+    <Compile Include="Generated\regcovid_select_testdeviceResultDto.cs" />
+    <Compile Include="Generated\regcovid_servicios_listadoResultDto.cs" />
+    <Compile Include="Generated\regcovid_servicios_vs_resultadosResult1Dto.cs" />
+    <Compile Include="Generated\regcovid_servicios_vs_resultadosResultDto.cs" />
+    <Compile Include="Generated\regcovid_sp_getempresasprincipalesResultDto.cs" />
+    <Compile Include="Generated\restrictedwarehouseprofileDto.cs" />
+    <Compile Include="Generated\restrictionDto.cs" />
+    <Compile Include="Generated\rolenodecomponentprofileDto.cs" />
+    <Compile Include="Generated\rolenodeDto.cs" />
+    <Compile Include="Generated\rolenodeprofileDto.cs" />
+    <Compile Include="Generated\salus_comprobarresultadoslaboratorioResult1Dto.cs" />
+    <Compile Include="Generated\salus_comprobarresultadoslaboratorioResultDto.cs" />
+    <Compile Include="Generated\secuentialDto.cs" />
+    <Compile Include="Generated\servernodesyncDto.cs" />
+    <Compile Include="Generated\serversyncstatusDto.cs" />
+    <Compile Include="Generated\servicecomponentDto.cs" />
+    <Compile Include="Generated\servicecomponentfieldsDto.cs" />
+    <Compile Include="Generated\servicecomponentfieldvaluesDto.cs" />
+    <Compile Include="Generated\servicecomponentfieldvaluesmultimediaDto.cs" />
+    <Compile Include="Generated\servicecomponentmultimediaDto.cs" />
+    <Compile Include="Generated\serviceDto.cs" />
+    <Compile Include="Generated\servicefactDto.cs" />
+    <Compile Include="Generated\servicemultimediaDto.cs" />
+    <Compile Include="Generated\serviceorderdetailDto.cs" />
+    <Compile Include="Generated\serviceorderDto.cs" />
+    <Compile Include="Generated\servicespivotDto.cs" />
+    <Compile Include="Generated\softwarecomponentreleaseDto.cs" />
+    <Compile Include="Generated\supplierDto.cs" />
+    <Compile Include="Generated\systemparameterDto.cs" />
+    <Compile Include="Generated\systemuserDto.cs" />
+    <Compile Include="Generated\systemusergobalprofileDto.cs" />
+    <Compile Include="Generated\systemuserrolenodeDto.cs" />
+    <Compile Include="Generated\testdeviceDto.cs" />
+    <Compile Include="Generated\typeofeepDto.cs" />
+    <Compile Include="Generated\uspgetemployeesResultDto.cs" />
+    <Compile Include="Generated\uspgetemployercompaniesResultDto.cs" />
+    <Compile Include="Generated\uspgetresultResultDto.cs" />
+    <Compile Include="Generated\usp_authorization_regcovidResultDto.cs" />
+    <Compile Include="Generated\usp_getpersonbydocumentResultDto.cs" />
+    <Compile Include="Generated\usp_getregisterworkesResultDto.cs" />
+    <Compile Include="Generated\usp_get_protocolcomponentbyprotocolidResultDto.cs" />
+    <Compile Include="Generated\usp_get_secuentialResultDto.cs" />
+    <Compile Include="Generated\usp_get_servicecomponentfieldvaluesbyservicecomponentidResultDto.cs" />
+    <Compile Include="Generated\usp_get_valorescomponenteResultDto.cs" />
+    <Compile Include="Generated\usp_notificacion_vigcovidResultDto.cs" />
+    <Compile Include="Generated\usp_regcovid_servicesResultDto.cs" />
+    <Compile Include="Generated\usp_resultados_covid_get_personaResultDto.cs" />
+    <Compile Include="Generated\usp_resultados_covid_get_resultadosResultDto.cs" />
+    <Compile Include="Generated\usp_resultados_covid_get_sedesResultDto.cs" />
+    <Compile Include="Generated\usp_resultados_covid_login_externosResultDto.cs" />
+    <Compile Include="Generated\usp_validate_scheduleResultDto.cs" />
+    <Compile Include="Generated\usuarioregcovidDto.cs" />
+    <Compile Include="Generated\usuarioregcovidorganizationDto.cs" />
+    <Compile Include="Generated\warehouseDto.cs" />
+    <Compile Include="Generated\workstationdangersDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Custom\SystemParameterList.cs" />
+    <Compile Include="Custom\WarehouseList.cs" />
+    <Compile Include="Custom\ServiceList.cs" />
+    <Compile Include="Custom\ReportEstudioElectrocardiografico.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,29 @@
+﻿
+@model IEnumerable<Sigesoft.Node.WinClient.BE.ListaCovid19>
+@{
+    var personId = Model.Count() == 0 ? "": Model.ToList()[0].PersonId;
+    var serviceComponentId = Model.Count() == 0 ? "" : Model.ToList()[0].ServiceComponentId;    
+}
+
+<input id="txtPersonId"  type="hidden" value="@personId">
+<input id="txtServiceComponentId"  type="hidden" value="@serviceComponentId">
+
+
+@foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <button class="demo-delete-row btn btn-primary btn-xs">
+                                    <i class="ion-edit"></i>
+                                </button>
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.Nombres)</td>
+                            <td>
+                                <span class="badge badge-default">Pendiente</span>
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Protocolo)</td>  
+                            <td>@Html.DisplayFor(modelItem => item.Empresa)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Puesto)</td>                            
+                        </tr>
+                    }

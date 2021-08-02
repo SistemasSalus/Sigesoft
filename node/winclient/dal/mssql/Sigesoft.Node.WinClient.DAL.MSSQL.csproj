@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B732067-FEC9-4DA2-AFD9-6DA773094E3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sigesoft.Node.WinClient.DAL</RootNamespace>
+    <AssemblyName>Sigesoft.Node.WinClient.DAL.MSSQL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DMnodeSQLServer1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMnodeSQLServer.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedAssemblers\applicationhierarchyAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\areaAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\atenderpacientecategoriaResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\attentioninareaAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\attentioninareacomponentAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\authorizedpersonAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\auxiliaryexamAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\background_comprar_registro_activoResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\blacklistpersonAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\brandAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\buscar_pacienteResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\calendarAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\campaniascovidAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\cie10Assembler.cs" />
+    <Compile Include="GeneratedAssemblers\clinicaAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\componentAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\componentfieldAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\componentfieldsAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\componentfieldvaluesAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\componentfieldvaluesrecommendationAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\componentfieldvaluesrestrictionAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\covidAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\datahierarchyAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\deploymentfileAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\diagnosticrepositoryAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\diseasesAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\drz_bs300readResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\dxfrecuenteAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\dxfrecuentedetalleAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\employeeAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\employercompanyAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\empresasempleadorasAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\familymedicalantecedentsAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\gesAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\getallcampaniascovidResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\getpositivoscovidResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\getservicespagedandfilteredfullnodeResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\groupoccupationAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\hcactualizadoAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\headcountAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\historyAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\interfacebc300Assembler.cs" />
+    <Compile Include="GeneratedAssemblers\interfaceesoAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\locationAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\logAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\loginexternoAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\masterrecommendationrestricctionAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\medicationAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\movementAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\movementdetailAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\multimediafileAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\nodeAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\nodedatabasestatusAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\nodeorganizationlocationprofileAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\nodeorganizationlocationwarehouseprofileAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\nodeorganizationprofileAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\nodeserviceprofileAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\nodesyncstatusAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\noxioushabitsAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\obteneragendaporcategoriaResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\obtenerdetalladoserviciosResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\obtenerestadoxcomponentesResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\obtenerhojatrabajolabResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\obtenerresultados_webxsystemuserResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\obtenerserviciosResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\obtenerserviciosxpacienteResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\occupationAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\ordenreporteAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\organizationAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\pacientAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\pacientmultimediadataAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\personAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\personmedicalhistoryAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\portaluseraccessAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\portaluserAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\portaluserpermissionAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\procedurebyserviceAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\productAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\productsformigrationAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\productwarehouseAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\professionalAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\protocolAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\protocolcomponentAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\protocolregcovidAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\protocolsystemuserAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\recommendationAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_background_servicios_anterioresResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_delete_brandResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_get_empresas_empleadorasResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_get_nodesResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_get_protocolidResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_get_sedesResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_get_systemparametersResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_get_values_componentResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_get_worker_from_hcactualizadoResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_indicadoresResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_list_servicesResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_list_services_foradminResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_positivosenviadosreg_vs_positivosrecividosvigResult1Assembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_positivosenviadosreg_vs_positivosrecividosvigResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_scheduleworkerResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_select_brandResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_select_testdeviceResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_servicios_listadoResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_servicios_vs_resultadosResult1Assembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_servicios_vs_resultadosResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\regcovid_sp_getempresasprincipalesResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\restrictedwarehouseprofileAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\restrictionAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\rolenodeAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\rolenodecomponentprofileAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\rolenodeprofileAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\salus_comprobarresultadoslaboratorioResult1Assembler.cs" />
+    <Compile Include="GeneratedAssemblers\salus_comprobarresultadoslaboratorioResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\secuentialAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\servernodesyncAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\serversyncstatusAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\serviceAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\servicecomponentAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\servicecomponentfieldsAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\servicecomponentfieldvaluesAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\servicecomponentfieldvaluesmultimediaAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\servicecomponentmultimediaAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\servicefactAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\servicemultimediaAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\serviceorderAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\serviceorderdetailAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\servicespivotAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\softwarecomponentreleaseAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\supplierAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\systemparameterAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\systemuserAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\systemusergobalprofileAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\systemuserrolenodeAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\testdeviceAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\typeofeepAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\uspgetemployeesResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\uspgetemployercompaniesResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\uspgetresultResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_authorization_regcovidResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_getpersonbydocumentResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_getregisterworkesResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_get_protocolcomponentbyprotocolidResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_get_secuentialResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_get_servicecomponentfieldvaluesbyservicecomponentidResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_get_valorescomponenteResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_notificacion_vigcovidResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_regcovid_servicesResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_resultados_covid_get_personaResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_resultados_covid_get_resultadosResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_resultados_covid_get_sedesResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_resultados_covid_login_externosResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usp_validate_scheduleResultAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usuarioregcovidAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\usuarioregcovidorganizationAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\warehouseAssembler.cs" />
+    <Compile Include="GeneratedAssemblers\workstationdangersAssembler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Server\WebClientAdmin\DAL\MSSQL\Sigesoft.Server.WebClientAdmin.DAL.MSSQL.csproj">
+      <Project>{733B4265-75BB-431F-9B19-1D8A483CBAD8}</Project>
+      <Name>Sigesoft.Server.WebClientAdmin.DAL.MSSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BE\Sigesoft.Node.WinClient.BE.csproj">
+      <Project>{FF8E51F3-510E-4E90-9627-0AD3E9CB8F5C}</Project>
+      <Name>Sigesoft.Node.WinClient.BE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="DMnodeSQLServer.Diagram1.view">
+      <DependentUpon>DMnodeSQLServer.edmx</DependentUpon>
+    </None>
+    <DevartEntityDeploy Include="DMnodeSQLServer.edmx">
+      <Generator>DevartEfGenerator</Generator>
+      <LastGenOutput>DMnodeSQLServer1.Designer.cs</LastGenOutput>
+    </DevartEntityDeploy>
+    <None Include="DMnodeSQLServer.edps">
+      <DependentUpon>DMnodeSQLServer.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

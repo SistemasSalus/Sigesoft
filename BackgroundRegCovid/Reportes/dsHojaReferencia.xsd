@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsHojaReferencia" targetNamespace="http://tempuri.org/dsHojaReferencia.xsd" xmlns:mstns="http://tempuri.org/dsHojaReferencia.xsd" xmlns="http://tempuri.org/dsHojaReferencia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsHojaReferencia" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsHojaReferencia" msprop:Generator_UserDSName="dsHojaReferencia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtHojaReferencia" msprop:Generator_TableClassName="dtHojaReferenciaDataTable" msprop:Generator_TableVarName="tabledtHojaReferencia" msprop:Generator_RowChangedName="dtHojaReferenciaRowChanged" msprop:Generator_TablePropName="dtHojaReferencia" msprop:Generator_RowDeletingName="dtHojaReferenciaRowDeleting" msprop:Generator_RowChangingName="dtHojaReferenciaRowChanging" msprop:Generator_RowEvHandlerName="dtHojaReferenciaRowChangeEventHandler" msprop:Generator_RowDeletedName="dtHojaReferenciaRowDeleted" msprop:Generator_RowClassName="dtHojaReferenciaRow" msprop:Generator_UserTableName="dtHojaReferencia" msprop:Generator_RowEvArgName="dtHojaReferenciaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Trabajador" msprop:Generator_ColumnVarNameInTable="columnTrabajador" msprop:Generator_ColumnPropNameInRow="Trabajador" msprop:Generator_ColumnPropNameInTable="TrabajadorColumn" msprop:Generator_UserColumnName="Trabajador" type="xs:string" minOccurs="0" />
+              <xs:element name="Dni" msprop:Generator_ColumnVarNameInTable="columnDni" msprop:Generator_ColumnPropNameInRow="Dni" msprop:Generator_ColumnPropNameInTable="DniColumn" msprop:Generator_UserColumnName="Dni" type="xs:string" minOccurs="0" />
+              <xs:element name="Edad" msprop:Generator_ColumnVarNameInTable="columnEdad" msprop:Generator_ColumnPropNameInRow="Edad" msprop:Generator_ColumnPropNameInTable="EdadColumn" msprop:Generator_UserColumnName="Edad" type="xs:string" minOccurs="0" />
+              <xs:element name="Empleadora" msprop:Generator_ColumnVarNameInTable="columnEmpleadora" msprop:Generator_ColumnPropNameInRow="Empleadora" msprop:Generator_ColumnPropNameInTable="EmpleadoraColumn" msprop:Generator_UserColumnName="Empleadora" type="xs:string" minOccurs="0" />
+              <xs:element name="PuestoTrabajo" msprop:Generator_ColumnVarNameInTable="columnPuestoTrabajo" msprop:Generator_ColumnPropNameInRow="PuestoTrabajo" msprop:Generator_ColumnPropNameInTable="PuestoTrabajoColumn" msprop:Generator_UserColumnName="PuestoTrabajo" type="xs:string" minOccurs="0" />
+              <xs:element name="MedicoVigila" msprop:Generator_ColumnVarNameInTable="columnMedicoVigila" msprop:Generator_ColumnPropNameInRow="MedicoVigila" msprop:Generator_ColumnPropNameInTable="MedicoVigilaColumn" msprop:Generator_UserColumnName="MedicoVigila" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

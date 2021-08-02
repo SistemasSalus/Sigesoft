@@ -1,0 +1,297 @@
+﻿<link href="~/plugins/css-loaders/css/css-loaders.css" rel="stylesheet">
+@model IEnumerable<Sigesoft.Node.WinClient.BE.ListaCovid19>
+@{
+    var personId = Model.Count() == 0 ? "": Model.ToList()[0].PersonId;
+    var serviceComponentId = Model.Count() == 0 ? "" : Model.ToList()[0].ServiceComponentId;    
+}
+
+<link href="~/plugins/fooTable/css/footable.core.css" rel="stylesheet" />
+
+<div id="page-content">    
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">Salus Laboris - Lima</h3>   
+        </div>
+        <!-- Foo Table - Add & Remove Rows -->
+        <!--===================================================-->
+        <div class="panel-body">           
+            <table id="demo-foo-addrow"
+                   class="table table-bordered table-hover toggle-circle"
+                   data-page-size="20">
+                <thead>
+                    <tr>
+                        <th data-sort-ignore="true" class="min-width"></th>
+                        <th data-sort-initial="true" data-toggle="true">
+                            Apellidos
+                        </th>
+                        <th>Nombres</th>                        
+                        <th data-hide="phone, tablet">Protocolo</th>
+                        <th data-hide="phone, tablet">Fecha Servicio</th>                        
+                        <th data-hide="phone, tablet">Empresa</th>
+                        <th data-hide="phone, tablet">Puesto</th>
+                        <th data-hide="phone, tablet">Encuesta</th>
+                        <th data-hide="phone, tablet">Triaje</th>
+                        <th data-hide="phone, tablet">Laboratorio</th>
+                        <th data-hide="phone, tablet">Aptitud</th>
+                        <th data-hide="phone, tablet">Teléfono</th>
+                        <th data-hide="phone, tablet">Imprimir</th>
+                        <th data-ignore="true" data-hide="all"></th>
+                        <th data-ignore="true" data-hide="all"></th>
+                        <th data-ignore="true" data-hide="all"></th>
+                        <th data-ignore="true" data-hide="all"></th>
+                        <th data-ignore="true" data-hide="all"></th>
+                    </tr>
+                </thead>
+                <div class="pad-btm form-inline">
+                    <div class="row">
+                        <div class="col-sm-6 text-xs-center text-right">
+                            <div class="form-group">
+                                <input id="demo-input-search2"
+                                       type="text"
+                                       placeholder="Buscador"
+                                       class="form-control"
+                                       autocomplete="off" />                                 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">			
+					    <input id="checkbox-option-Covid19" class="magic-checkbox" type="checkbox" checked>
+					    <label for="checkbox-option-Covid19">Prueba Rápida</label>
+					
+					    <input id="checkbox-option-Certificado-Covid19" class="magic-checkbox" type="checkbox" checked>
+					    <label for="checkbox-option-Certificado-Covid19">Cerificado y Covid19</label>					
+
+                        <input id="checkbox-option-Certificado-Descenso-Covid19" class="magic-checkbox" type="checkbox" checked>
+					    <label for="checkbox-option-Certificado-Descenso-Covid19">Cerificado Descenso</label>					
+				</div>
+                </div>
+                 
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <button class="Link-Examen btn btn-primary btn-xs">
+                                    <i class="ion-edit"></i>
+                                </button>
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                            <td >@Html.DisplayFor(modelItem => item.Nombres)</td>                                                        
+                            <td>@Html.DisplayFor(modelItem => item.Protocolo)</td>  
+                            <td>@Html.DisplayFor(modelItem => item.FechaServicio)</td>  
+                            <td>@Html.DisplayFor(modelItem => item.Empresa)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Puesto)</td>  
+                            <td>
+                                @if (item.Estado == "No Aplica")
+                                {
+                                    <span class="badge badge-info">No aplica</span>
+                                }
+                                else if (item.Estado == "pendiente")
+                                {
+                                    <span class="badge badge-default">Pendiente</span>
+                                }
+                                else if (item.Estado == "realizado")
+                                {
+                                    <span class="badge badge-success">Realizado</span>
+                                }          
+                                
+                            </td>
+                            <td>
+                                @if (item.EstadoTriaje == "No Aplica")
+                                {
+                                    <span class="badge badge-info">No aplica</span>
+                                }
+                                else if (item.EstadoTriaje == "pendiente"){
+                                    <span class="badge badge-default">Pendiente</span>
+                                }
+                                else if (item.EstadoTriaje == "realizado")
+                                {
+                                    <span class="badge badge-success">Realizado</span>
+                                }                                
+                            </td>            
+                            <td>
+                               @if (item.EstadoLaboratorio == "No Aplica")
+                                {
+                                    <span class="badge badge-info">No aplica</span>
+                                }
+                               else if (item.EstadoLaboratorio == "pendiente")
+                               {
+                                    <span class="badge badge-default">Pendiente</span>
+                                }
+                               else if (item.EstadoLaboratorio == "realizado")
+                                {
+                                    <span class="badge badge-success">Realizado</span>
+                                }                                      
+                            </td>       
+                            <td> 
+                                @if (item.Aptitud == "No Aplica")
+                                {
+                                    <span class="badge badge-info">No aplica</span>
+                                }
+                                else if (item.Aptitud == "NO INICIADO")
+                                {
+                                    <span class="badge badge-warning">@item.Aptitud</span>
+                                }
+                                else
+                                {
+                                    <span class="badge badge-success">@item.Aptitud</span>
+                                }
+                                
+                            </td>    
+                            <td>@Html.DisplayFor(modelItem => item.Telefono)</td>   
+                            <td>
+                                <button class="Link-PDF btn btn-danger btn-xs">
+                                    <i class="ion-printer">PDF</i>
+                                </button>
+                            </td>                                       
+                            <td id="serviceComponentId" >@Html.DisplayFor(modelItem => item.ServiceComponentId)</td>      
+                            <td id="personId" >@Html.DisplayFor(modelItem => item.PersonId)</td>  
+                            <td id="serviceId" >@Html.DisplayFor(modelItem => item.ServiceId)</td>  
+                            <td id="componentId" >@Html.DisplayFor(modelItem => item.ComponentId)</td>  
+                            <td id="organizationId" >@Html.DisplayFor(modelItem => item.OrganizationId)</td>      
+                        </tr>
+                    }
+                </tbody>   
+                <tfoot>
+                    <tr>
+                      <td colspan="13" class="footable-visible">
+                        <div class="text-right">
+                          <ul class="pagination">
+                            <li class="footable-page-arrow">
+                                <a data-page="first" href="#first">«</a>
+                            </li>
+                            <li class="footable-page-arrow">
+                                <a data-page="prev" href="#prev">‹</a>
+                            </li>
+                            <li class="footable-page">
+                                <a data-page="0" href="#">1</a>
+                            </li>
+                            <li class="footable-page active">
+                                <a data-page="1" href="#">2</a>
+                            </li>
+                            <li class="footable-page-arrow disabled">
+                                <a data-page="next" href="#next">›</a>
+                            </li>
+                            <li class="footable-page-arrow disabled">
+                                <a data-page="last" href="#last">»</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tfoot>             
+            </table>
+        </div>
+        <!--===================================================-->
+        <!-- End Foo Table - Add & Remove Rows -->
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog">
+ <div class="modal-dialog modal-dialog-centered text-center" role="document">
+     <div class="load6">
+		<div class="loader"></div>
+	    </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/plugins/fooTable/dist/footable.all.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#checkbox-option-Covid19').change(function () {
+            Filter();           
+        });
+
+        $('#checkbox-option-Certificado-Covid19').change(function () {
+            Filter();           
+        });
+
+        $('#checkbox-option-Certificado-Descenso-Covid19').change(function () {
+            Filter();
+        });
+
+        function Filter() {
+            $('.modal').modal('show');
+            $("tbody").empty();
+            var valueCovid = $("#checkbox-option-Covid19").get(0).checked;
+            var valueCertificado = $('#checkbox-option-Certificado-Covid19').get(0).checked;
+            var valueDescenso = $('#checkbox-option-Certificado-Descenso-Covid19').get(0).checked;
+            
+            $.ajax({
+                type: "GET",
+                url: "/Generals/Index?optionCovid=" + valueCovid + "&&optionCertificado="+ valueCertificado + "&&optionDescenso=" + valueDescenso,
+                dataType: 'html',
+                success: function (html) {
+                    $('.modal').modal('hide');
+                    var doc = new DOMParser().parseFromString(html, "text/html");
+                    var trs = doc.querySelectorAll("tbody > tr");
+
+                    $("#demo-foo-addrow tbody").html(trs);
+
+                    updateFootable();
+                }
+            });
+        }
+    });
+
+
+    function updateFootable() {
+        var paramTable = $('.footable');
+        paramTable.trigger('footable_initialize'); 
+    }    
+
+    function EsEditable(personId, serviceComponentId, serviceId, componentId, organizationId) {
+        
+        $.ajax({
+            type: "GET",
+            dataType: 'json',
+            url: "/Generals/EsEditable?serviceComponentId=" + serviceComponentId,
+            success: function (data) {
+                console.log("data", data);
+                if (data) {                   
+                    //if (esEditable) {
+                        if (componentId == "N003-ME000000063") {
+                            window.location.href = '/Covid19Retorno/Index?personId=' + personId + '&&serviceComponentId=' + serviceComponentId + '&&serviceId=' + serviceId + '&&componentId=' + componentId + '&&organizationId=' + organizationId;
+                        } else {
+                            window.location.href = '/Covid19/Index?personId=' + personId + '&&serviceComponentId=' + serviceComponentId + '&&serviceId=' + serviceId + '&&componentId=' + componentId + '&&organizationId=' + organizationId;
+                        }
+                    //} 
+                } else {
+                    alert("Este servicio ya no es editable");
+                }
+            }
+        });
+
+    }
+
+    $(document).on('nifty.ready', function () {
+
+        // Search input
+        $('#demo-input-search2').on('input', function (e) {
+            e.preventDefault();
+            addrow.trigger('footable_filter', { filter: $(this).val() });
+        });
+
+        var addrow = $('#demo-foo-addrow');
+        addrow.footable().on('click', '.Link-Examen', function () {
+            var personId = $(this).parent().parent().find("#personId").text();
+            var serviceComponentId = $(this).parent().parent().find("#serviceComponentId").text();
+            var serviceId = $(this).parent().parent().find("#serviceId").text();
+            var componentId = $(this).parent().parent().find("#componentId").text();
+            var organizationId = $(this).parent().parent().find("#organizationId").text();
+
+            EsEditable(personId, serviceComponentId, serviceId, componentId, organizationId);
+        
+            
+        }).on('click', '.Link-PDF', function () {
+            var serviceId = $(this).parent().parent().find("#serviceId").text();
+            window.location.href = '/PDF/Index?id=' + serviceId
+        });
+    });
+
+</script>
+

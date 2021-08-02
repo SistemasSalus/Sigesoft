@@ -1,0 +1,3767 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Sigesoft.Common
+{
+    public static class Constants
+    {
+        public const string Select = "--Seleccionar--";
+        public const string SelectValue = "-1";
+        public const string All = "--Todos--";
+        public const string AllValue = "-1";
+        public const int WIDTH_MAX_SIZE_IMAGE = 4000;
+        public const int HEIGHT_MAX_SIZE_IMAGE = 7000;
+        public const int COLUMNAS_POR_CONTROL = 3;
+
+        #region MAIL
+        public const string EMAIL_FROM = "administrador@saluslaboris.com.pe";
+        public const string EMAIL_HOST = "";
+        public const string EMAIL_PORT = "";
+        #endregion
+
+        #region LABORATORIO
+
+        #region HEMOGRAMA_COMPLETO
+
+        public const string HEMOGRAMA_COMPLETO_ID = "N002-ME000000007";
+        public const string HEMOGRAMA_COMPLETO_HEMOGRAMA_CONCLUSION_ID = "N009-MF000001152";
+        public const string HEMOGRAMA_COMPLETO_CONCLUSIONES_DE_HEMOGRAMA = "N009-MF000000516";
+        // 
+        public const string HEMOGRAMA_COMPLETO_CHCM = "N002-MF000000144";
+        public const string HEMOGRAMA_COMPLETO_HCM = "N002-MF000000143";
+        public const string HEMOGRAMA_COMPLETO_HEMATOCRITO = "N002-MF000000141";
+        public const string HEMOGRAMA_COMPLETO_HEMOGLOBINA = "N002-MF000000140";
+        public const string HEMOGRAMA_COMPLETO_VCM = "N002-MF000000142";
+        public const string HEMOGRAMA_COMPLETO_HEMATIES = "N002-MF000000139";
+        public const string HEMOGRAMA_COMPLETO_LEUCOCITOS = "N002-MF000000145";
+        public const string HEMOGRAMA_COMPLETO_PLAQUETAS = "N002-MF000000146";
+        public const string HEMOGRAMA_COMPLETO_VPM = "N002-MF000000147";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_ABASTONADOS = "N002-MF000000152";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_SEGMENTADOS = "N002-MF000000153";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_EOSINOFILOS = "N002-MF000000148";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_BASOFILOS = "N002-MF000000149";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_MONOCITOS = "N002-MF000000155";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_NEUTROFILOS = "N002-MF000000150";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_LINFOCITOS = "N002-MF000000154";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_OBSERVACIONES = "N009-MF000000516";	
+        
+        // Valores deseables
+        public const string HEMOGRAMA_COMPLETO_HEMATOCRITO_DESEABLE = "H:36-51 M: 33 - 44";
+        public const string HEMOGRAMA_COMPLETO_HEMOGLOBINA_DESEABLE = "H:12.0-17.2 M: 11 -15";
+        public const string HEMOGRAMA_COMPLETO_HEMATIES_DESEABLE = "3.80 - 5.80";
+        public const string HEMOGRAMA_COMPLETO_LEUCOCITOS_DESEABLE = "4.0-11.0";
+        public const string HEMOGRAMA_COMPLETO_PLAQUETAS_DESEABLE = "150-450";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_ABASTONADOS_DESEABLE = "00-04";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_SEGMENTADOS_DESEABLE = "42-72";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_EOSINOFILOS_DESEABLE = "00-04";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_BASOFILOS_DESEABLE = "00-02";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_MONOCITOS_DESEABLE = "00-10";
+        public const string HEMOGRAMA_COMPLETO_FORMULA_LEUCOCITARIA_LINFOCITOS_DESEABLE = "25-40";	
+
+        
+        #endregion
+
+        #region HEMOGRAMA
+
+        public const string HEMATOCRITO_HEMOGRAMA_HEMATOCRITO = "N009-MF000000266";	
+        public const string HEMOGLOBINA_HEMOGRAMA_HEMOGLOBINA = "N009-MF000000265";	
+
+        //
+        public const string HEMATOCRITO_HEMOGRAMA_HEMATOCRITO_DESEABLE = "N009-MF000000421";
+        public const string HEMOGLOBINA_HEMOGRAMA_HEMOGLOBINA_DESEABLE = "N009-MF000000420";	
+
+
+        #endregion
+
+        #region EXAMEN COMPLETO DE ORINA
+
+        public const string EXAMEN_COMPLETO_DE_ORINA_ID = "N002-ME000000014";
+        public const string EXAMEN_COMPLETO_ORINA_MACROSCOPICO_COLOR = "N002-MF000000092";
+        public const string EXAMEN_COMPLETO_ORINA_MACROSCOPICO_ASPECTO = "N002-MF000000093";
+        public const string EXAMEN_COMPLETO_ORINA_MACROSCOPICO_DENSIDAD = "N002-MF000000097";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_ESTERASA_LEUCOCITARIA = "N002-MF000000104";
+        public const string EXAMEN_COMPLETO_ORINA_MACROSCOPICO_PH = "N002-MF000000094";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_CELULAS_EPITELIALES = "N002-MF000000106";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_CELULAS_EPITELIALES_A = "N002-MF000000119";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_LEUCOCITOS = "N002-MF000000108";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_HEMATIES = "N002-MF000000109";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_GERMENES = "N002-MF000000107";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_CILINDROS = "N009-MF000001069";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_CRISTALES = "N002-MF000000110";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_FILAMENTO_MUCOIDE = "N002-MF000000095";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_NITRITOS = "N002-MF000000105";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_PROTEINAS = "N002-MF000000098";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_GLUCOSA = "N002-MF000000099";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_CETONAS = "N002-MF000000100";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_UROBILINOGENO = "N002-MF000000102";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_BILIRRUBINA = "N002-MF000000101";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_SANGRE = "N009-MF000001047";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_HEMOGLOBINA = "N002-MF000000103";
+        public const string EXAMEN_COMPLETO_DE_ORINA_CONCLUSIONES_ID = "N009-MF000001154";
+
+        // Valor deseable
+        public const string EXAMEN_COMPLETO_ORINA_MACROSCOPICO_COLOR_DESEABLE = "Amarillo Claro";
+        public const string EXAMEN_COMPLETO_ORINA_MACROSCOPICO_ASPECTO_DESEABLE = "Transparente";
+        public const string EXAMEN_COMPLETO_ORINA_MACROSCOPICO_DENSIDAD_DESEABLE = "de 1.015 a 1.020";
+        public const string EXAMEN_COMPLETO_ORINA_MACROSCOPICO_PH_DESEABLE = "de 4.5 a 8.0";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_CELULAS_EPITELIALES_DESEABLE = "Negativo";
+       
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_LEUCOCITOS_DESEABLE = "De 0 a 5";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_HEMATIES_DESEABLE = "De 0 a 5";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_GERMENES_DESEABLE = "Negativo";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_CILINDROS_DESEABLE = "N009-MF000001070";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_CRISTALES_DESEABLE = "Negativo";
+        public const string EXAMEN_COMPLETO_ORINA_MICROSCOPICO_FILAMENTO_MUCOIDE_DESEABLE = "Negativo";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_NITRITOS_DESEABLE = "Negativo";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_PROTEINAS_DESEABLE = "Negativo";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_GLUCOSA_DESEABLE = "Negativo";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_CETONAS_DESEABLE = "Negativo";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_UROBILINOGENO_DESEABLE = "Negativo";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_BILIRRUBINA_DESEABLE = "Negativo";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_SANGRE_DESEABLE = "N009-MF000001048";
+        public const string EXAMEN_COMPLETO_ORINA_BIOQUIMICO_HEMOGLOBINA_DESEABLE = "Negativo";	
+
+
+        #endregion
+
+        #region GRUPO Y FACTOR SANGUÍNEO
+
+        public const string GRUPO_Y_FACTOR_SANGUINEO_ID = "N002-ME000000006";
+        public const string GRUPO_SANGUINEO_ID = "N002-MF000000074";
+        public const string FACTOR_SANGUINEO_ID = "N002-MF000000072";
+
+        #endregion
+
+        #region GLUCOSA
+
+        public const string GLUCOSA_ID = "N002-ME000000008";
+        public const string GLUCOSA_GLUCOSA_ID = "N002-MF000000089";
+        public const string GLUCOSA_GLUCOSA_VALOR_DESEABLE_ID = "";
+
+        #endregion
+
+        #region COLESTEROL
+
+        public const string COLESTEROL_ID = "N002-ME000000009";
+        public const string COLESTEROL_COLESTEROL_TOTAL_ID = "N002-MF000000085";
+        public const string COLESTEROL_COLESTEROL_TOTAL_DESEABLE_ID = "";
+
+        #endregion
+
+        #region TRIGLICERIDOS
+
+        public const string TRIGLICERIDOS_ID = "N002-ME000000012";
+        public const string TRIGLICERIDOS_BIOQUIMICA_TRIGLICERIDOS = "N002-MF000000088";
+        public const string TRIGLICERIDOS_BIOQUIMICA_TRIGLICERIDOS_DESEABLE = "";	
+
+        #endregion
+
+        #region COLESTEROL HDL
+
+        public const string COLESTEROL_HDL_ID = "N002-ME000000010";
+        public const string COLESTEROL_HDL_BIOQUIMICA_COLESTEROL_HDL = "N002-MF000000087";
+        public const string COLESTEROL_HDL_BIOQUIMICA_COLESTEROL_TOTAL_HDL = "N009-MF000001077";
+
+        public const string COLESTEROL_HDL_BIOQUIMICA_COLESTEROL_HDL_DESEABLE = "";
+        public const string COLESTEROL_HDL_BIOQUIMICA_COLESTEROL_TOTAL_HDL_DESEABLE = "";	
+
+        #endregion
+
+        #region COLESTEROL  LDL
+
+        public const string COLESTEROL_LDL_ID = "N002-ME000000011";
+        public const string COLESTEROL_LDL_BIOQUIMICA_COLESTEROL_LDL = "N002-MF000000086";
+        public const string COLESTEROL_LDL_BIOQUIMICA_COLESTEROL_LDL_HDL = "N009-MF000001079";
+
+        public const string COLESTEROL_LDL_BIOQUIMICA_COLESTEROL_LDL_DESEABLE = "";
+        public const string COLESTEROL_LDL_BIOQUIMICA_COLESTEROL_LDL_HDL_DESEABLE = "";	
+
+        #endregion
+
+        #region COLESTEROL VLDL
+
+        public const string COLESTEROL_VLDL_ID = "N009-ME000000095";
+        public const string COLESTEROL_VLDL_BIOQUIMICA_COLESTEROL_VLDL = "N009-MF000001434";
+
+        public const string COLESTEROL_VLDL_BIOQUIMICA_COLESTEROL_VLDL_DESEABLE = "";	
+
+        #endregion
+
+        #region CREATININA
+
+        public const string CREATININA_ID = "N002-ME000000061";
+        public const string CREATININA_BIOQUIMICA_CREATININA = "N002-MF000000578";
+
+        public const string CREATININA_BIOQUIMICA_CREATININA_DESEABLE = "";	
+
+        #endregion
+
+        #region ACIDO_URICO
+
+        public const string ACIDO_URICO_ID = "N002-ME000000060";
+        public const string ACIDO_URICO_BIOQUIMICA_ACIDO_URICO = "N002-MF000000577";
+
+        public const string ACIDO_URICO_BIOQUIMICA_ACIDO_URICO_DESEABLE = "";	
+
+        #endregion
+
+        #region ANTIGENO_PROSTATICO
+
+        public const string ANTIGENO_PROSTATICO_ID = "N002-ME000000064";
+        public const string ANTIGENO_PROSTATICO_ANTIGENO_PROSTATICO_VALOR = "N002-MF000000581";
+
+        public const string ANTIGENO_PROSTATICO_VALOR_DESEABLE = "";
+
+        #endregion
+
+        #region PLOMO_SANGRE
+
+        public const string PLOMO_SANGRE_ID = "N002-ME000000112";
+        public const string PLOMO_SANGRE_BIOQUIMICA_PLOMO_SANGRE = "N002-MF000000629";
+
+        public const string PLOMO_SANGRE_BIOQUIMICA_PLOMO_SANGRE_DESEABLE = "";	
+
+        #endregion
+
+        #region TGO
+
+        public const string TGO_ID = "N002-ME000000062";
+        public const string TGO_BIOQUIMICA_TGO = "N002-MF000000579";
+
+        public const string TGO_BIOQUIMICA_TGO_DESEABLE = "";	
+
+        #endregion
+
+        #region TGP
+
+        public const string TGP_ID = "N002-ME000000063";
+        public const string TGP_BIOQUIMICA_TGP = "N002-MF000000580";
+
+        public const string TGP_BIOQUIMICA_TGP_DESEABLE = "";	
+
+        #endregion
+
+        #region UREA
+
+        public const string UREA_ID = "N002-ME000000059";
+
+        public const string UREA_BIOQUIMICA_UREA = "N002-MF000000576";
+        public const string UREA_BIOQUIMICA_UREA_DESEABLE = "";	
+        
+        #endregion
+
+        #region AGLUTINACIONES_LAMINA  (AGLUTINACIONES PARA TIFOIDEA, PARATIFICAS, BRUCELL)
+
+        public const string AGLUTINACIONES_LAMINA_ID = "N009-ME000000116";
+        public const string AGLUTINACIONES_LAMINA_REACTIVOS_TIFICO_O = "N009-MF000001540";
+        public const string AGLUTINACIONES_LAMINA_REACTIVOS_TIFICO_H = "N009-MF000001541";
+        public const string AGLUTINACIONES_LAMINA_REACTIVOS_PARATIFICO_A = "N009-MF000001542";
+        public const string AGLUTINACIONES_LAMINA_REACTIVOS_PARATIFICO_B = "N009-MF000001543";
+        public const string AGLUTINACIONES_LAMINA_REACTIVOS_BRUCELLA = "N009-MF000001544";
+
+        public const string AGLUTINACIONES_LAMINA_REACTIVOS_TIFICO_O_DESEABLE = "";
+        public const string AGLUTINACIONES_LAMINA_REACTIVOS_TIFICO_H_DESEABLE = "";
+        public const string AGLUTINACIONES_LAMINA_REACTIVOS_PARATIFICO_A_DESEABLE = "";
+        public const string AGLUTINACIONES_LAMINA_REACTIVOS_PARATIFICO_B_DESEABLE = "";
+        public const string AGLUTINACIONES_LAMINA_REACTIVOS_BRUCELLA_DESEABLE = "";
+
+        #endregion
+
+        #region  EXAMEN_ELISA
+
+        public const string EXAMEN_ELISA_ID = "N009-ME000000115";
+        public const string EXAMEN_ELISA_REACTIVOS_EXAMEN_ELISA = "N009-MF000001454";
+
+        public const string EXAMEN_ELISA__REACTIVOS_EXAMEN_ELISA_DESEABLE = "";	
+
+        #endregion
+
+        #region HEPATITIS A
+
+        public const string HEPATITIS_A_ID = "N002-ME000000149";
+        public const string HEPATITIS_A_REACTIVOS_HEPATITIS_A = "N002-MF000001146";
+    
+        public const string HEPATITIS_A_REACTIVOS_HEPATITIS_A_DESEABLE = "";
+     
+
+        #endregion
+
+        #region HEPATITIS C
+
+        public const string HEPATITIS_C_ID = "N002-ME000000151";
+        public const string HEPATITIS_C_REACTIVOS_HEPATITIS_C = "N002-MF000001148";
+     
+        public const string HEPATITIS_C_REACTIVOS_HEPATITIS_C_DESEABLE = "";
+
+
+        #endregion
+
+        #region VDRL
+
+        public const string VDRL_ID = "N002-ME000000013";
+        public const string VDRL_REACTIVOS_VDRL = "N002-MF000000090";   
+
+        public const string LABORATORIO_VDRL_ID = "N009-MF000000269";
+
+        public const string VDRL_REACTIVOS_VDRL_DESEABLE = "";	
+
+        #endregion
+
+        #region PARASITOLOGICO_SIMPLE
+
+        public const string PARASITOLOGICO_SIMPLE_ID = "N002-ME000000016";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_COLOR = "N009-MF000000260";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_CONSISTENCIA = "N009-MF000001325";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_RESTOS_ALIMENTICIOS = "N009-MF000001326";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_SANGRE = "N009-MF000001327";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_MOCO = "N009-MF000001328";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_QUISTES = "N009-MF000001333";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_HUEVOS = "N009-MF000001334";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_TROFOZOITOS = "N009-MF000001335";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_HEMATIES = "N009-MF000001336";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_LEUCOCITOS = "N009-MF000001337";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_RESULTADOS = "N009-MF000001339";
+
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_MACROSCOPICO = "N002-MF000000112";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_MICROSCOPICO = "N002-MF000001151";
+        public const string PARASITOLOGICO_SIMPLE_EXAMEN_HECES_PARASITOLOGICO_SIMPLE = "N002-MF000000111";
+
+        #endregion
+
+        #region PARASITOLOGICO_SERIADO
+
+        public const string PARASITOLOGICO_SERIADO_ID = "N002-ME000000017";
+        // 1era Muestra
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_COLOR = "N009-MF000000515";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_CONSISTENCIA = "N009-MF000001329";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_RESTOS_ALIMENTICIOS = "N009-MF000001330";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_SANGRE = "N009-MF000001331";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_MOCO = "N009-MF000001340";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_QUISTES = "N009-MF000001343";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_HUEVOS = "N009-MF000001342";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_TROFOZOITOS = "N009-MF000001344";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_HEMATIES = "N009-MF000001345";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_LEUCOCITOS = "N009-MF000001346";
+        // new 30/07/15
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_PARASITOLOGICO_I = "N002-MF000000113";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_MACROSCOPICO = "N002-MF000000116";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_MICROSCOPICO = "N002-MF000001152";
+
+
+        // 2da Muestra
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_COLOR = "N009-MF000001347";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_CONSISTENCIA = "N009-MF000001348";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_RESTOS_ALIMENTICIOS = "N009-MF000001349";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_SANGRE = "N009-MF000001350";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_MOCO = "N009-MF000001351";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_QUISTES = "N009-MF000001353";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_HUEVOS = "N009-MF000001354";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_TROFOZOITOS = "N009-MF000001355";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_HEMATIES = "N009-MF000001356";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_LEUCOCITOS = "N009-MF000001357";
+        // new 30/07/15
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_PARASITOLOGICO_II = "N002-MF000000114";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_MACROSCOPICO = "N002-MF000001153";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_SEGUNDA_MICROSCOPICO = "N002-MF000001154";
+
+        // 3era Muestra
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_COLOR = "N009-MF000001358";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_CONSISTENCIA = "N009-MF000001359";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_RESTOS_ALIMENTICIOS = "N009-MF000001360";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_SANGRE = "N009-MF000001361";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_MOCO = "N009-MF000001362";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_QUISTES = "N009-MF000001364";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_HUEVOS = "N009-MF000001365";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_TROFOZOITOS = "N009-MF000001366";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_HEMATIES = "N009-MF000001367";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_LEUCOCITOS = "N009-MF000001368";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_RESULTADOS = "N009-MF000001370";
+        // new 30/07/15
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_PRIMERA_PARASITOLOGICO_III = "N002-MF000000115";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_MACROSCOPICO = "N002-MF000001155";
+        public const string PARASITOLOGICO_SERIADO_EXAMEN_HECES_TERCERA_MICROSCOPICO = "N002-MF000001156";
+
+        #endregion
+
+        #region BK_DIRECTO  (BACILOSCOPIA)
+
+        public const string BK_DIRECTO_ID = "N002-ME000000030";
+
+        public const string BK_DIRECTO_MICROBIOLOGICO_MUESTRA = "N002-MF000001139";
+        public const string BK_DIRECTO_MICROBIOLOGICO_COLORACION = "N009-MF000001372";
+        public const string BK_DIRECTO_MICROBIOLOGICO_RESULTADOS = "N002-MF000001140";	
+
+
+        #endregion
+
+        // AGVR 12/11/2016
+        public const string TOXICOLOGICO_COMPLETO_ID = "N009-ME000000107";
+        public const string TOXICOLOGICO_DOSAJE_10_DROGAS_ID = "N003-ME000000001";
+
+        public const string TOXICOLOGICO_DOSAJE_DROGAS_OPIACEOS_ID = "N009-ME000000169";
+        public const string TOXICOLOGICO_DOSAJE_METALES_ARSENICO_ID = "N009-ME000000170";
+
+        public const string TOXICOLOGICO_RESULTADO_POSITIVO_NEGATIVO_ID = "N009-MF000001446";
+        
+
+        #region TOXICOLOGICO_COCAINA_MARIHUANA
+
+        public const string TOXICOLOGICO_COCAINA_MARIHUANA_ID = "N009-ME000000105";
+
+        public const string COCAINA_MARIHUANA_TOXICOLOGICOS_MUESTRA = "N009-MF000001444";
+        public const string COCAINA_MARIHUANA_TOXICOLOGICOS_METODO = "N009-MF000001375";
+        public const string COCAINA_MARIHUANA_TOXICOLOGICOS_COCAINA = "N009-MF000000705";
+        public const string COCAINA_MARIHUANA_TOXICOLOGICOS_MARIHUANA = "N009-MF000001294";	
+
+
+        #endregion
+
+        public const string LABORATORIO_HEMOGLOBINA_ID = "N009-ME000000006";
+        public const string HEMOGLOBINA_ID = "N009-MF000000265";
+        public const string LABORATORIO_HEMOGLOBINA_VALOR_DESEABLE_ID = "N009-MF000000420";
+
+        public const string LABORATORIO_HEMATOCRITO_ID = "N009-ME000000001";
+        public const string HEMATOCRITO_ID = "N009-MF000000266";
+     
+
+        public const string PERFIL_HIPIDICO_ID = "N009-ME000000007";
+        public const string PERFIL_HIPIDICO_COLESTEROL_HDL_ID = "N009-MF000000254";
+        public const string PERFIL_HIPIDICO_COLESTEROL_HDL_DESEABLE_ID = "N009-MF000000414";
+        public const string PERFIL_HIPIDICO_TRIGLICERIDO_ID = "N009-MF000000268";
+        public const string PERFIL_HIPIDICO_TRIGLICERIDO_DESEABLE_ID = "N009-MF000000419";
+
+      
+        
+        public const string EXAMEN_D_HECES_ID = "N009-ME000000049";
+        public const string EXAMEN_D_HECES_THENEVON_EXAMEN_DE_HECES_ID = "N009-MF000000515";
+
+        #endregion
+
+        #region KOH_AL10
+
+        public const string KOH_AL10_ID = "N002-ME000000110";
+
+        //public const string KOH_AL10_MUESTRA = "N002-MF000001139";
+        //public const string KOH_AL10_COLORACION = "N009-MF000001372";
+        public const string KOH_AL10_RESULTADOS = "N002-MF000000627";
+
+        #endregion
+
+        #region ALCOHOLENSALIVA
+
+        public const string ALCOHOLENSALIVA_ID = "N009-ME000000109";
+
+        public const string ALCOHOLENSALIVA_RESULTADOS = "N009-MF000001448";
+
+        #endregion
+
+        #region HISOPADO_DE_MANOS
+
+        public const string HISOPADO_DE_MANOS_ID = "N009-ME000000097";
+
+        public const string HISOPADO_DE_MANOS_CULTIVO = "N003-MF000000044";
+        public const string HISOPADO_DE_MANOS_RESULTADOS = "N003-MF000000045";
+
+        #endregion
+
+        #region HISOPADO_FARINGEO
+
+        public const string HISOPADO_FARINGEO_ID = "N002-ME000000019";
+
+        public const string HISOPADO_FARINGEO_CULTIVO = "N002-MF000001149";
+        public const string HISOPADO_FARINGEO_RESULTADOS = "N002-MF000001150";
+
+        #endregion
+
+        #region Psicologico Ocupacional
+
+        public const string EXAMEN_PSICOLOGICO = "N009-ME000000084"; // tipo ucontrol
+              
+        #endregion
+
+        public const string ELECTROCARDIOGRAMA_CONCLUSION_DESCRIPCION = "N009-MF000000227";
+        public const string PAPANICOLAU_RADIOGRAFIA_RESULTADO_DE_LA_EVALUACION = "N009-MF000001138";
+
+        public const string ECOGRAFIA_PELVICA_ID = "N009-ME000000019";
+        public const string ECOGRAFIA_PELVICA_HALLAZGOS = "N009-MF000000456";
+
+        public const string ECOGRAFIA_TRANSVAGINAL_ID = "N009-ME000000050";
+        public const string ECOGRAFIA_TRANSVAGINAL_HALLAZGOS = "N009-MF000000517";
+        public const string RESULTADOS_DE_ECOGRAFIA_HALLAZGOS = "N009-MF000001163";
+
+        public const string COLONOSCOPIA_ID = "N009-ME000000020";
+        public const string COLONOSCOPIA_HALLAZGOS = "N009-MF000000455";
+
+        public const string DENSITOMETRIA_OSEA_ID = "N009-ME000000018";
+        public const string DENSITOMETRIA_OSEA_HALLAZGOS = "N009-MF000000440";
+
+        public const string ECOGRAFIA_MAMA_ID = "N009-ME000000061";
+  
+        #region IDs Informes
+             
+        public const string INFORME_CERTIFICADO_APTITUD = "CAP";
+        public const string INFORME_CONSENTIMIENTO_INFORMADO = "COIN";
+        public const string INFORME_ANEXO_312 = "312";
+        public const string INFORME_ANEXO_7C = "16";
+        public const string INFORME_FICHA_MEDICA_TRABAJADOR = "FMT";
+        public const string INFORME_HISTORIA_OCUPACIONAL = "HOC";
+        public const string INFORME_RADIOGRAFICO_OIT = "ROIT";
+        public const string INFORME_CLINICO = "IC";
+        public const string INFORME_LABORATORIO_CLINICO = "ILAB_CLINICO";
+        // NEW
+        public const string OFT = "OFT";
+
+        // new 02/07/15
+        public const string MUS_ESQUE = "MUS_ESQUE";
+
+        #endregion
+
+        #region OSTEO_MUSCULAR OLD
+        // modificado para conpatibilidad con new
+        //public const string OSTEO_MUSCULAR_ID = "N002-ME000000046";
+        public const string OSTEO_MUSCULAR_ID = "N002-ME000000999";
+
+        public const string OSTEO_MUSCULAR_ABDOMEN_EXCELENTE_ID = "N009-MF000000153";
+        public const string OSTEO_MUSCULAR_ABDOMEN_PROMEDIO_ID = "N009-MF000000154";
+        public const string OSTEO_MUSCULAR_ABDOMEN_REGULAR_ID = "N009-MF000000155";
+        public const string OSTEO_MUSCULAR_ABDOMEN_POBRE_ID = "N009-MF000000156";
+        public const string OSTEO_MUSCULAR_ABDOMEN_PUNTOS_ID = "N009-MF000000147";
+        public const string OSTEO_MUSCULAR_ABDOMEN_OBSERVACIONES_ID = "N009-MF000000158";
+        public const string OSTEO_MUSCULAR_CADERA_EXCELENTE_ID = "N009-MF000000146";
+        public const string OSTEO_MUSCULAR_CADERA_PROMEDIO_ID = "N009-MF000000152";
+        public const string OSTEO_MUSCULAR_CADERA_REGULAR_ID = "N009-MF000000157";
+        public const string OSTEO_MUSCULAR_CADERA_POBRE_ID = "N009-MF000000808";
+        public const string OSTEO_MUSCULAR_CADERA_PUNTOS_ID = "N009-MF000000809";
+        public const string OSTEO_MUSCULAR_CADERA_OBSERVACIONES_ID = "N009-MF000000810";
+        public const string OSTEO_MUSCULAR_MUSLO_EXCELENTE_ID = "N009-MF000000812";
+        public const string OSTEO_MUSCULAR_MUSLO_PROMEDIO_ID = "N009-MF000000813";
+        public const string OSTEO_MUSCULAR_MUSLO_REGULAR_ID = "N009-MF000000814";
+        public const string OSTEO_MUSCULAR_MUSLO_POBRE_ID = "N009-MF000000815";
+        public const string OSTEO_MUSCULAR_MUSLO_PUNTOS_ID = "N009-MF000000816";
+        public const string OSTEO_MUSCULAR_MUSLO_OBSERVACIONES_ID = "N009-MF000000817";
+        public const string OSTEO_MUSCULAR_ABDOMEN_LATERAL_EXCELENTE_ID = "N009-MF000000819";
+        public const string OSTEO_MUSCULAR_ABDOMEN_LATERAL_PROMEDIO_ID = "N009-MF000000820";
+        public const string OSTEO_MUSCULAR_ABDOMEN_LATERAL_REGULAR_ID = "N009-MF000000821";
+        public const string OSTEO_MUSCULAR_ABDOMEN_LATERAL_POBRE_ID = "N009-MF000000822";
+        public const string OSTEO_MUSCULAR_ABDOMEN_LATERAL_PUNTOS_ID = "N009-MF000000823";
+        public const string OSTEO_MUSCULAR_ABDOMEN_LATERAL_OBSERVACIONES_ID = "N009-MF000000824";
+        public const string OSTEO_MUSCULAR_TOTAL1_ID = "N009-MF000000829";
+        public const string OSTEO_MUSCULAR_ADUCCION_HOMBRO_NORMAL_OPTIMO_ID = "N009-MF000000167";
+        public const string OSTEO_MUSCULAR_ADUCCION_HOMBRO_NORMAL_LIMITADO_ID = "N009-MF000000168";
+        public const string OSTEO_MUSCULAR_ADUCCION_HOMBRO_NORMAL_MUY_LIMITADO_ID = "N009-MF000000169";
+        public const string OSTEO_MUSCULAR_ADUCCION_HOMBRO_NORMAL_PUNTOS_ID = "N009-MF000000170";
+        public const string OSTEO_MUSCULAR_ADUCCION_HOMBRO_NORMAL_DOLOR_ID = "N009-MF000000171";
+        public const string OSTEO_MUSCULAR_ADUCCION_HOMBRO_OPTIMO_ID = "N009-MF000000173";
+        public const string OSTEO_MUSCULAR_ADUCCION_HOMBRO_LIMITADO_ID = "N009-MF000000174";
+        public const string OSTEO_MUSCULAR_ADUCCION_HOMBRO_MUY_LIMITADO_ID = "N009-MF000000831";
+        public const string OSTEO_MUSCULAR_ADUCCION_HOMBRO_PUNTOS_ID = "N009-MF000000832";
+        public const string OSTEO_MUSCULAR_ADUCCION_HOMBRO_DOLOR_ID = "N009-MF000000833";
+        public const string OSTEO_MUSCULAR_ROTACION_EXTERNA_OPTIMO_ID = "N009-MF000000835";
+        public const string OSTEO_MUSCULAR_ROTACION_EXTERNA_LIMITADO_ID = "N009-MF000000836";
+        public const string OSTEO_MUSCULAR_ROTACION_EXTERNA_MUY_LIMITADO_ID = "N009-MF000000837";
+        public const string OSTEO_MUSCULAR_ROTACION_EXTERNA_PUNTOS_ID = "N009-MF000000838";
+        public const string OSTEO_MUSCULAR_ROTACION_EXTERNA_DOLOR_ID = "N009-MF000000839";
+        public const string OSTEO_MUSCULAR_ROTACION_EXTERNA_HOMBRO_INTERNO_OPTIMO_ID = "N009-MF000000841";
+        public const string OSTEO_MUSCULAR_ROTACION_EXTERNA_HOMBRO_INTERNO_LIMITADO_ID = "N009-MF000000842";
+        public const string OSTEO_MUSCULAR_ROTACION_EXTERNA_HOMBRO_INTERNO_MUY_LIMITADO_ID = "N009-MF000000843";
+        public const string OSTEO_MUSCULAR_ROTACION_EXTERNA_HOMBRO_INTERNO_PUNTOS_ID = "N009-MF000000844";
+        public const string OSTEO_MUSCULAR_ROTACION_EXTERNA_HOMBRO_INTERNO_DOLOR_ID = "N009-MF000000845";
+        public const string OSTEO_MUSCULAR_TOTAL2_ID = "N009-MF000000850";
+        public const string OSTEO_MUSCULAR_DESCRIPCION_ID = "N009-MF000000232";
+        public const string OSTEO_MUSCULAR_APTITUD_ID = "N009-MF000000621";
+
+        // GRUPBOX ANTECEDENTES MUSCULOESQUELÉTICOS
+        public const string OSTEO_MUSCULAR_PRESENTA_ANTECEDENTES = "N009-MF000000520";
+        public const string OSTEO_MUSCULAR_DESCRIPCION = "N009-MF000000521";
+        //Analisis de Dolor
+        public const string OSTEO_MUSCULAR_COLUMNA_CERVICAL = "N009-MF000000871";
+        public const string OSTEO_MUSCULAR_COLUMNA_CERVICAL_DESCRIPCION = "N009-MF000000872";
+       
+        public const string OSTEO_MUSCULAR_COLUMNA_DORSAL = "N009-MF000000873";
+        public const string OSTEO_MUSCULAR_COLUMNA_DORSAL_DESCRIPCION = "N009-MF000000874";
+       
+        public const string OSTEO_MUSCULAR_COLUMNA_DORSO_LUMBAR = "N009-MF000000879";
+        public const string OSTEO_MUSCULAR_COLUMNA_DORSO_LUMBAR_DESCRIPCION = "N009-MF000000880";
+        
+        public const string OSTEO_MUSCULAR_COLUMNA_LUMBOSACRA = "N009-MF000000881";
+        public const string OSTEO_MUSCULAR_COLUMNA_LUMBOSACRA_DESCRIPCION = "N009-MF000000882";
+        
+        public const string OSTEO_MUSCULAR_COSTO_CONDRALES = "N009-MF000000877";
+        public const string OSTEO_MUSCULAR_COSTO_CONDRALES_DESCRIPCION = "N009-MF000000878";
+       
+        public const string OSTEO_MUSCULAR_COSTO_ESTERNALES = "N009-MF000000875";
+        public const string OSTEO_MUSCULAR_COSTO_ESTERNALES_DESCRIPCION = "N009-MF000000876";
+        //ARTICULACION
+
+        public const string OSTEO_MUSCULAR_TEMPERO_MANDIBULAR = "N009-MF000000853";
+        public const string OSTEO_MUSCULAR_TEMPERO_MANDIBULAR_DESCRIPCION = "N009-MF000000854";
+        
+        public const string OSTEO_MUSCULAR_HOMBRO = "N009-MF000000855";
+        public const string OSTEO_MUSCULAR_HOMBRO_DESCRIPCION = "N009-MF000000856";
+        
+        public const string OSTEO_MUSCULAR_CODO = "N009-MF000000857";
+        public const string OSTEO_MUSCULAR_CODO_DESCRIPCION = "N009-MF000000858";
+        
+        public const string OSTEO_MUSCULAR_MUNECA = "N009-MF000000859";
+        public const string OSTEO_MUSCULAR_MUNECA_DESCRIPCION = "N009-MF000000860";
+        
+        public const string OSTEO_MUSCULAR_INTERFALANGICAS = "N009-MF000000861";
+        public const string OSTEO_MUSCULAR_INTERFALANGICAS_DESCRIPCION = "N009-MF000000862";
+        
+        public const string OSTEO_MUSCULAR_COXOFEMORAL = "N009-MF000000863";
+        public const string OSTEO_MUSCULAR_COXOFEMORAL_DESCRIPCION = "N009-MF000000864";
+        
+        public const string OSTEO_MUSCULAR_RODILLA = "N009-MF000000865";
+        public const string OSTEO_MUSCULAR_RODILLA_DESCRIPCION = "N009-MF000000866";
+        
+        public const string OSTEO_MUSCULAR_TOBILLO_PIE = "N009-MF000000867";
+        public const string OSTEO_MUSCULAR_TOBILLO_PIE_DESCRIPCION = "N009-MF000000868";
+   
+
+
+        // GRUPBOX ANALISIS DE LABOR QUE REALIZA
+        public const string OSTEO_MUSCULAR_MOVIMIENTOS_REPETITIVOS = "N002-MF000000372";
+        public const string OSTEO_MUSCULAR_MOVIMIENTO_MANUAL_CARGA = "N002-MF000000373";
+        public const string OSTEO_MUSCULAR_POSTURA_FORZADA = "N002-MF000000374";
+        public const string OSTEO_MUSCULAR_USUARIO_PANTALLA_PVD = "N002-MF000000377";
+        public const string OSTEO_MUSCULAR_HORAS_DIA = "N002-MF000000378";
+        public const string OSTEO_MUSCULAR_POSTURA_SENTADO = "N009-MF000000041";
+        public const string OSTEO_MUSCULAR_POSTURA_PIE = "N002-MF000000371";
+        //B. Curvaturas Columna Vertebral Bipedestación
+        public const string OSTEO_MUSCULAR_LORDOSIS_CERVICAL = "N009-MF000000042";
+        public const string OSTEO_MUSCULAR_CIFOSIS_DORSAL = "N009-MF000000043";
+        public const string OSTEO_MUSCULAR_LORDOSIS_LUMBAR = "N009-MF000000044";
+        public const string OSTEO_MUSCULAR_ESCOLIOSIS_LUMBAR = "N009-MF000000045";
+        public const string OSTEO_MUSCULAR_ESCOLIOSIS_DORSAL = "N009-MF000000046";
+        public const string OSTEO_MUSCULAR_OBSERVACIONES = "N009-MF000000047";
+        public const string OSTEO_MUSCULAR_OBSERVACION = "N009-MF000000048";
+        public const string OSTEO_MUSCULAR_DOLOR_ESPALDA = "N009-MF000000049";
+        public const string OSTEO_MUSCULAR_CONTRACTURA_MUSCULAR = "N009-MF000000050";
+        //C. Extremidades Inferiores - Eje
+        public const string OSTEO_MUSCULAR_RODILLA_DERECHA_VARO = "N009-MF000000556";
+        public const string OSTEO_MUSCULAR_RODILLA_DERECHA_VALGO = "N009-MF000000557";
+        public const string OSTEO_MUSCULAR_RODILLA_IZQUIERDA_VARO = "N009-MF000000559";
+        public const string OSTEO_MUSCULAR_RODILLA_IZQUIERDA_VALGO = "N009-MF000000560";
+        public const string OSTEO_MUSCULAR_PIE_DERECHO_CAVO = "N009-MF000000565";
+        public const string OSTEO_MUSCULAR_PIE_DERECHO_PLANO = "N009-MF000000566";
+        public const string OSTEO_MUSCULAR_PIE_IZQUIERDO_CAVO = "N009-MF000000568";
+        public const string OSTEO_MUSCULAR_PIE_IZQUIERDO_PLANO = "N009-MF000000569";
+        //C. Extremidades Inferiores - Relfejos
+        public const string OSTEO_MUSCULAR_REFLEJO_TOTULIANO_DERECHO = "N009-MF000000544";
+        public const string OSTEO_MUSCULAR_REFLEJO_TOTULIANO_IZQUIERDO = "N009-MF000000545";
+        public const string OSTEO_MUSCULAR_REFLEJO_AQUILEO_DERECHO = "N009-MF000000547";
+        public const string OSTEO_MUSCULAR_REFLEJO_AQUILEO_IZQUIERDO = "N009-MF000000548";
+        //C. Extremidades Test y Signos
+        public const string OSTEO_MUSCULAR_TEST_PHALEN_DERECHO = "N009-MF000000059";
+        public const string OSTEO_MUSCULAR_TEST_PHALEN_IZQUIERDA = "N009-MF000000060";
+        public const string OSTEO_MUSCULAR_TEST_TINEL_DERECHO = "N009-MF000000062";
+        public const string OSTEO_MUSCULAR_TEST_TINEL_IZQUIERDO = "N009-MF000000063";
+        public const string OSTEO_MUSCULAR_SIGNO_LASAGUE_DERECHO = "N009-MF000000064";
+        public const string OSTEO_MUSCULAR_SIGNO_LASAGUE_IZQUIERDO = "N009-MF000000065";
+        public const string OSTEO_MUSCULAR_SIGNO_BRAGARD_DERECHO = "N009-MF000000144";
+        public const string OSTEO_MUSCULAR_SIGNO_BRAGARD_IZQUIERDO = "N009-MF000000536";
+        //D. Aptitud de Espalda: Flexibilidad / Fuerza
+
+
+        public const string OSTEO_MUSCULAR_PESO_CARGA = "N002-MF000000375";
+        public const string OSTEO_MUSCULAR_METODO_CARGA = "N002-MF000000376";
+
+        public const string OSTEO_MUSCULAR_TAREAS_HORAS_DIAS = "N009-MF000001220";
+        public const string OSTEO_MUSCULAR_TAREAS_FRECUENCIA = "N009-MF000001221";
+        public const string OSTEO_MUSCULAR_TAREAS_HORAS_SEMANA = "N009-MF000001222";
+        public const string OSTEO_MUSCULAR_TAREAS_TIPO = "N009-MF000001223";
+        public const string OSTEO_MUSCULAR_TAREAS_CICLO = "N009-MF000001226";
+        public const string OSTEO_MUSCULAR_TAREAS_CARGA = "N009-MF000001227";
+        public const string OSTEO_MUSCULAR_COLUMNA_LATERAL_CERVICAL = "N009-MF000001228";
+        public const string OSTEO_MUSCULAR_COLUMNA_LATERAL_DORSAL = "N009-MF000001229";
+        public const string OSTEO_MUSCULAR_COLUMNA_LATERAL_LUMBAR = "N009-MF000001230";
+
+        #endregion
+
+        // new 02/07/15
+        #region MUSCULO ESQUELETICO 1
+
+        public const string MUSCULO_ESQUELETICO_1_ID = "N002-ME000000045";
+
+        public const string MUSCULO_ESQUELETICO_NUCA_DOLOR_ULTIMO_12MESES = "N002-MF000000189";
+        public const string MUSCULO_ESQUELETICO_NUCA_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000193";
+        public const string MUSCULO_ESQUELETICO_NUCA_DOLOR_ULTIMO_7DIAS = "N002-MF000000194";
+        public const string MUSCULO_ESQUELETICO_HOMBRO_DERECHO_DOLOR_ULTIMO_12MESES = "N002-MF000000195";
+        public const string MUSCULO_ESQUELETICO_HOMBRO_DERECHO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000196";
+        public const string MUSCULO_ESQUELETICO_HOMBRO_DERECHO_DOLOR_ULTIMO_7DIAS = "N002-MF000000197";
+        public const string MUSCULO_ESQUELETICO_HOMBRO_IZQUIERDO_DOLOR_ULTIMO_12MESES = "N002-MF000000198";
+        public const string MUSCULO_ESQUELETICO_HOMBRO_IZQUIERDO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000199";
+        public const string MUSCULO_ESQUELETICO_HOMBRO_IZQUIERDO_DOLOR_ULTIMO_7DIAS = "N002-MF000000200";
+        public const string MUSCULO_ESQUELETICO_HOMBRO_AMBOS_ULTIMO_12MESES = "N002-MF000000201";
+        public const string MUSCULO_ESQUELETICO_HOMBRO_AMBOS_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000202";
+        public const string MUSCULO_ESQUELETICO_HOMBRO_AMBOS_DOLOR_ULTIMO_7DIAS = "N002-MF000000203";
+        public const string MUSCULO_ESQUELETICO_CODO_DERECHO_DOLOR_ULTIMO_12MESES = "N002-MF000000204";
+        public const string MUSCULO_ESQUELETICO_CODO_DERECHO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000205";
+        public const string MUSCULO_ESQUELETICO_CODO_DERECHO_DOLOR_ULTIMO_7DIAS = "N002-MF000000206";
+        public const string MUSCULO_ESQUELETICO_CODO_IZQUIERDO_DOLOR_ULTIMO_12MESES = "N002-MF000000207";
+        public const string MUSCULO_ESQUELETICO_CODO_IZQUIERDO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000208";
+        public const string MUSCULO_ESQUELETICO_CODO_IZQUIERDO_DOLOR_ULTIMO_7DIAS = "N002-MF000000209";
+        public const string MUSCULO_ESQUELETICO_CODO_AMBOS_ULTIMO_12MESES = "N002-MF000000210";
+        public const string MUSCULO_ESQUELETICO_CODO_AMBOS_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000211";
+        public const string MUSCULO_ESQUELETICO_CODO_AMBOS_DOLOR_ULTIMO_7DIAS = "N002-MF000000212";
+
+        public const string MUSCULO_ESQUELETICO_PUÑOSMANOS_DERECHO_DOLOR_ULTIMO_12MESES = "N002-MF000000213";
+        public const string MUSCULO_ESQUELETICO_PUÑOSMANOS_DERECHO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000214";
+        public const string MUSCULO_ESQUELETICO_PUÑOSMANOS_DERECHO_DOLOR_ULTIMO_7DIAS = "N002-MF000000215";
+
+        public const string MUSCULO_ESQUELETICO_PUÑOSMANOS_IZQUIERDO_DOLOR_ULTIMO_12MESES = "N002-MF000000216";
+        public const string MUSCULO_ESQUELETICO_PUÑOSMANOS_IZQUIERDO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000217";
+        public const string MUSCULO_ESQUELETICO_PUÑOSMANOS_IZQUIERDO_DOLOR_ULTIMO_7DIAS = "N002-MF000000218";
+
+        public const string MUSCULO_ESQUELETICO_PUÑOSMANOS_AMBOS_DOLOR_ULTIMO_12MESES = "N002-MF000000219";
+        public const string MUSCULO_ESQUELETICO_PUÑOSMANOS_AMBOS_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000220";
+        public const string MUSCULO_ESQUELETICO_PUÑOSMANOS_AMBOS_DOLOR_ULTIMO_7DIAS = "N002-MF000000221";
+
+        public const string MUSCULO_ESQUELETICO_COLUMNA_ALTA_DOLOR_ULTIMO_12MESES = "N002-MF000000222";
+        public const string MUSCULO_ESQUELETICO_COLUMNA_ALTA_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000223";
+        public const string MUSCULO_ESQUELETICO_COLUMNA_ALTA_DOLOR_ULTIMO_7DIAS = "N002-MF000000224";
+
+        public const string MUSCULO_ESQUELETICO_COLUMNA_BAJA_DOLOR_ULTIMO_12MESES = "N002-MF000000225";
+        public const string MUSCULO_ESQUELETICO_COLUMNA_BAJA_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000226";
+        public const string MUSCULO_ESQUELETICO_COLUMNA_BAJA_DOLOR_ULTIMO_7DIAS = "N002-MF000000227";
+
+        public const string MUSCULO_ESQUELETICO_CADERAS_DERECHO_DOLOR_ULTIMO_12MESES = "N002-MF000000228";
+        public const string MUSCULO_ESQUELETICO_CADERAS_DERECHO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000229";
+        public const string MUSCULO_ESQUELETICO_CADERAS_DERECHO_DOLOR_ULTIMO_7DIAS = "N002-MF000000230";
+
+        public const string MUSCULO_ESQUELETICO_CADERAS_IZQUIERDO_DOLOR_ULTIMO_12MESES = "N002-MF000000231";
+        public const string MUSCULO_ESQUELETICO_CADERAS_IZQUIERDO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000232";
+        public const string MUSCULO_ESQUELETICO_CADERAS_IZQUIERDO_DOLOR_ULTIMO_7DIAS = "N002-MF000000233";
+
+        public const string MUSCULO_ESQUELETICO_RODILLAS_DERECHO_DOLOR_ULTIMO_12MESES = "N002-MF000000234";
+        public const string MUSCULO_ESQUELETICO_RODILLAS_DERECHO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000235";
+        public const string MUSCULO_ESQUELETICO_RODILLAS_DERECHO_DOLOR_ULTIMO_7DIAS = "N002-MF000000236";
+
+        public const string MUSCULO_ESQUELETICO_RODILLAS_IZQUIERDO_DOLOR_ULTIMO_12MESES = "N002-MF000000237";
+        public const string MUSCULO_ESQUELETICO_RODILLAS_IZQUIERDO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000238";
+        public const string MUSCULO_ESQUELETICO_RODILLAS_IZQUIERDO_DOLOR_ULTIMO_7DIAS = "N002-MF000000239";
+
+        public const string MUSCULO_ESQUELETICO_TOBILLOSPIES_DERECHO_DOLOR_ULTIMO_12MESES = "N002-MF000000240";
+        public const string MUSCULO_ESQUELETICO_TOBILLOSPIES_DERECHO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000241";
+        public const string MUSCULO_ESQUELETICO_TOBILLOSPIES_DERECHO_DOLOR_ULTIMO_7DIAS = "N002-MF000000242";
+
+        public const string MUSCULO_ESQUELETICO_TOBILLOSPIES_IZQUIERDO_DOLOR_ULTIMO_12MESES = "N002-MF000000243";
+        public const string MUSCULO_ESQUELETICO_TOBILLOSPIES_IZQUIERDO_INCAPACITADO_ULTIMO_12MESES = "N002-MF000000244";
+        public const string MUSCULO_ESQUELETICO_TOBILLOSPIES_IZQUIERDO_DOLOR_ULTIMO_7DIAS = "N002-MF000000245";
+
+        //public const string MUSCULO_ESQUELETICO_COLUMNA_VERTEBRAL_EXPLORACION_LASENGUE_DERECHO = "N002-MF000000271";
+        //public const string MUSCULO_ESQUELETICO_COLUMNA_VERTEBRAL_EXPLORACION_LASENGUE_IZQUIERDO = "N002-MF000000272";
+        //public const string MUSCULO_ESQUELETICO_COLUMNA_VERTEBRAL_EXPLORACION_TEST_SCHOBER_DERECHO = "N002-MF000000273";
+        //public const string MUSCULO_ESQUELETICO_COLUMNA_VERTEBRAL_EXPLORACION_TEST_SCHOBER_IZQUIERDO = "N002-MF000000274";
+
+        //public const string MUSCULO_ESQUELETICO_EXTREMIDADES_SUPERIORESINFERIORES_TEST_PHALEN_DERECHO = "N002-MF000000275";
+        //public const string MUSCULO_ESQUELETICO_EXTREMIDADES_SUPERIORESINFERIORES_TEST_PHALEN_IZQUIERDO = "N002-MF000000276";
+        //public const string MUSCULO_ESQUELETICO_EXTREMIDADES_SUPERIORESINFERIORES_TEST_TINEL_DERECHO = "N002-MF000000277";
+        //public const string MUSCULO_ESQUELETICO_EXTREMIDADES_SUPERIORESINFERIORES_TEST_TINEL_IZQUIERDO = "N002-MF000000278";
+
+        //public const string MUSCULO_ESQUELETICO_EXTREMIDADES_SUPERIORESINFERIORES_CODO_DERECHO = "N002-MF000000279";
+        //public const string MUSCULO_ESQUELETICO_EXTREMIDADES_SUPERIORESINFERIORES_CODO_IZQUIERDO = "N002-MF000000280";
+        //public const string MUSCULO_ESQUELETICO_EXTREMIDADES_SUPERIORESINFERIORES_PIE_DERECHO = "N002-MF000000281";
+        //public const string MUSCULO_ESQUELETICO_EXTREMIDADES_SUPERIORESINFERIORES_PIE_IZQUIERDO = "N002-MF000000282";
+
+        //public const string MUSCULO_ESQUELETICO_CERVICAL_REPOSO_DERECHO = "N002-MF000000282";
+        //public const string MUSCULO_ESQUELETICO_CERVICAL_REPOSO_DOLOR_PALPACION = "N002-MF000000282";
+        //public const string MUSCULO_ESQUELETICO_CERVICAL_REPOSO_IZQUIERDO = "N002-MF000000282";
+        //public const string MUSCULO_ESQUELETICO_CERVICAL_REPOSO_DOLOR_MOVIMIENTO = "N002-MF000000282";
+
+        //public const string MUSCULO_ESQUELETICO_CERVICAL_FLEXION40_DERECHO = "N002-MF000000282";
+        //public const string MUSCULO_ESQUELETICO_CERVICAL_FLEXION40_DOLOR_PALPACION = "N002-MF000000282";
+        //public const string MUSCULO_ESQUELETICO_CERVICAL_FLEXION40_IZQUIERDO = "N002-MF000000282";
+        //public const string MUSCULO_ESQUELETICO_CERVICAL_FLEXION40_DOLOR_MOVIMIENTO = "N002-MF000000282";
+
+        // NUEVO
+        public const string MÚSCULO_ESQUELÉTICO_1_DETALLE_DE_ANTECEDENTES_ENCONTRADOS = "N002-MF000000869";
+
+
+
+        #endregion
+
+        // new 02/07/15
+        #region MUSCULO ESQUELETICO 2
+
+        //ID de componente
+        public const string MÚSCULO_ESQUELÉTICO_2_ID = "N002-ME000000148";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_REPOSO = "N002-MF000000871";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_DOLOR_PALPACION = "N002-MF000000872";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_FLEXION_40 = "N002-MF000000873";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_EXTENSION_75 = "N002-MF000000874";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_ROTACION_D_75 = "N002-MF000000875";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_ROTACION_I_75 = "N002-MF000000876";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_LATER_D_30_45 = "N002-MF000000877";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_LATER_I_30_45 = "N002-MF000000878";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_DOLOR_MOVIMIENTO_FLEX = "N002-MF000000885";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_DOLOR_MOVIMIENTO_EXT = "N002-MF000000887";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_DOLOR_MOVIMIENTO_RD = "N002-MF000000888";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_DOLOR_MOVIMIENTO_RI = "N002-MF000000889";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_DOLOR_MOVIMIENTO_LD = "N002-MF000000890";
+        public const string MÚSCULO_ESQUELÉTICO_2_A_COLUMNA_CERVICAL_DOLOR_MOVIMIENTO_LI = "N002-MF000000891";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_REPOSO = "N002-MF000000892";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_FLEXION_40 = "N002-MF000000894";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_DOLOR_MOVIMIENTO_FLEX = "N002-MF000000895";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_EXTENSION = "N002-MF000000896";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_DOLOR_MOVIMIENTO_EXT = "N002-MF000000897";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_ROTACION_D = "N002-MF000000898";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_DOLOR_MOVIMIENTO_RD = "N002-MF000000899";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_ROTACION_I = "N002-MF000000900";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_DOLOR_MOVIMIENTO_RI = "N002-MF000000901";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_LATER_D = "N002-MF000000902";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_DOLOR_MOVIMIENTO_LD = "N002-MF000000903";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_LATER_I = "N002-MF000000904";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_DOLOR_MOVIMIENTO_LI = "N002-MF000000905";
+        public const string MÚSCULO_ESQUELÉTICO_2_B_COLUMNA_DORSO_LUMBAR_DOLOR_PALPACION = "N002-MF000000909";
+        
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_EXTENSION_50_HD = "N002-MF000000906";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_EXTENSION_50_HI = "N002-MF000000907";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_FLEXION_180_HD = "N002-MF000000910";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_FLEXION_180_HI = "N002-MF000000911";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HD_EXT = "N002-MF000000912";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HI_EXT = "N002-MF000000913";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_HOMBRO_DERECHO = "N002-MF000000914";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_HOMBRO_IZQUIERDO = "N002-MF000000915";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_HD = "N002-MF000000916";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_HI = "N002-MF000000917";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HD_FLEX = "N002-MF000000918";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HI_FLEX = "N002-MF000000919";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_REPOSO_HD = "N002-MF000000920";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_REPOSO_HI = "N002-MF000000921";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_PALPACION_HD = "N002-MF000000922";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_PALPACION_HI = "N002-MF000000923";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_ABDUCCION_180_HD = "N002-MF000000924";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_ABDUCCION_180_HI = "N002-MF000000925";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HD_ABD = "N002-MF000000926";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HI_ABD = "N002-MF000000927";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_ADUCCION_50_HD = "N002-MF000000928";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_ADUCCION_50_HI = "N002-MF000000929";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HD_AD = "N002-MF000000930";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HI_AD = "N002-MF000000931";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_ROTACION_INTERNA_HD = "N002-MF000000932";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_ROTACION_INTERNA_HI = "N002-MF000000933";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HD_ROT_INT = "N002-MF000000934";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HI_ROT_INT = "N002-MF000000935";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_ROTACION_EXTERNA_HD = "N002-MF000000936";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_ROTACION_EXTERNA_HI = "N002-MF000000937";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HD_ROT_EXT = "N002-MF000000938";
+        public const string MÚSCULO_ESQUELÉTICO_2_C_HOMBRO_DOLOR_MOVIMIENTO_HI_ROT_EXT = "N002-MF000000939";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_CODO_DERECHO = "N002-MF000000940";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_CODO_IZQUIERDO = "N002-MF000000941";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_HD = "N002-MF000000942";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_HI = "N002-MF000000943";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_REPOSO_CD = "N002-MF000000944";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_REPOSO_CI = "N002-MF000000945";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_DOLOR_PALPACION_CD = "N002-MF000000946";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_DOLOR_PALPACION_CI = "N002-MF000000947";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_DOLOR_MOVIMIENTO_CD_FLEX = "N002-MF000000948";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_DOLOR_MOVIMIENTO_CI_FLEX = "N002-MF000000949";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_FLEXION_CD = "N002-MF000000950";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_FLEXION_CI = "N002-MF000000951";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_EXTENSION_CD = "N002-MF000000952";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_EXTENSION_CI = "N002-MF000000953";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_DOLOR_MOVIMIENTO_CD_EXT = "N002-MF000000954";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_DOLOR_MOVIMIENTO_CI_EXT = "N002-MF000000955";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_PRONACION_CD = "N002-MF000000956";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_PRONACION_CI = "N002-MF000000957";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_DOLOR_MOVIMIENTO_CD_PRO = "N002-MF000000958";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_DOLOR_MOVIMIENTO_CI_PRO = "N002-MF000000959";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_SUPINACION_CD = "N002-MF000000960";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_SUPINACION_CI = "N002-MF000000961";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_DOLOR_MOVIMIENTO_CD_SUP = "N002-MF000000962";
+        public const string MÚSCULO_ESQUELÉTICO_2_D_CODO_DOLOR_MOVIMIENTO_CI_SUP = "N002-MF000000963";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_MD = "N002-MF000000964";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_MI = "N002-MF000000965";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_MUÑECA_DERECHA = "N002-MF000000966";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_MUÑECA_IZQUIERDA = "N002-MF000000967";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_REPOSO_MD = "N002-MF000000968";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_REPOSO_MI = "N002-MF000000969";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_DOLOR_PALPACION_MD = "N002-MF000000970";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_DOLOR_PALPACION_MI = "N002-MF000000971";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_FLEXION_MD = "N002-MF000000972";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_FLEXION_MI = "N002-MF000000973";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_DOLOR_MOVIMIENTO_MD_FLEX = "N002-MF000000974";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_DOLOR_MOVIMIENTO_MI_FLEX = "N002-MF000000975";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_EXTENSION_MD = "N002-MF000000976";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_EXTENSION_MI = "N002-MF000000977";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_DOLOR_MOVIMIENTO_MD_EXT = "N002-MF000000978";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_DOLOR_MOVIMIENTO_MI_EXT = "N002-MF000000979";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_ABDUCCION_MD = "N002-MF000000980";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_ABDUCCION_MI = "N002-MF000000981";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_DOLOR_MOVIMIENTO_MD_ABD = "N002-MF000000982";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_DOLOR_MOVIMIENTO_MI_ABD = "N002-MF000000983";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_ADUCCION_MD = "N002-MF000000984";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_ADUCCION_MI = "N002-MF000000985";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_DOLOR_MOVIMIENTO_MD_AD = "N002-MF000000986";
+        public const string MÚSCULO_ESQUELÉTICO_2_E_MUÑECA_DOLOR_MOVIMIENTO_MI_AD = "N002-MF000000987";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_MANO_IZQUIERDA = "N002-MF000000988";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_MD = "N002-MF000000989";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_MANO_DERECHA = "N002-MF000000990";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_MI = "N002-MF000000991";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_REPOSO_MD = "N002-MF000000992";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_REPOSO_MI = "N002-MF000000993";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_DOLOR_PALPACION_MD = "N002-MF000000994";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_DOLOR_PALPACION_MI = "N002-MF000000995";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_FLEXION_MD = "N002-MF000000996";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_FLEXION_MI = "N002-MF000000997";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_DOLOR_MOVIMIENTO_MD_FLEX = "N002-MF000000998";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_DOLOR_MOVIMIENTO_MI_FLEX = "N002-MF000000999";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_EXTENSION_MD = "N002-MF000001000";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_EXTENSION_MI = "N002-MF000001001";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_DOLOR_MOVIMIENTO_MD_EXT = "N002-MF000001002";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_DOLOR_MOVIMIENTO_MI_EXT = "N002-MF000001003";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_ABDUCCION_MD = "N002-MF000001004";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_ABDUCCION_MI = "N002-MF000001005";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_DOLOR_MOVIMIENTO_MD_ABD = "N002-MF000001006";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_DOLOR_MOVIMIENTO_MI_ABD = "N002-MF000001007";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_ADUCCION_MD = "N002-MF000001008";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_ADUCCION_MI = "N002-MF000001009";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_DOLOR_MOVIMIENTO_MD_AD = "N002-MF000001010";
+        public const string MÚSCULO_ESQUELÉTICO_2_F_ARTICULACION_METACARPO_FALANGICA_PRIMER_DEDO_DOLOR_MOVIMIENTO_MI_AD = "N002-MF000001011";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_MANO_DERECHA = "N002-MF000001012";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_MD = "N002-MF000001013";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_MANO_IZQUIERDA = "N002-MF000001014";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_MI = "N002-MF000001015";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_REPOSO_MD = "N002-MF000001016";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_DOLOR_PALPACION_MD = "N002-MF000001017";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_REPOSO_MI = "N002-MF000001018";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_DOLOR_PALPACION_MI = "N002-MF000001019";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_FLEXION_MD = "N002-MF000001020";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_FLEXION_MI = "N002-MF000001021";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_DOLOR_MOVIMIENTO_MD_FLEX = "N002-MF000001022";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_DOLOR_MOVIMIENTO_MI_FLEX = "N002-MF000001023";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_EXTENSION_MD = "N002-MF000001024";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_EXTENSION_MI = "N002-MF000001025";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_DOLOR_MOVIMIENTO_MD_EXT = "N002-MF000001026";
+        public const string MÚSCULO_ESQUELÉTICO_2_G_ARTICULACION_METACARPO_FALANGICA_1_4_DEDO_DOLOR_MOVIMIENTO_MI_EXT = "N002-MF000001027";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_MANO_DERECHA = "N002-MF000001028";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_MD = "N002-MF000001029";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_MANO_IZQUIERDA = "N002-MF000001030";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_MI = "N002-MF000001031";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_REPOSO_MD = "N002-MF000001032";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_DOLOR_PALPACION_MD = "N002-MF000001033";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_REPOSO_MI = "N002-MF000001034";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_DOLOR_PALPACION_MI = "N002-MF000001035";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_FLEXION_MD = "N002-MF000001036";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_FLEXION_MI = "N002-MF000001037";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_DOLOR_MOVIMIENTO_MD_FLEX = "N002-MF000001038";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_DOLOR_MOVIMIENTO_MI_FLEX = "N002-MF000001039";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_EXTENSION_MD = "N002-MF000001040";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_EXTENSION_MI = "N002-MF000001041";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_DOLOR_MOVIMIENTO_MD_EXT = "N002-MF000001042";
+        public const string MÚSCULO_ESQUELÉTICO_2_H_ARTICULACION_INTERFALANGICA_PROXIMAL_DOLOR_MOVIMIENTO_MI_EXT = "N002-MF000001043";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_MANO_DERECHA = "N002-MF000001044";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_MD = "N002-MF000001045";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_MANO_IZQUIERDA = "N002-MF000001046";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_MI = "N002-MF000001047";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_REPOSO_MD = "N002-MF000001048";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_DOLOR_PALPACION_MD = "N002-MF000001049";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_REPOSO_MI = "N002-MF000001050";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_DOLOR_PALPACION_MI = "N002-MF000001051";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_FLEXION_MD = "N002-MF000001052";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_FLEXION_MI = "N002-MF000001053";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_DOLOR_MOVIMIENTO_MD_FLEX = "N002-MF000001054";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_DOLOR_MOVIMIENTO_MI_FLEX = "N002-MF000001055";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_EXTENSION_MD = "N002-MF000001056";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_EXTENSION_MI = "N002-MF000001057";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_DOLOR_MOVIMIENTO_MD_EXT = "N002-MF000001058";
+        public const string MÚSCULO_ESQUELÉTICO_2_I_ARTICULACION_INTERFALANGICA_DISTAL_DOLOR_MOVIMIENTO_MI_EXT = "N002-MF000001059";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_CADERA_DERECHA = "N002-MF000001060";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_CADERA_IZQUIERDA = "N002-MF000001061";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_CD = "N002-MF000001062";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_CI = "N002-MF000001063";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_REPOSO_CD = "N002-MF000001064";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_REPOSO_CI = "N002-MF000001065";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_PALPACION_CD = "N002-MF000001066";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_PALPACION_CI = "N002-MF000001067";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_FLEXION_CON_ROD_EXT_CD = "N002-MF000001068";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_FLEXION_CON_ROD_EXT_CI = "N002-MF000001069";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CD_FLEX_ROD_EXT = "N002-MF000001070";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CI_FLEX_ROD_EXT = "N002-MF000001071";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_FLEXION_CON_ROD_FLEX_CD = "N002-MF000001072";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_FLEXION_CON_ROD_FLEX_CI = "N002-MF000001073";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CD_FLEX_ROD_FLEX = "N002-MF000001074";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CI_FLEX_ROD_FLEX = "N002-MF000001075";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_EXTENSION_CD = "N002-MF000001076";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_EXTENSION_CI = "N002-MF000001077";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CD_EXT = "N002-MF000001078";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CI_EXT = "N002-MF000001079";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_ABDUCCION_CD = "N002-MF000001080";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_ABDUCCION_CI = "N002-MF000001081";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CD_ABD = "N002-MF000001082";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CI_ABD = "N002-MF000001083";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_ADUCCION_CD = "N002-MF000001084";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_ADUCCION_CI = "N002-MF000001085";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CD_AD = "N002-MF000001086";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CI_AD = "N002-MF000001087";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_ROTACION_EXTERNA_CD = "N002-MF000001088";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_ROTACION_EXTERNA_CI = "N002-MF000001089";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CD_ROT_EXT = "N002-MF000001090";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CI_ROT_EXT = "N002-MF000001091";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_ROTACION_INTERNA_CD = "N002-MF000001092";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_ROTACION_INTERNA_CI = "N002-MF000001093";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CD_ROT_INT = "N002-MF000001094";
+        public const string MÚSCULO_ESQUELÉTICO_2_J_CADERA_DOLOR_MOVIMIENTO_CI_ROT_INT = "N002-MF000001095";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_RODILLA_DERECHA = "N002-MF000001096";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_RODILLA_IZQUIRDA = "N002-MF000001097";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_RI = "N002-MF000001098";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_RD = "N002-MF000001099";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_REPOSO_RD = "N002-MF000001100";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_REPOSO_RI = "N002-MF000001101";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_DOLOR_PALPACION_RD = "N002-MF000001102";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_DOLOR_PALPACION_RI = "N002-MF000001103";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_FLEXION_RD = "N002-MF000001104";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_FLEXION_RI = "N002-MF000001105";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_DOLOR_MOVIMIENTO_RD_FLEX = "N002-MF000001106";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_DOLOR_MOVIMIENTO_RI_FLEX = "N002-MF000001107";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_EXTENSION_RD = "N002-MF000001108";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_EXTENSION_RI = "N002-MF000001109";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_DOLOR_MOVIMIENTO_RD_EXT = "N002-MF000001110";
+        public const string MÚSCULO_ESQUELÉTICO_2_K_RODILLA_DOLOR_MOVIMIENTO_RI_EXT = "N002-MF000001111";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_TOBILLO_DERECHO = "N002-MF000001112";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_TOBILLO_IZQUIERDO = "N002-MF000001113";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_TD = "N002-MF000001114";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_TI = "N002-MF000001115";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_REPOSO_TD = "N002-MF000001116";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_DOLOR_PALPACION_TD = "N002-MF000001117";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_REPOSO_TI = "N002-MF000001118";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_DOLOR_PALPACION_TI = "N002-MF000001119";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_FLEXION_TD = "N002-MF000001120";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_DOLOR_MOVIMIENTO_TD_FLEX = "N002-MF000001121";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_FLEXION_TI = "N002-MF000001122";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_DOLOR_MOVIMIENTO_TI_FLEX = "N002-MF000001123";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_EXTENSION_TD = "N002-MF000001124";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_DOLOR_MOVIMIENTO_TD_EXT = "N002-MF000001125";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_EXTENSION_TI = "N002-MF000001126";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_DOLOR_MOVIMIENTO_TI_EXT = "N002-MF000001127";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_INVERSION_SUBTALAR_TD = "N002-MF000001128";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_DOLOR_MOVIMIENTO_TD_IST = "N002-MF000001129";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_INVERSION_SUBTALAR_TI = "N002-MF000001130";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_DOLOR_MOVIMIENTO_TI_IST = "N002-MF000001131";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_EVERSION_SUBTALAR_TD = "N002-MF000001132";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_DOLOR_MOVIMIENTO_TD_EST = "N002-MF000001133";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_EVERSION_SUBTALAR_TI = "N002-MF000001134";
+        public const string MÚSCULO_ESQUELÉTICO_2_L_TOBILLO_DOLOR_MOVIMIENTO_TI_EST = "N002-MF000001135";
+
+        public const string MÚSCULO_ESQUELÉTICO_2_M_DES_HALLAZGOS = "N002-MF000001136";
+
+        #endregion
+
+
+        public const string CERTIFICADO_COVID_ID = "N003-ME000000061";
+
+        public const string CERTIFICADO_COVID_DOMICILIO_ID = "N006-MF000000001";
+        public const string CERTIFICADO_COVID_GEOLOCALIZACION_ID = "N006-MF000000002";
+        public const string CERTIFICADO_COVID_PROFESION_ID = "N006-MF000000003";
+        public const string CERTIFICADO_COVID_ES_PERSONAL_SALUD_ID = "N006-MF000000004";
+        public const string CERTIFICADO_COVID_TIENE_SINTOMAS_ID = "N006-MF000000005";
+        public const string CERTIFICADO_COVID_INICIO_SINTOMAS_ID = "N006-MF000000006";
+        public const string CERTIFICADO_COVID_CEFALEA_ID = "N006-MF000000007";
+        public const string CERTIFICADO_COVID_CONGESTION_NASAL_ID = "N006-MF000000008";
+        public const string CERTIFICADO_COVID_DIARREA_ID = "N006-MF000000009";
+        public const string CERTIFICADO_COVID_DIFIC_RESPIRA_ID = "N006-MF000000010";
+
+        public const string CERTIFICADO_COVID_VIAJADO_FUERA_PAIS_ID = "N006-MF000000088";
+        public const string CERTIFICADO_COVID_ESTABLECIMIENTO_SALUD_ID = "N006-MF000000089";
+        public const string CERTIFICADO_COVID_CONTACTO_DIRECTO_ID = "N006-MF000000090";
+        public const string CERTIFICADO_COVID_TOMA_MEDICACION_ID = "N006-MF000000091";
+
+        public const string CERTIFICADO_COVID_DOLOR_ID = "N006-MF000000011";
+        public const string CERTIFICADO_COVID_DOLOR_GARGANTA_ID = "N006-MF000000012";
+        public const string CERTIFICADO_COVID_FIEBRE_ESCALOFRIO_ID = "N006-MF000000013";
+        public const string CERTIFICADO_COVID_IRRITABILIDAD_ID = "N006-MF000000014";
+        public const string CERTIFICADO_COVID_MALESTAR_GENERAL_ID = "N006-MF000000015";
+        public const string CERTIFICADO_COVID_NAUSEAS_ID = "N006-MF000000016";
+        public const string CERTIFICADO_COVID_OTROS_ID = "N006-MF000000017";
+        public const string CERTIFICADO_COVID_TOS_ID = "N006-MF000000018";
+        public const string CERTIFICADO_COVID_ABDOMINAL_ID = "N006-MF000000019";
+        public const string CERTIFICADO_COVID_ARTICULACIONES_ID = "N006-MF000000020";
+
+
+        public const string CERTIFICADO_COVID_MUSCULAR_ID = "N006-MF000000021";
+        public const string CERTIFICADO_COVID_PECHO_ID = "N006-MF000000022";
+        public const string CERTIFICADO_COVID_OTROS_SINTOMAS_ID = "N006-MF000000023";
+        public const string CERTIFICADO_COVID_CLASIFICACION_CLINICA_ID = "N006-MF000000024";
+        public const string CERTIFICADO_COVID_FECHA_EJECUCION_ID = "N006-MF000000025";
+        public const string CERTIFICADO_COVID_PROCEDENCIA_SOLICITUD_ID = "N006-MF000000026";
+        public const string CERTIFICADO_COVID_RES_1_PRUEBA_ID = "N006-MF000000027";
+        public const string CERTIFICADO_COVID_RES_2_PRUEBA_ID = "N006-MF000000028";
+        public const string CERTIFICADO_COVID_ASMA_ID = "N006-MF000000029";
+        public const string CERTIFICADO_COVID_CANCER_ID = "N006-MF000000030";
+
+        public const string CERTIFICADO_COVID_DIABETES_ID = "N006-MF000000031";
+        public const string CERTIFICADO_COVID_EMBARAZO_ID = "N006-MF000000032";
+        public const string CERTIFICADO_COVID_ENF_CARDIO_ID = "N006-MF000000033";
+        public const string CERTIFICADO_COVID_INMUNOSUPRESOR_ID = "N006-MF000000034";
+        public const string CERTIFICADO_COVID_ENF_PULMONAR_ID = "N006-MF000000035";
+        public const string CERTIFICADO_COVID_HIPERTENCION_ARTERIAL_ID = "N006-MF000000036";
+        public const string CERTIFICADO_COVID_INSUFICIENCIA_RENAL_ID = "N006-MF000000037";
+        public const string CERTIFICADO_COVID_MAYOR_60_ID = "N006-MF000000038";
+        public const string CERTIFICADO_COVID_OBESIDAD_ID = "N006-MF000000039";
+        public const string CERTIFICADO_COVID_PERSONAL_SALUD_ID = "N006-MF000000040";
+
+        public const string CONTINUIDAD_DE_LA_ATENCION_ID = "N006-MF000000031";
+        public const string CERTIFICADO_COVID_PROCEDIMIENTO_A_SEGUIR_ID = "N006-MF000000032";
+        public const string CERTIFICADO_COVID_OBSERVACION_ID = "N006-MF000000033";
+
+        
+        public const string CERTIFICADO_DESCENSO_COVID_ID = "N003-ME000000063";
+        public const string CERTIFICADO_DESCENSO_COVID_CERTIFICACION_ID = "N003-MF000000187";
+        public const string CERTIFICADO_DESCENSO_COVID_DOMICILIO_ID = "N003-MF000000188";
+        public const string CERTIFICADO_DESCENSO_COVID_ESTABLECIMIENTO_SALUD_ID = "N003-MF000000189";
+        public const string CERTIFICADO_DESCENSO_COVID_TOMA_MEDICACION_ID = "N003-MF000000190";
+        public const string CERTIFICADO_DESCENSO_COVID_ASMA_ID = "N003-MF000000191";
+        public const string CERTIFICADO_DESCENSO_COVID_CANCER_ID = "N003-MF000000192";
+        public const string CERTIFICADO_DESCENSO_COVID_DIABETES_ID = "N003-MF000000193";
+        public const string CERTIFICADO_DESCENSO_COVID_EMBARAZO_ID = "N003-MF000000194";
+        public const string CERTIFICADO_DESCENSO_COVID_ENF_CARDIO_ID = "N003-MF000000195";
+        public const string CERTIFICADO_DESCENSO_COVID_INMUNOSUPRESOR_ID = "N003-MF000000196";
+        public const string CERTIFICADO_DESCENSO_COVID_ENF_PULMONAR_ID = "N003-MF000000197";
+        public const string CERTIFICADO_DESCENSO_COVID_HIPERTENCION_ARTERIAL_ID = "N003-MF000000198";
+        public const string CERTIFICADO_DESCENSO_COVID_INSUFICIENCIA_RENAL_ID = "N003-MF000000199";
+        public const string CERTIFICADO_DESCENSO_COVID_MAYOR_60_ID = "N003-MF000000200";
+        public const string CERTIFICADO_DESCENSO_COVID_OBESIDAD_ID = "N003-MF000000201";
+        public const string CERTIFICADO_DESCENSO_COVID_CHECK_PERSONAL_SALUD_ID = "N003-MF000000202";
+        public const string CERTIFICADO_DESCENSO_COVID_PREGUNTA_ES_PERSONAL_SALUD_ID = "N003-MF000000203";
+        public const string CERTIFICADO_DESCENSO_COVID_PROFESION_ID = "N003-MF000000204";
+        public const string CERTIFICADO_DESCENSO_COVID_TIENE_SINTOMAS_ID = "N003-MF000000205";
+        public const string CERTIFICADO_DESCENSO_COVID_INICIO_SINTOMAS_ID = "N003-MF000000206";
+        public const string CERTIFICADO_DESCENSO_COVID_TOS_ID = "N003-MF000000207";
+        public const string CERTIFICADO_DESCENSO_COVID_DOLOR_GARGANTA_ID = "N003-MF000000208";
+        public const string CERTIFICADO_DESCENSO_COVID_CONGESTION_NASAL_ID = "N003-MF000000209";
+        public const string CERTIFICADO_DESCENSO_COVID_DIFIC_RESPIRA_ID = "N003-MF000000210";
+        public const string CERTIFICADO_DESCENSO_COVID_FIEBRE_ESCALOFRIO_ID = "N003-MF000000211";
+        public const string CERTIFICADO_DESCENSO_COVID_MALESTAR_GENERAL_ID = "N003-MF000000212";
+        public const string CERTIFICADO_DESCENSO_COVID_DIARREA_ID = "N003-MF000000213";
+        public const string CERTIFICADO_DESCENSO_COVID_NAUSEAS_ID = "N003-MF000000214";
+        public const string CERTIFICADO_DESCENSO_COVID_CEFALEA_ID = "N003-MF000000215";
+        public const string CERTIFICADO_DESCENSO_COVID_IRRITABILIDAD_ID = "N003-MF000000216";
+        public const string CERTIFICADO_DESCENSO_COVID_DOLOR_ID = "N003-MF000000217";
+        public const string CERTIFICADO_DESCENSO_COVID_EXPECTORACION_ID = "N003-MF000000218";
+        public const string CERTIFICADO_DESCENSO_COVID_ABDOMINAL_ID = "N003-MF000000219";
+        public const string CERTIFICADO_DESCENSO_COVID_ARTICULACIONES_ID = "N003-MF000000220";
+        public const string CERTIFICADO_DESCENSO_COVID_MUSCULAR_ID = "N003-MF000000221";
+        public const string CERTIFICADO_DESCENSO_COVID_PECHO_ID = "N003-MF000000222";
+        public const string CERTIFICADO_DESCENSO_COVID_OTROS_SINTOMAS_ID = "N003-MF000000223";
+        public const string CERTIFICADO_DESCENSO_COVID_CLASIFICACION_CLINICA_ID = "N003-MF000000224";
+
+
+        public const string EMPRESA_PERULNG_ID = "N003-OO000001651";
+        public const string EMPRESA_TRANSPORTES77_ID = "N003-OO000000051";
+        
+        #region Datos Empresa BACKUS
+        public const string EMPRESA_BACKUS_ID = "N003-OO000000425";
+        public const string EMPRESA_BACKUS_PROTOCOLO_PRUEBA_RAPIDA_COVID_ID = "N003-PR000003616";
+
+        public const string SEDE_BACKUS_LIMA_ID = "N003-OL000000423";
+
+        public const string PROTOCOLO_BACKUS_CONO_NORTE = "N003-PR000003671";
+        public const string PROTOCOLO_BACKUS_RIMAC = "N003-PR000003672";
+        public const string PROTOCOLO_BACKUS_ATE = "N003-PR000003676";
+        public const string PROTOCOLO_BACKUS_CONOSUR = "N003-PR000003677";
+        public const string PROTOCOLO_BACKUS_CALLAO = "N003-PR000003678";
+        public const string PROTOCOLO_BACKUS_VEGUETA = "N003-PR000003723";
+        public const string PROTOCOLO_BACKUS_TINGOMARIA = "N003-PR000003733";
+        public const string PROTOCOLO_BACKUS_NAZCA = "N003-PR000003735";
+
+        public const string PROTOCOLO_BACKUS_TRUJILLO = "N003-PR000003727";
+        public const string PROTOCOLO_BACKUS_CHIMBOTE = "N003-PR000003726";
+        public const string PROTOCOLO_BACKUS_PIURA = "N003-PR000003728";
+        public const string PROTOCOLO_BACKUS_TUMBES = "N003-PR000003730";
+        public const string PROTOCOLO_BACKUS_CHANCHAMAYO = "N003-PR000003724";
+        public const string PROTOCOLO_BACKUS_CANETE = "N003-PR000003725";
+        public const string PROTOCOLO_BACKUS_TALARA = "N003-PR000003729";
+        public const string PROTOCOLO_BACKUS_SATIPO = "N003-PR000003731";
+        public const string PROTOCOLO_BACKUS_HUANUCO = "N003-PR000003732";
+        public const string PROTOCOLO_BACKUS_ICA = "N003-PR000003734";
+        public const string PROTOCOLO_SL_CHICLAYO = "N003-PR000003702";
+
+        #endregion
+        public const string EMPRESA_SALUS_LABORIS_ID = "N003-OO000000002";
+
+        #region ANTIGENOS
+        public const string ANTIGENOS_ID = "N003-ME000000067";
+        public static string ANTIGENO_DOMICILIO_ID = "N006-MF000000225";
+        public static string ANTIGENO_GEOLOCALIZACION_ID = "N006-MF000000226";
+        public static string ANTIGENO_PROFESION_ID = "N006-MF000000227";
+        public static string ANTIGENO_ES_PERSONAL_SALUD_ID = "N006-MF000000228";
+        public static string ANTIGENO_TIENE_SINTOMAS_ID = "N006-MF000000229";
+        public static string ANTIGENO_INICIO_SINTOMAS_ID = "N006-MF000000230";
+        public static string ANTIGENO_CEFALEA_ID = "N006-MF000000231";
+        public static string ANTIGENO_CONGESTION_NASAL_ID = "N006-MF000000232";
+        public static string ANTIGENO_DIARREA_ID = "N006-MF000000233";
+        public static string ANTIGENO_DIFIC_RESPIRA_ID = "N006-MF0000000234";
+        public static string ANTIGENO_DOLOR_ID = "N006-MF000000235";
+        public static string ANTIGENO_DOLOR_GARGANTA_ID = "N006-MF000000236";
+        public static string ANTIGENO_FIEBRE_ESCALOFRIO_ID = "N006-MF000000238";
+        public static string ANTIGENO_IRRITABILIDAD_ID = "N006-MF000000239";
+        public static string ANTIGENO_MALESTAR_GENERAL_ID = "N006-MF000000240";
+        public static string ANTIGENO_NAUSEAS_ID = "N006-MF000000241";
+        public static string ANTIGENO_TOS_ID = "N006-MF000000242";
+        public static string ANTIGENO_ABDOMINAL_ID = "N006-MF000000243";
+        public static string ANTIGENO_ARTICULACIONES_ID = "N006-MF000000244";
+        public static string ANTIGENO_MUSCULAR_ID = "N006-MF000000245";
+        public static string ANTIGENO_PECHO_ID = "N006-MF000000246";
+        public static string ANTIGENO_OTROS_SINTOMAS_ID = "N006-MF000000247";
+        public static string ANTIGENO_CLASIFICACION_CLINICA_ID = "N006-MF000000248";
+        public static string ANTIGENO_FECHA_EJECUCION_ID = "N006-MF000000249";
+        public static string ANTIGENO_PROCEDENCIA_SOLICITUD_ID = "N006-MF000000250";
+        public static string ANTIGENO_RES_1_PRUEBA_ID = "N006-MF000000251";
+        public static string ANTIGENO_RES_2_PRUEBA_ID = "N006-MF000000252";
+        public static string ANTIGENO_ASMA_ID = "N006-MF000000253";
+        public static string ANTIGENO_CANCER_ID = "N006-MF000000254";
+        public static string ANTIGENO_DIABETES_ID = "N006-MF000000255";
+        public static string ANTIGENO_EMBARAZO_ID = "N006-MF000000256";
+        public static string ANTIGENO_ENF_CARDIO_ID = "N006-MF000000257";
+        public static string ANTIGENO_INMUNOSUPRESOR_ID = "N006-MF000000258";
+        public static string ANTIGENO_ENF_PULMONAR_ID = "N006-MF000000259";
+        public static string ANTIGENO_HIPERTENCION_ARTERIAL_ID = "N006-MF000000260";
+        public static string ANTIGENO_INSUFICIENCIA_RENAL_ID = "N006-MF000000261";
+        public static string ANTIGENO_MAYOR_60_ID = "N006-MF000000262";
+        public static string ANTIGENO_OBESIDAD_ID = "N006-MF000000263";
+        public static string ANTIGENO_PERSONAL_SALUD_ID = "N006-MF000000264";
+        public static string ANTIGENO_CONTINUIDAD_DE_LA_ATENCION_ID = "N006-MF000000265";
+        public static string ANTIGENO_PROCEDIMIENTO_A_SEGUIR_ID = "N006-MF000000266";
+        public static string ANTIGENO_OBSERVACION_ID = "N006-MF000000267";
+        #endregion
+        
+        public const string COVID_ID = "N003-ME000000060";
+        public const string COVID_DOMICILIO_ID = "N006-MF000000045";
+        public const string COVID_GEOLOCALIZACION_ID = "N006-MF000000046";
+        public const string COVID_PROFESION_ID = "N006-MF000000047";
+        public const string COVID_ES_PERSONAL_SALUD_ID = "N006-MF000000048";
+        public const string COVID_TIENE_SINTOMAS_ID = "N006-MF000000049";
+        public const string COVID_INICIO_SINTOMAS_ID = "N006-MF000000050";
+        public const string COVID_CEFALEA_ID = "N006-MF000000051";
+        public const string COVID_CONGESTION_NASAL_ID = "N006-MF000000052";
+        public const string COVID_DIARREA_ID = "N006-MF000000053";
+        public const string COVID_DIFIC_RESPIRA_ID = "N006-MF000000054";
+
+        public const string COVID_DOLOR_ID = "N006-MF000000055";
+        public const string COVID_DOLOR_GARGANTA_ID = "N006-MF000000056";
+        public const string COVID_FIEBRE_ESCALOFRIO_ID = "N006-MF000000057";
+        public const string COVID_IRRITABILIDAD_ID = "N006-MF000000058";
+        public const string COVID_MALESTAR_GENERAL_ID = "N006-MF000000059";
+        public const string COVID_NAUSEAS_ID = "N006-MF000000060";
+        public const string COVID_OTROS_ID = "N006-MF000000061";
+        public const string COVID_TOS_ID = "N006-MF000000062";
+        public const string COVID_ABDOMINAL_ID = "N006-MF000000063";
+        public const string COVID_ARTICULACIONES_ID = "N006-MF000000064";
+
+
+        public const string COVID_MUSCULAR_ID = "N006-MF000000065";
+        public const string COVID_PECHO_ID = "N006-MF000000066";
+        public const string COVID_OTROS_SINTOMAS_ID = "N006-MF000000067";
+        public const string COVID_CLASIFICACION_CLINICA_ID = "N006-MF000000068";
+        public const string COVID_FECHA_EJECUCION_ID = "N006-MF000000069";
+        public const string COVID_PROCEDENCIA_SOLICITUD_ID = "N006-MF000000070";
+        public const string COVID_RES_1_PRUEBA_ID = "N006-MF000000071";
+        public const string COVID_RES_2_PRUEBA_ID = "N006-MF000000072";
+        public const string COVID_ASMA_ID = "N006-MF000000073";
+        public const string COVID_CANCER_ID = "N006-MF000000074";
+
+
+        public const string COVID_DIABETES_ID = "N006-MF000000075";
+        public const string COVID_EMBARAZO_ID = "N006-MF000000076";
+        public const string COVID_ENF_CARDIO_ID = "N006-MF000000077";
+        public const string COVID_INMUNOSUPRESOR_ID = "N006-MF000000078";
+        public const string COVID_ENF_PULMONAR_ID = "N006-MF000000079";
+        public const string COVID_HIPERTENCION_ARTERIAL_ID = "N006-MF000000080";
+        public const string COVID_INSUFICIENCIA_RENAL_ID = "N006-MF000000081";
+        public const string COVID_MAYOR_60_ID = "N006-MF000000082";
+        public const string COVID_OBESIDAD_ID = "N006-MF000000083";
+        public const string COVID_PERSONAL_SALUD_ID = "N006-MF000000084";
+
+        public const string COVID_CONTINUIDAD_DE_LA_ATENCION_ID = "N006-MF000000085";
+        public const string COVID_PROCEDIMIENTO_A_SEGUIR_ID = "N006-MF000000086";
+        public const string COVID_OBSERVACION_ID = "N006-MF000000087";
+
+
+        
+
+
+
+        #region EXAMEN_FISICO
+        
+       
+        public const string EXAMEN_FISICO_ID = "N002-ME000000022";
+        public const string EXAMEN_FISICO_HALLAZGOS_ID = "N002-MF000000138";
+        public const string EXAMEN_FISICO_OIDOS_ID = "N002-MF000000125";
+        public const string EXAMEN_FISICO_OJOSANEXOS_ID = "N002-MF000000122";
+        public const string EXAMEN_FISICO_APARATORESPIRATORIO_ID = "N002-MF000000126";
+        public const string EXAMEN_FISICO_GENITOURINARIO_ID = "N002-MF000000133";
+        public const string EXAMEN_FISICO_MARCHA_ID = "N002-MF000000125";
+        public const string EXAMEN_FISICO_FARINGE_ID = "N002-MF000000123";
+   
+        public const string EXAMEN_FISICO_COLMNA_ID = "N002-MF000000136";
+        public const string EXAMEN_FISICO_NARIZ_ID = "N002-MF000000124";
+        public const string EXAMEN_FISICO_EXTREMIDADE_SUPERIORES_ID = "N002-MF000000135";
+        public const string EXAMEN_FISICO_PIEL_ID = "N002-MF000000128";
+        public const string EXAMEN_FISICO_CABELLO_ID = "N002-MF000000132";
+        public const string EXAMEN_FISICO_APARATO_DIGESTIVO_ID = "N002-MF000000133";
+        public const string EXAMEN_FISICO_EXTREMIDADES_INFERIORES_ID = "N002-MF000000135";
+        public const string EXAMEN_FISICO_CUELLO_ID = "N002-MF000000126";
+        public const string EXAMEN_FISICO_BOCA_ID = "N002-MF000000122";
+        public const string EXAMEN_FISICO_APARATO_LOCOMOTOR_ID = "N002-MF000000137";
+        public const string EXAMEN_FISICO_LINFATICOS_ID = "N002-MF000000176";
+        public const string EXAMEN_FISICO_SISTEMA_NERVIOSO_ID = "N002-MF000000177";
+        public const string EXAMEN_FISICO_ECTOSCOPIA_ID = "N009-MF000000003";
+
+        // new
+        public const string EXAMEN_FISICO_ABDOMEN_ID = "N002-MF000000131";
+        public const string EXAMEN_FISICO_GANGLIOS_ID = "N002-MF000000127";
+        public const string EXAMEN_FISICO_CARDIO_VASCULAR_ID = "N002-MF000000129";
+        public const string EXAMEN_FISICO_VENAS_PERIFERICAS_ID = "N002-MF000000130";
+        public const string EXAMEN_FISICO_ANILLOS_ID = "N002-MF000000132";
+        public const string EXAMEN_FISICO_NEUROLOGICO_ID = "N002-MF000000137";
+
+        // Descripcion
+        public const string EXAMEN_FISICO_PIEL_DESCRIPCION_ID = "N009-MF000000601";
+        public const string EXAMEN_FISICO_CABELLO_DESCRIPCION_ID = "N009-MF000000602";
+        public const string EXAMEN_FISICO_OIDOS_DESCRIPCION_ID = "N009-MF000000603";
+        public const string EXAMEN_FISICO_OJOSANEXOS_DESCRIPCION_ID = "N009-MF000000604";
+        public const string EXAMEN_FISICO_NARIZ_DESCRIPCION_ID = "N009-MF000000605";
+        public const string EXAMEN_FISICO_BOCA_DESCRIPCION_ID = "N009-MF000000606";
+        public const string EXAMEN_FISICO_FARINGE_DESCRIPCION_ID = "N009-MF000000607";
+        public const string EXAMEN_FISICO_CUELLO_DESCRIPCION_ID = "N009-MF000000608";
+        public const string EXAMEN_FISICO_APARATO_RESPIRATORIO_DESCRIPCION_ID = "N009-MF000000609";
+        public const string EXAMEN_FISICO_CARDIO_VASCULAR_DESCRIPCION_ID = "N009-MF000000610";
+        public const string EXAMEN_FISICO_APARATO_DIGESTIVO_DESCRIPCION_ID = "N009-MF000000611";
+        public const string EXAMEN_FISICO_APARATO_GENITOURINARIO_DESCRIPCION_ID = "N009-MF000000612";
+        public const string EXAMEN_FISICO_APARATO_LOCOMOTOR_DESCRIPCION_ID = "N009-MF000000613";
+        public const string EXAMEN_FISICO_MARCHA_DESCRIPCION_ID = "N009-MF000000614";
+        public const string EXAMEN_FISICO_COLUMNA_DESCRIPCION_ID = "N009-MF000000615";
+        public const string EXAMEN_FISICO_EXTREMIDADES_SUPERIORES_DESCRIPCION_ID = "N009-MF000000616";
+        public const string EXAMEN_FISICO_EXTREMIDADES_INFERIORES_DESCRIPCION_ID = "N009-MF000000617";
+        public const string EXAMEN_FISICO_LINFATICOS_DESCRIPCION_ID = "N009-MF000000618";
+        public const string EXAMEN_FISICO_SISTEMA_NERVIOSO_DESCRIPCION_ID = "N009-MF000000619";
+        public const string EXAMEN_FISICO_ECTOSCOPIA_GENERAL_DESCRIPCION_ID = "N003-MF000000030";
+        public const string EXAMEN_FISICO_ESTADO_METAL_ID = "N009-MF000000624";
+        public const string EXAMEN_FISICO_ESTADO_METAL_DESCRIPCION_ID = "N003-MF000000031";
+        public const string EXAMEN_FISICO_DESCRIPCION_ID = "N009-MF000000439";
+
+       
+        #endregion
+
+        #region RX
+         
+        public const string RX_ID = "N002-ME000000032";
+        public const string RX_HALLAZGOS = "N002-MF000000166";
+        public const string RX_CONCLUSIONES_RADIOGRAFICAS_ID = "N009-MF000000224";
+        public const string RX_CONCLUSIONES_RADIOGRAFICAS_DESCRIPCION_ID = "N009-MF000001421";
+        public const string RX_EXPOSICION_POLVO_ID = "N009-MF000000598";
+        public const string RX_EXPOSICION_POLVO_DESCRIPCION_ID = "N009-MF000000599";
+
+        public const string RX_VERTICES_ID = "N009-MF000001424";
+        public const string RX_CAMPOS_PULMONARES_ID = "N009-MF000001425";
+        public const string RX_HILOS_ID = "N009-MF000001426";
+        public const string RX_COSTO_ODIAFRAGMATICO_ID = "N009-MF000001427";
+        public const string RX_SENOS_CARDIOFRENICOS_DESCRIPCION_ID = "N009-MF000001428";     
+        public const string RX_MEDIASTINOS_DESCRIPCION_ID = "N009-MF000001429";
+        public const string RX_SILUETA_CARDIACA_DESCRIPCION_ID = "N009-MF000001430";
+        public const string RX_INDICE_CARDIACO_DESCRIPCION_ID = "N009-MF000001431";
+        public const string RX_INDICE_CARDIACO_ID = "N009-MF000000884";      
+        public const string RX_PARTES_BLANDAS_OSEAS_ID = "N009-MF000001432";
+
+        public const string RX_SENOS_CARDIOFRENICOS_ID = "N009-MF000001428";
+        
+        
+        //MARQUE LA RESPUESTA ADECUADA
+        public const string RX_AA_ID = "N009-MF000000762";
+        public const string RX_AT_ID = "N009-MF000000763";
+        public const string RX_AX_ID = "N009-MF000000764";
+        public const string RX_BU_ID = "N009-MF000000765";
+        public const string RX_CA_ID = "N009-MF000000766";
+        public const string RX_CG_ID = "N009-MF000000767";
+        public const string RX_CN_ID = "N009-MF000000768";
+        public const string RX_CO_ID = "N009-MF000000770";
+        public const string RX_CP_ID = "N009-MF000000771";
+        public const string RX_CV_ID = "N009-MF000000772";
+
+        public const string RX_DI_ID = "N009-MF000001017";
+        public const string RX_EF_ID = "N009-MF000001018";
+        public const string RX_EM_ID = "N009-MF000001019";
+        public const string RX_ES_ID = "N009-MF000001020";
+        public const string RX_FR_ID = "N009-MF000001022";
+        public const string RX_HI_ID = "N009-MF000001023";
+        public const string RX_HO_ID = "N009-MF000001024";
+        public const string RX_ID_ID = "N009-MF000001025";
+        public const string RX_IH_ID = "N009-MF000001026";
+        public const string RX_KL_ID = "N009-MF000001027";
+        public const string RX_ME_ID = "N009-MF000001028";
+        public const string RX_OD_ID = "N009-MF000001037";
+        public const string RX_PA_ID = "N009-MF000001030";
+        public const string RX_PB_ID = "N009-MF000001031";
+        public const string RX_PI_ID = "N009-MF000001032";
+        public const string RX_PX_ID = "N009-MF000001033";
+        public const string RX_RA_ID = "N009-MF000001034";
+        public const string RX_RP_ID = "N009-MF000001035";
+        public const string RX_TB_ID = "N009-MF000001036";
+        public const string RX_COMENTARIO_OD_ID = "N009-MF000001039";
+
+
+        //SIMBOLO
+        public const string RX_SIMBOLO_SI_ID = "N009-MF000000761";
+        public const string RX_SIMBOLO_NO_ID = "N009-MF000000760";
+        //OPACIDADES GRANDES
+        public const string RX_A_ID = "N009-MF000000757";
+        public const string RX_B_ID = "N009-MF000000758";
+        public const string RX_C_ID = "N009-MF000000759";
+        public const string RX_D_ID = "N009-MF000000756";
+        //ZONAS AFECTADAS
+        public const string RX_INFERIOR_DERECHO_ID = "N009-MF000000222";
+        public const string RX_INFERIOR_IZQUIERDO_ID = "N009-MF000000223";
+        public const string RX_MEDIO_DERECHO_ID = "N009-MF000000220";
+        public const string RX_MEDIO_IZQUIERDO_ID = "N009-MF000000221";
+        public const string RX_SUPERIOR_DERECHO_ID = "N009-MF000000218";
+        public const string RX_SUPERIOR_IZQUIERDO_ID = "N009-MF000000219";
+        //PROFUSION
+        public const string RX_0_NADA_ID = "N002-MF000000221";
+        public const string RX_0_0_ID = "N002-MF000000222";
+        public const string RX_0_1_ID = "N002-MF000000223";
+
+        public const string RX_1_0_ID = "N002-MF000000220";
+        public const string RX_1_1_ID = "N009-MF000000720";
+        public const string RX_1_2_ID = "N009-MF000000721";
+
+        public const string RX_2_1_ID = "N009-MF000000722";
+        public const string RX_2_2_ID = "N009-MF000000723";
+        public const string RX_2_3_ID = "N009-MF000000724";
+
+        public const string RX_3_2_ID = "N009-MF000000725";
+        public const string RX_3_3_ID = "N009-MF000000726";
+        public const string RX_3_MAS_ID = "N009-MF000000727";
+    
+        //Placa Radiografica
+        public const string RX_CALIDAD_ID = "N002-MF000000184";
+        public const string RX_CAUSAS_ID = "N002-MF000000210";
+        public const string RX_FECHA_LECTURA_ID = "N009-MF000000587";
+        public const string RX_FECHA_TOMA_ID = "N009-MF000000588";
+        public const string RX_COMENTARIOS_ID = "N009-MF000000589";
+        public const string RX_NRO_PLACA_ID = "N002-MF000000211";
+        //ddd
+        public const string RX_P_ID = "N009-MF000000733";
+        public const string RX_P1_ID = "N009-MF000000736";
+
+        public const string RX_Q_ID = "N009-MF000000742";
+        public const string RX_Q1_ID = "N009-MF000000746";
+
+        public const string RX_R_ID = "N009-MF000000749";
+        public const string RX_R1_ID = "N009-MF000000753";
+
+        public const string RX_S_ID = "N009-MF000000734";
+        public const string RX_S1_ID = "N009-MF000000737";
+
+        public const string RX_T_ID = "N009-MF000000744";
+        public const string RX_T1_ID = "N009-MF000000748";
+
+        public const string RX_U_ID = "N009-MF000000751";
+        public const string RX_U1_ID = "N009-MF000000755";
+        #endregion
+
+        public const string LABORATORIO_ID = "N009-ME000000002";
+       
+        
+        public const string LABORATORIO_HALLAZGO_PATOLOGICO_LABORATORIO_ID = "N009-MF000000272";
+
+        #region CAMPOS UC ESPIROMETRIA
+
+        public const string TXT_ESP_CVF = "N003-MFP00000001";
+        public const string TXT_ESP_VEF1 = "N002-ESP00000002";
+        public const string TXT_ESP_CVF_VEF1 = "N002-ESP00000003";
+        // Dx automatico
+        public const string txt_ESP_DX_AUTO = "N002-MF000000812";
+
+
+        #endregion
+
+        #region CAMPOS UC OFTALMOLOGIA
+
+        public const string TXT_OFT_SC_OD = "N002-OFT00000001";
+        public const string TXT_OFT_CC_OD = "N002-OFT00000002";
+        public const string TXT_OFT_SC_OI = "N002-OFT00000003";
+        public const string TXT_OFT_CC_OI = "N002-OFT00000004";
+        public const string TXT_OFT_AE_OD = "N002-OFT00000005";
+        public const string TXT_OFT_AE_OI = "N002-OFT00000006";
+        public const string TXT_OFT_SC_ODC = "N002-OFT00000007";
+        public const string TXT_OFT_CC_ODC = "N002-OFT00000008";
+        public const string TXT_OFT_CC_ODC2 = "N002-OFT00000011";
+        public const string TXT_OFT_SC_OIC = "N002-OFT00000009";
+        public const string TXT_OFT_CC_OIC = "N002-OFT00000010";
+        public const string TXT_OFT_CC_OIC2 = "N002-OFT00000012";
+        public const string CHK_OFT_FIGURAS = "N002-OFT00000014";
+
+        // Dx automatico
+        public const string txt_OFT_DX_AUTO = "N002-MF000000813";
+
+        #endregion
+
+        #region Pruebas internas del UC Examen Psicologico
+
+        public const string RAZONAMIENTO = "N002-PSITEST0001";
+        public const string FACTOR_V = "N002-PSITEST0002";
+        public const string FACTOR_N = "N002-PSITEST0003";
+        public const string FACTOR_E = "N002-PSITEST0004";
+        public const string BETA_III_R_CLAVES = "N002-PSITEST0005";
+        public const string BETA_III_R_RAZONAMIENTO = "N002-PSITEST0006";
+        public const string BC_DISCRIMINACION = "N002-PSITEST0007";
+        public const string TEST_BENTON = "N002-PSITEST0008";
+        public const string WAIS_LABERINTO = "N002-PSITEST0009";
+        public const string DISC = "N002-PSITEST0010";
+        public const string TEST_DIBUJO_HOMBRE_BAJO_LA_LLUVIA = "N002-PSITEST0011";
+        public const string NOCIONES_SEGURIDAD = "N002-PSITEST0012";
+
+        public const string CUESTIONARIO_ESTRÉS_ORGANIZACIONAL = "N002-PSITEST0013";
+        public const string ESCALA_SINTOMATICA_ESTRES = "N002-PSITEST0014";
+        public const string TEST_INDICATIVO_FATIGA_LABORAL = "N002-PSITEST0015";
+      
+
+        #endregion
+
+        #region CAMPOS UC Examen Psicologico
+
+        public const string txt_Razonamiento_Puntaje = "N002-PSI00000001";
+        public const string txt_Razonamiento_Nivel = "N002-PSI00000002";
+        public const string txt_Razonamiento_Categoria = "N002-PSI00000003";
+        public const string txt_Razonamiento_Interpretacion = "N002-PSI00000004";
+
+        public const string txt_BETAIII_RClaves_Puntaje = "N002-PSI00000005";
+        public const string txt_BETAIII_RClaves_Nivel = "N002-PSI00000006";
+        public const string txt_BETAIII_RClaves_Categoria = "N002-PSI00000007";
+        public const string txt_BETAIII_RClaves_Interpretacion = "N002-PSI00000008";
+
+        public const string txt_BETTAIII_RRazonamientoNoVerbal_Puntaje = "N002-PSI00000009";
+        public const string txt_BETTAIII_RRazonamientoNoVerbal_Nivel = "N002-PSI00000010";
+        public const string txt_BETTAIII_RRazonamientoNoVerbal_Categoria = "N002-PSI00000011";
+        public const string txt_BETTAIII_RRazonamientoNoVerbal_Interpretacion = "N002-PSI00000012";
+
+        public const string txt_FACTORV_ComprensionVerbal_Puntaje = "N002-PSI00000013";
+        public const string txt_FACTORV_ComprensionVerbal_Nivel = "N002-PSI00000014";
+        public const string txt_FACTORV_ComprensionVerbal_Categoria = "N002-PSI00000015";
+        public const string txt_FACTORV_ComprensionVerbal_Interpretacion = "N002-PSI00000016";
+
+        public const string txt_FACTORN_CalculoNumerico_Puntaje = "N002-PSI00000017";
+        public const string txt_FACTORN_CalculoNumerico_Nivel = "N002-PSI00000018";
+        public const string txt_FACTORN_CalculoNumerico_Categoria = "N002-PSI00000019";
+        public const string txt_FACTORN_CalculoNumerico_Interpretacion = "N002-PSI00000020";
+
+        public const string txt_FACTORE_ConceptualizacionEspacial_Puntaje = "N002-PSI00000021";
+        public const string txt_FACTORE_ConceptualizacionEspacial_Nivel = "N002-PSI00000022";
+        public const string txt_FACTORE_ConceptualizacionEspacial_Categoria = "N002-PSI00000023";
+        public const string txt_FACTORE_ConceptualizacionEspacial_Interpretacion = "N002-PSI00000024";
+
+        public const string txt_BC_Discriminacion_Puntaje = "N002-PSI00000025";
+        public const string txt_BC_Discriminacion_Nivel = "N002-PSI00000026";
+        public const string txt_BC_Discriminacion_Categoria = "N002-PSI00000027";
+        public const string txt_BC_Discriminacion_Interpretacion = "N002-PSI00000028";
+
+        public const string cb_GrupoOcupacional = "N002-PSI00000029";
+
+        public const string txt_WAIS_LABERINTOS_Interpretacion = "N002-PSI00000030";
+
+        public const string cb_DISC_Combinacion = "N002-PSI00000031";
+        public const string txt_DISC_Categoria = "N002-PSI00000032";
+        public const string txt_DISC_Interpretacion = "N002-PSI00000033";
+
+        public const string txt_TEST_DIBUJO_HOMBRE_BAJO_LLUVIA_Interpretacion = "N002-PSI00000034";
+
+        public const string chk_TieneNocionesSeguridad = "N002-PSI00000035";
+
+
+        public const string txt_CuestionarioEstresOrganizacional_Puntaje = "N002-PSI00000036";
+        public const string txt_CuestionarioEstresOrganizacional_Categoria = "N002-PSI00000037";
+        public const string txt_CuestionarioEstresOrganizacional_interpretacion = "N002-PSI00000038";
+
+        public const string txt_EscalaSintomaticaEstres_Puntaje = "N002-PSI00000039";
+        public const string txt_EscalaSintomaticaEstres_Categoria = "N002-PSI00000040";
+        public const string txt_EscalaSintomaticaEstres_Interpretacion = "N002-PSI00000041";
+
+        public const string txt_TestIndicativoFatigaLaboral_Puntaje = "N002-PSI00000042";
+        public const string txt_TestIndicativoFatigaLaboral_Interpretacion = "N002-PSI00000043";
+
+        // Resultado de evaluacion EMOA
+        public const string cb_RESULTADO_EVAL_EstabilidadEmocional = "N002-PSI00000044";
+        public const string txt_RESULTADO_EVAL_IndicadoresFobia = "N002-PSI00000045";
+        public const string txt_RESULTADO_EVAL_IndicadoresFatigaySomnolencia = "N002-PSI00000046";
+        public const string cb_RESULTADO_EVAL_Personalidad = "N002-PSI00000047";
+        public const string cb_RESULTADO_EVAL_Afectividad = "N002-PSI00000048";
+        public const string cb_RESULTADO_EVAL_Motivacion = "N002-PSI00000049";
+        public const string cb_RESULTADO_EVAL_NivelStres = "N002-PSI00000050";
+        public const string txt_RESULTADO_EVAL_IndicadoresPsicosomaticosStres = "N002-PSI00000051";
+        public const string txt_RESULTADO_EVAL_IndicadoresFatigaLaboral = "N002-PSI00000052";
+
+
+        // Resultado de evaluacion EMPO
+        public const string cb_RESULTADO_EVAL_Capacidad = "N002-PSI00000053";
+        public const string cb_RESULTADO_EVAL_JuicioSentidoComun = "N002-PSI00000054";
+        public const string cb_RESULTADO_EVAL_CoordinacionVisoMotriz = "N002-PSI00000055";
+        public const string cb_RESULTADO_EVAL_PlanificacionyOrganizacion = "N002-PSI00000056";
+        public const string cb_RESULTADO_EVAL_PercepcionFrenteSeguridad = "N002-PSI00000057";
+        public const string cb_RESULTADO_EVAL_MotivacionHaciaTrabajo = "N002-PSI00000058";
+        public const string cb_RESULTADO_EVAL_EstabildadEmocional = "N002-PSI00000059";
+        public const string cb_RESULTADO_EVAL_ControlImpulsos = "N002-PSI00000060";
+        public const string cb_RESULTADO_EVAL_RelacionesInterpersonales = "N002-PSI00000061";
+        public const string cb_RESULTADO_EVAL_ManejoPresionyEstres = "N002-PSI00000062";
+
+        //************
+
+        //public const string cb_GrupoOcupacional_EMOA = "N002-PSI00000063";
+
+
+        #endregion
+
+        #region CAMPOS Examen Psicologico (campos dinamicos)
+
+        public const string EXAMEN_PSICOLOGICO_Obs_conductas_Articulación =	"N009-MF000001513"	;
+        public const string EXAMEN_PSICOLOGICO_Obs_conductas_Espacio	="N009-MF000001520"	;
+        public const string EXAMEN_PSICOLOGICO_Obs_conductas_Persona	="N009-MF000001521"	;
+        public const string EXAMEN_PSICOLOGICO_Obs_conductas_Postura	="N009-MF000001508"	;
+        public const string EXAMEN_PSICOLOGICO_Obs_conductas_Presentacion	="N009-MF000001507"	;
+        public const string EXAMEN_PSICOLOGICO_Obs_conductas_Ritmo	="N009-MF000001511"	;
+        public const string EXAMEN_PSICOLOGICO_Obs_conductas_Tiempo	="N009-MF000001519"	;
+        public const string EXAMEN_PSICOLOGICO_Obs_conductas_Tono	="N009-MF000001512"	;
+        public const string EXAMEN_PSICOLOGICO_Enfe_psicoso_Apetito_Bulimia_anorexia_otros	="N009-MF000001527"	;
+        public const string EXAMEN_PSICOLOGICO_Enfe_psicoso_Cardiovasculares_palpitaciones_cefale_otros=	"N009-MF000001522"	;
+        public const string EXAMEN_PSICOLOGICO_Enfe_psicoso_Gastrointestinales_Sequedad_de_boca_gastritis_ulcera_otros=	"N009-MF000001523"	;
+        public const string EXAMEN_PSICOLOGICO_Enfe_psicoso_Observaciones	="N009-MF000001529"	;
+        public const string EXAMEN_PSICOLOGICO_Enfe_psicoso_Respiratorios_Asma_hiperventilación_suspiros_otros	="N009-MF000001524"	;
+        public const string EXAMEN_PSICOLOGICO_Enfe_psicoso_Sudoracion	= "N009-MF000001526"	;
+        public const string EXAMEN_PSICOLOGICO_Enfe_psicoso_Sueño_insomnio	="N009-MF000001528"	;
+        public const string EXAMEN_PSICOLOGICO_Enfe_psicoso_Tics_nerviosos	="N009-MF000001525"	;
+        public const string EXAMEN_PSICOLOGICO_His_fami_Esposo	="N009-MF000001530"	;
+        public const string EXAMEN_PSICOLOGICO_His_fami_Hermanos	="N009-MF000001533"	;
+        public const string EXAMEN_PSICOLOGICO_His_fami_Hijo	="N009-MF000001531"	;
+        public const string EXAMEN_PSICOLOGICO_His_fami_Otros	="N009-MF000001534"	;
+        public const string EXAMEN_PSICOLOGICO_His_fami_Padres	="N009-MF000001532"	;
+        public const string EXAMEN_PSICOLOGICO_Habitos_Alcohol=	"N009-MF000001537"	;
+        public const string EXAMEN_PSICOLOGICO_Habitos_Pasatiempo	="N009-MF000001535"	;
+        public const string EXAMEN_PSICOLOGICO_Habitos_Tabaco	="N009-MF000001536"	;
+        public const string EXAMEN_PSICOLOGICO_Conclu_final_Aptitud	="N009-MF000001539"	;
+        public const string EXAMEN_PSICOLOGICO_Conclu_final_Riesgo	="N009-MF000001538"	;
+
+
+        #endregion
+
+        // nuevo
+
+        #region OFTALMOLOGIA NEW
+
+        public const string OFTALMOLOGIA = "OFT";
+
+        public const string AGUDEZA_VISUAL = "N002-ME000000145";
+        public const string ANTECEDENTES_AGUDEZA_VISUAL = "N003-MF000000038";
+
+        // Miguel (nuevo)
+
+        public const string EXPLORACIÓN_CLÍNICA_ID = "N002-ME000000146";
+
+        public const string EXPLORACIÓN_CLÍNICA_CORRECTORES_OCULARES_VISIÓN_DE_LEJOS = "N002-MF000000829";
+
+        public const string EXPLORACIÓN_CLÍNICA_CORRECTORES_OCULARES_VISIÓN_DE_CERCA = "N002-MF000000839";
+
+        public const string EXPLORACIÓN_CLÍNICA_MOVIMIENTOS_OCULARES_OD = "N002-MF000000841";
+
+        public const string EXPLORACIÓN_CLÍNICA_MOVIMIENTOS_OCULARES_OI = "N002-MF000000842";
+
+        public const string EXPLORACIÓN_CLÍNICA_HALLAZGOS_ESTRABISMO = "N002-MF000000840";
+
+        public const string EXPLORACIÓN_CLÍNICA_HALLAZGOS_CHALAZION = "N002-MF000000830";
+
+        public const string EXPLORACIÓN_CLÍNICA_HALLAZGOS_ORZUELO = "N002-MF000000831";
+
+        public const string EXPLORACIÓN_CLÍNICA_HALLAZGOS_PINGUECULA = "N002-MF000000832";
+
+        public const string EXPLORACIÓN_CLÍNICA_HALLAZGOS_PTERIGION = "N002-MF000000833";
+
+        public const string EXPLORACIÓN_CLÍNICA_HALLAZGOS_SECUELA_DE_TRAUMA = "N002-MF000000834";
+
+        public const string EXPLORACIÓN_CLÍNICA_HALLAZGOS_CATARATA = "N002-MF000000835";
+
+        public const string EXPLORACIÓN_CLÍNICA_HALLAZGOS_PSEUDOFAQUIA = "N002-MF000000836";
+
+        public const string EXPLORACIÓN_CLÍNICA_HALLAZGOS_OTROS = "N002-MF000000837";
+
+        public const string EXPLORACIÓN_CLÍNICA_DESCRIPCION_DE_HALLAZGOS = "N002-MF000000838";
+
+        // ID de componente
+        public const string VISION_DE_COLORES_ID = "N002-ME000000119";
+
+        public const string VISION_DE_COLORES_TEST_DE_ISHIHARA_SELECCIONAR = "N002-MF000000666";
+
+        public const string VISION_DE_COLORES_TEST_DE_ISHIHARA_DESCRIPCION = "N002-MF000000686";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_ROJO_OD = "N002-MF000000668";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_ROJO_OI = "N002-MF000000669";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_VERDE_OD = "N002-MF000000671";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_VERDE_OI = "N002-MF000000672";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_AZUL_OD = "N002-MF000000674";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_AZUL_OI = "N002-MF000000675";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_AMARILLO_OD = "N002-MF000000677";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_AMARILLO_OI = "N002-MF000000678";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_BLANCO_OD = "N002-MF000000680";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_BLANCO_OI = "N002-MF000000681";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_NEGRO_OD = "N002-MF000000683";
+
+        public const string VISION_DE_COLORES_PERCEPCION_DE_COLORES_BASICOS_NEGRO_OI = "N002-MF000000684";
+
+        // ID de componente
+        public const string VISION_ESTEREOSCOPICA_ID = "N002-ME000000120";
+
+        public const string VISION_ESTEREOSCOPICA_TEST_DE_LOS_ANILLOS_SELECCIONAR = "N002-MF000000685";
+
+        public const string VISION_ESTEREOSCOPICA_TEST_DE_LOS_ANILLOS_DESCRIPCION = "N002-MF000000687";
+
+        // ID de componente
+        public const string CAMPO_VISUAL_ID = "N002-ME000000121";
+
+        public const string CAMPO_VISUAL_CAMPIMETRIA_SELECCIONAR_OD = "N002-MF000000751";
+
+        public const string CAMPO_VISUAL_CAMPIMETRIA_SELECCIONAR_OI = "N002-MF000000690";
+
+        public const string CAMPO_VISUAL_CAMPIMETRIA_DESCRIPCION_OD = "N002-MF000000859";
+
+        public const string CAMPO_VISUAL_CAMPIMETRIA_DESCRIPCION_OI = "N002-MF000000860";
+
+        // ID de componente
+        public const string PRESION_INTRAOCULAR_ID = "N002-ME000000122";
+
+        public const string PRESION_INTRAOCULAR_TONOMETRIA_CONCLUSION = "N002-MF000000861";
+        public const string PRESION_INTRAOCULAR_TONOMETRIA_OD = "N002-MF000000691";
+        public const string PRESION_INTRAOCULAR_TONOMETRIA_OI = "N002-MF000000692";
+
+        // ID de componente
+        public const string FONDO_DE_OJO_ID = "N002-ME000000123";
+
+        public const string FONDO_DE_OJO_OFTALMOSCOPIA_VITREO_OD = "N002-MF000000701";
+        public const string FONDO_DE_OJO_OFTALMOSCOPIA_VITREO_OI = "N002-MF000000702";
+        public const string FONDO_DE_OJO_OFTALMOSCOPIA_MACULA_OD = "N002-MF000000704";
+        public const string FONDO_DE_OJO_OFTALMOSCOPIA_MACULA_OI = "N002-MF000000705";
+        public const string FONDO_DE_OJO_OFTALMOSCOPIA_RETINA_OD = "N002-MF000000707";
+        public const string FONDO_DE_OJO_OFTALMOSCOPIA_RETINA_OI = "N002-MF000000708";
+        public const string FONDO_DE_OJO_OFTALMOSCOPIA_NERVIO_OPTICO_OD = "N002-MF000000710";
+        public const string FONDO_DE_OJO_OFTALMOSCOPIA_NERVIO_OPTICO_OI = "N002-MF000000711";
+        public const string FONDO_DE_OJO_OFTALMOSCOPIA_CONCLUSION = "N002-MF000000862";
+        public const string FONDO_DE_OJO_DESCRIPCION = "N002-MF000000712";
+
+
+        public const string REFRACCION_ID = "N002-ME000000147";
+        public const string REFRACCION_LEJOS_ESFERA_OD = "N002-MF000000845";
+        public const string REFRACCION_LEJOS_ESFERA_OI = "N002-MF000000846";
+        public const string REFRACCION_LEJOS_CILINDRO_OD = "N002-MF000000847";
+        public const string REFRACCION_LEJOS_CILINDRO_OI = "N002-MF000000848";
+        public const string REFRACCION_LEJOS_EJE_OD = "N002-MF000000849";
+        public const string REFRACCION_LEJOS_EJE_OI = "N002-MF000000850";
+        public const string REFRACCION_CERCA_ADD_MAS = "N002-MF000000851";
+
+
+        #endregion
+
+        // old
+
+        #region OFTALMOLOGIA OLD
+
+
+        public const string OFTALMOLOGIA_ID = "N002-ME000000028";
+        public const string OFTALMOLOGIA_CORRECTORES_OCULARES_SI_ID = "N002-MF000000224";
+        public const string OFTALMOLOGIA_CORRECTORES_OCULARES_NO_ID = "N009-MF000000719";
+        public const string OFTALMOLOGIA_CORRECTORES_OCULARES_ULTIMA_REFRACCION_ID = "N002-MF000000225";
+        public const string OFTALMOLOGIA_HIPERTENSION_ID = "N009-MF000000175";
+        public const string OFTALMOLOGIA_DIABETES_ID = "N009-MF000000176";
+        public const string OFTALMOLOGIA_GLAUCOMA_ID = "N009-MF000000177";
+        public const string OFTALMOLOGIA_TRAUMATISMO_ID = "N009-MF000000178";
+        public const string OFTALMOLOGIA_AMBLIOPIA_ID = "N009-MF000000179";
+        public const string OFTALMOLOGIA_SUST_QUIMICAS_ID = "N009-MF000000180";
+        public const string OFTALMOLOGIA_SOLDADURA_ID = "N009-MF000000181";
+        public const string OFTALMOLOGIA_CATARATAS_ID = "N009-MF000000182";
+        public const string OFTALMOLOGIA_OTROS_ESPECIFICAR_ID = "N009-MF000000710";
+        public const string OFTALMOLOGIA_AE_LEJOS_OJO_DERECHO_ID = "N002-MF000000226";
+        public const string OFTALMOLOGIA_SC_CERCA_OJO_IZQUIERDO_ID = "N002-MF000000227";
+        public const string OFTALMOLOGIA_AE_LEJOS_OJO_IZQUIERDO_ID = "N002-MF000000228";
+        public const string OFTALMOLOGIA_SC_LEJOS_OJO_IZQUIERDO_ID = "N002-MF000000230";
+        public const string OFTALMOLOGIA_CC_LEJOS_OJO_DERECHO_ID = "N002-MF000000231";
+        public const string OFTALMOLOGIA_SC_CERCA_OJO_DERECHO_ID = "N002-MF000000233";
+        public const string OFTALMOLOGIA_SC_LEJOS_OJO_DERECHO_ID = "N002-MF000000234";
+        public const string OFTALMOLOGIA_CC_CERCA_OJO_DERECHO_ID = "N002-MF000000235";
+        public const string OFTALMOLOGIA_CC_LEJOS_OJO_IZQUIERDO_ID = "N002-MF000000236";
+        public const string OFTALMOLOGIA_AE_CERCA_OJO_IZQUIERDO_ID = "N002-MF000000237";
+        public const string OFTALMOLOGIA_AE_CERCA_OJO_DERECHO_ID = "N009-MF000000641";
+        public const string OFTALMOLOGIA_CC_CERCA_OJO_IZQUIERDO_ID = "N009-MF000000646";
+        public const string OFTALMOLOGIA_MACULA_OJO_DERECHO_ID = "N002-MF000000238";
+        public const string OFTALMOLOGIA_MACULA_OJO_IZQUIERDO_ID = "N002-MF000000239";
+        public const string OFTALMOLOGIA_RETINA_OJO_DERECHO_ID = "N002-MF000000240";
+        public const string OFTALMOLOGIA_RETINA_OJO_IZQUIERDO_ID = "N002-MF000000241";
+        public const string OFTALMOLOGIA_NERVIO_OPTICO_DERECHO_ID = "N002-MF000000246";
+        public const string OFTALMOLOGIA_NERVIO_OPTICO_IZQUIERDO_ID = "N002-MF000000247";
+        public const string OFTALMOLOGIA_PARPADO_OJO_DERECHO_ID = "N002-MF000000251";
+        public const string OFTALMOLOGIA_PARPADO_OJO_IZQUIERDO_ID = "N002-MF000000252";
+        public const string OFTALMOLOGIA_CONJUNTIVA_OJO_DERECHO_ID = "N002-MF000000254";
+        public const string OFTALMOLOGIA_CONJUNTIVA_OJO_IZQUIERDO_ID = "N002-MF000000255";
+        public const string OFTALMOLOGIA_CORNEA_OJO_DERECHO_ID = "N009-MF000000524";
+        public const string OFTALMOLOGIA_CORNEA_OJO_IZQUIERDO_ID = "N009-MF000000525";
+        public const string OFTALMOLOGIA_CRISTALINO_OJO_DERECHO_ID = "N009-MF000000527";
+        public const string OFTALMOLOGIA_CRISTALINO_OJO_IZQUIERDO_ID = "N009-MF000000528";
+        public const string OFTALMOLOGIA_IRIS_OJO_DERECHO_ID = "N009-MF000000530";
+        public const string OFTALMOLOGIA_IRIS_OJO_IZQUIERDO_ID = "N009-MF000000531";
+        public const string OFTALMOLOGIA_MOV_OCULARES_OJO_DERECHO_ID = "N009-MF000000533";
+        public const string OFTALMOLOGIA_MOV_OCULARES_OJO_IZQUIERDO_ID = "N009-MF000000534";
+        public const string OFTALMOLOGIA_CONFRONTACION_CAMPO_COMPLETO_OJO_DERECHO_ID = "N009-MF000000711";
+        public const string OFTALMOLOGIA_CONFRONTACION_CAMPO_RESTRINGIDO_OJO_DERECHO_ID = "N009-MF000000712";
+        public const string OFTALMOLOGIA_CONFRONTACION_CAMPO_COMPLETO_OJO_IZQUIERDO_ID = "N009-MF000000713";
+        public const string OFTALMOLOGIA_CONFRONTACION_CAMPO_RESTRINGIDO_OJO_IZQUIERDO_ID = "N009-MF000000714";
+        public const string OFTALMOLOGIA_TEST_ISHIHARA_NORMAL_ID = "N009-MF000000717";
+        public const string OFTALMOLOGIA_TEST_ISHIHARA_ANORMAL_ID = "N009-MF000000718";
+        public const string OFTALMOLOGIA_DICROMATOPSIA_ID = "N009-MF000000522";
+        public const string OFTALMOLOGIA_TEST_ESTEREOPSIS_TIEMPO_ID = "N002-MF000000258";
+        public const string OFTALMOLOGIA_TEST_ESTEREOPSIS_NORMAL_ID = "N002-MF000000343";
+        public const string OFTALMOLOGIA_TEST_ESTEREOPSIS_ANORMAL_ID = "N002-MF000000342";
+        public const string OFTALMOLOGIA_PRESION_INTRAOCULAR_OJO_DERECHO_ID = "N002-MF000000261";
+        public const string OFTALMOLOGIA_PRESION_INTRAOCULAR_OJO_IZQUIERDO_ID = "N002-MF000000262";
+        public const string OFTALMOLOGIA_HALLAZGOS_ID = "N009-MF000000356";
+        public const string OFTALMOLOGIA_CONCLUSIONES = "N009-MF000000231";
+        public const string OFTALMOLOGIA_AGUDEZA_VISUAL_CERCA_SC_OJO_DERECHO = "N002-MF000000233";
+        public const string OFTALMOLOGIA_AGUDEZA_VISUAL_CERCA_SC_OJO_IZQUIERDO = "N002-MF000000227";  // 234
+        public const string OFTALMOLOGIA_AGUDEZA_VISUAL_CERCA_CC_OJO_DERECHO = "N002-MF000000235";  //231 antes
+        public const string OFTALMOLOGIA_AGUDEZA_VISUAL_CERCA_CC_OJO_IZQUIERDO = "N009-MF000000646";
+        public const string OFTALMOLOGIA_TEST_ESTEREOPSIS = "N002-MF000000257";
+        public const string OFTALMOLOGIA_TEST_ISHIHARA = "N002-MF000000256";
+
+        #endregion
+
+        public const string PSICOLOGIA_ID = "N002-ME000000033";
+        public const string PSICOLOGIA_AREA_COGNITIVA_ID = "N003-MF000000011";
+        public const string PSICOLOGIA_AREA_EMOCIONAL_ID = "N002-MF000000337";
+        public const string PSICOLOGIA_AREA_CONCLUSIONES_ID = "N002-MF000000338";
+        public const string PSICOLOGIA_CELIMA_CONCLUSIONES = "N003-MF000000011";
+
+        public const string PSICOLOGIA_ID_2017 = "N009-ME000000084";
+
+        #region ALTURA_ESTRUCTURAL OLD
+
+        public const string ALTURA_ESTRUCTURAL_ID = "N009-ME000000015";
+        public const string ALTURA_ESTRUCTURAL_ANTECEDENTE_TEC_SI_ID = "N009-MF000000781";
+        public const string ALTURA_ESTRUCTURAL_ANTECEDENTE_TEC_NO_ID = "N009-MF000000782";
+        public const string ALTURA_ESTRUCTURAL_ANTECEDENTE_TEC_OBS_ID = "N009-MF000000783";
+        public const string ALTURA_ESTRUCTURAL_CONVULSIONES_EPILEPSIA_SI_ID = "N009-MF000000785";
+        public const string ALTURA_ESTRUCTURAL_CONVULSIONES_EPILEPSIA_NO_ID = "N009-MF000000786";
+        public const string ALTURA_ESTRUCTURAL_CONVULSIONES_EPILEPSIA_OBS_ID = "N009-MF000000787";
+        public const string ALTURA_ESTRUCTURAL_MAREOS_SI_ID = "N009-MF000000789";
+        public const string ALTURA_ESTRUCTURAL_MAREOS_NO_ID = "N009-MF000000790";
+        public const string ALTURA_ESTRUCTURAL_MAREOS_OBS_ID = "N009-MF000000791";
+        public const string ALTURA_ESTRUCTURAL_AGORAFOBIA_SI_ID = "N009-MF000000793";
+        public const string ALTURA_ESTRUCTURAL_AGORAFOBIA_NO_ID = "N009-MF000000794";
+        public const string ALTURA_ESTRUCTURAL_AGORAFOBIA_OBS_ID = "N009-MF000000795";
+        public const string ALTURA_ESTRUCTURAL_ACROFOBIA_SI_ID = "N009-MF000000797";
+        public const string ALTURA_ESTRUCTURAL_ACROFOBIA_NO_ID = "N009-MF000000798";
+        public const string ALTURA_ESTRUCTURAL_ACROFOBIA_OBS_ID = "N009-MF000000799";
+        public const string ALTURA_ESTRUCTURAL_INSUFICIENCIA_CARDIACA_SI_ID = "N009-MF000000801";
+        public const string ALTURA_ESTRUCTURAL_INSUFICIENCIA_CARDIACA_NO_ID = "N009-MF000000802";
+        public const string ALTURA_ESTRUCTURAL_INSUFICIENCIA_CARDIACA_OBS_ID = "N009-MF000000803";
+        public const string ALTURA_ESTRUCTURAL_ESTEREOPSIA_SI_ID = "N009-MF000000805";
+        public const string ALTURA_ESTRUCTURAL_ESTEREOPSIA_NO_ID = "N009-MF000000806";
+        public const string ALTURA_ESTRUCTURAL_ESTEREOPSIA_OBS_ID = "N009-MF000000807";
+        public const string ALTURA_ESTRUCTURAL_NISTAGMUS_ESPONTANEO_ID = "N009-MF000000026";
+        public const string ALTURA_ESTRUCTURAL_NISTAGMUS_PROVOCADO_ID = "N009-MF000000027";
+        public const string ALTURA_ESTRUCTURAL_PRIMEROS_AUXILIOS_ID = "N009-MF000000028";
+        public const string ALTURA_ESTRUCTURAL_TRABAJO_SOBRE_NIVEL_ID = "N009-MF000000029";
+        public const string ALTURA_ESTRUCTURAL_TIMPANOS_ID = "N009-MF000000030";
+        public const string ALTURA_ESTRUCTURAL_EQUILIBRIO_ID = "N009-MF000000031";
+        public const string ALTURA_ESTRUCTURAL_SUST_PIE_20_ID = "N009-MF000000036";
+        public const string ALTURA_ESTRUCTURAL_CAMINAR_LIBRE_RECTA_3_ID = "N009-MF000000035";
+        public const string ALTURA_ESTRUCTURAL_CAMINAR_LIBRE_OJOS_VENDADOS_3_ID = "N009-MF000000034";
+        public const string ALTURA_ESTRUCTURAL_CAMINAR_LIBRE_OJOS_VENDADOS_PUNTA_TALON_3_ID = "N009-MF000000032";
+        public const string ALTURA_ESTRUCTURAL_ROTAR_SILLA_GIRATORIA_ID = "N009-MF000000033";
+        public const string ALTURA_ESTRUCTURAL_ADIADOCOQUINESIA_DIRECTA_ID = "N009-MF000000037";
+        public const string ALTURA_ESTRUCTURAL_ADIADOCOQUINESIA_CRUZADA_ID = "N009-MF000000038";
+        public const string ALTURA_ESTRUCTURAL_APTO_ID = "N009-MF000000039";
+        public const string ALTURA_ESTRUCTURAL_DESCRIPCION_ID = "N009-MF000000357";
+
+        #endregion
+
+        #region ALTURA_ESTRUCTURAL
+
+        public const string ALTURA_FISICA_M_18 = "N002-ME000000047"; // Altura mayor a 1.8 metros
+        public const string ALTURA_FISICA_M_18_AGORAFOBIA = "N002-MF000000329";
+        public const string ALTURA_FISICA_M_18_AGORAFOBIA_DISEASES_ID = "N002-DD000000346";
+        public const string ALTURA_FISICA_M_18_DIABETES_NOCONTROLADA = "N002-MF000000330";
+        public const string ALTURA_FISICA_M_18_ACROFOBIA = "N002-MF000000331";
+        public const string ALTURA_FISICA_M_18_INSUFICIENCIA_CARDIACA = "N002-MF000000332";
+        public const string ALTURA_FISICA_M_18_CONSUMO_ALCOHOL = "N002-MF000000333";
+        public const string ALTURA_FISICA_M_18_HIPERTENSION_NOCONTROLADA = "N002-MF000000334";
+        public const string ALTURA_FISICA_M_18_CONSUMO_DROGAS = "N002-MF000000335";
+        public const string ALTURA_FISICA_M_18_ALTERACIONESCARDIOVASCULARES = "N002-MF000000336";
+        public const string ALTURA_FISICA_M_18_TRAUMA_ENCEFALO = "N002-MF000000337";
+        public const string ALTURA_FISICA_M_18_AMETROPIA_LEJOS = "N002-MF000000338";
+        public const string ALTURA_FISICA_M_18_CONVULSIONES = "N002-MF000000339";
+        public const string ALTURA_FISICA_M_18_ESTEROPSIA_ALTERADA = "N002-MF000000340";
+        public const string ALTURA_FISICA_M_18_VERTIGO_MAREO = "N002-MF000000341";
+        public const string ALTURA_FISICA_M_18_ASMA = "N002-MF000000342";
+        public const string ALTURA_FISICA_M_18_SINCOPE = "N002-MF000000343";
+        public const string ALTURA_FISICA_M_18_HIPOACUSIA_SEVERA = "N002-MF000000344";
+        public const string ALTURA_FISICA_M_18_MIOCLONIAS = "N002-MF000000345";
+        public const string ALTURA_FISICA_M_18_ENTR_PRIMEROS_AUX = "N002-MF000000346";
+        public const string ALTURA_FISICA_M_18_ACATISIA = "N002-MF000000347";
+        public const string ALTURA_FISICA_M_18_ENTR_TRABAJO_ALTURA = "N002-MF000000348";
+        public const string ALTURA_FISICA_M_18_CEFALEA = "N002-MF000000349";
+        public const string ALTURA_FISICA_M_18_EMF_PSIQUI = "N002-MF000000350";
+        public const string ALTURA_FISICA_M_18_TIMPANOS = "N002-MF000000351";
+        public const string ALTURA_FISICA_M_18_AUDICION = "N002-MF000000352";
+        public const string ALTURA_FISICA_M_18_SUS_PIE_15SEG = "N002-MF000000353";
+        public const string ALTURA_FISICA_M_18_CAMINA_LIBRE_RECTA_3MTS = "N002-MF000000354";
+        public const string ALTURA_FISICA_M_18_CAMINA_LIBRE_OJOS_VENDADOS = "N002-MF000000355";
+        public const string ALTURA_FISICA_M_18_CAMINA_LIBRE_OJOS_VENDADOS_PUNTA_TALON = "N002-MF000000356";
+        public const string ALTURA_FISICA_M_18_LIMITACION_FUEZA_EXTREMIEDADES = "N002-MF000000357";
+        public const string ALTURA_FISICA_M_18_ADIADOCOQUINESIA_DIRECTA = "N002-MF000000358";
+        public const string ALTURA_FISICA_M_18_ADIADOCOQUINESIA_CRUZADA = "N002-MF000000359";
+        public const string ALTURA_FISICA_M_18_NISTAGMUS = "N002-MF000000360";
+        public const string ALTURA_FISICA_M_18_APTO_PARA_ALTURA_MTS18 = "N002-MF000000361";
+        public const string ALTURA_FISICA_M_18_OBS2 = "N002-MF000000362";
+        public const string ALTURA_FISICA_M_18_OBS1 = "N002-MF000000630";
+
+
+     
+
+        #endregion
+
+        public const string TACTO_RECTAL_ID = "N009-ME000000031";
+        public const string TACTO_RECTAL_HALLAZGOS = "N009-MF000000358";
+
+        public const string EVAL_NEUROLOGICA_ID = "N009-ME000000037";
+        public const string EVAL_NEUROLOGICA_HALLAZGOS = "N009-MF000000359";
+        public const string EVAL_NEUROLOGICA_DESCRIPCION_ID = "N009-MF000000354";
+
+        public const string OWNER_ORGNIZATION_ID = "N009-OO000000052";
+        
+        public const string GenericErrorMessage = "Se generó un error al procesar los datos. Por favor verificar el LOG y comunicarse con el administrador del sistema.";
+        public const string GOOGLE_IP_ADDRESS = "74.125.229.247";
+        public const string IMAGE_PREVIEW_DIRECTORY = @"Images\Preview\";
+
+        #region ANTROPOMETRIA
+              
+        public const string ANTROPOMETRIA_ID = "N002-ME000000002";
+        public const string ANTROPOMETRIA_TALLA_ID = "N002-MF000000007";
+        public const string ANTROPOMETRIA_PESO_ID = "N002-MF000000008";
+        public const string ANTROPOMETRIA_IMC_ID = "N002-MF000000009";
+        public const string ANTROPOMETRIA_PERIMETRO_ABDOMINAL_ID = "N002-MF000000010";
+        public const string ANTROPOMETRIA_PERIMETRO_CADERA_ID = "N002-MF000000011";
+        public const string ANTROPOMETRIA_INDICE_CINTURA_ID = "N002-MF000000012";
+        public const string ANTROPOMETRIA_PORCENTAJE_GRASA_CORPORAL_ID = "N002-MF000000013";
+        
+      
+        
+        #endregion
+
+      
+        #region FUNCIONES_VITALES
+               
+        public const string FUNCIONES_VITALES_ID = "N002-ME000000001";
+        public const string FUNCIONES_VITALES_PAS_ID = "N002-MF000000001";
+        public const string FUNCIONES_VITALES_PAD_ID = "N002-MF000000002";
+        public const string FUNCIONES_VITALES_FREC_CARDIACA_ID = "N002-MF000000003";
+        public const string FUNCIONES_VITALES_TEMPERATURA_ID = "N002-MF000000004";
+        public const string FUNCIONES_VITALES_FREC_RESPIRATORIA_ID = "N002-MF000000005";
+        public const string FUNCIONES_VITALES_SAT_O2_ID = "N002-MF000000006";
+
+        #endregion
+
+        public const string TEST_ROMBERG_ID = "N009-ME000000038";
+        public const string TEST_ROMBERG_HALLAZGOS_ID = "N009-MF000000363";
+        public const string TEST_ROMBERG_DESCRIPCION_ID = "N009-MF000000375";
+
+        #region Tamizaje Dermatológico
+        public const string TAMIZAJE_DERMATOLOGIO_ID = "N009-ME000000044";
+        public const string TAMIZAJE_DERMATOLOGIO_HALLAZGOS_ID = "N009-MF000000405";
+
+        public const string TAMIZAJE_DERMATOLOGIO_SUFRE_UD_ENFERMEDAD_PIEL_ID = "N009-MF000000399";
+        public const string TAMIZAJE_DERMATOLOGIO_SI_QUE_DX_TIENE_ID = "N009-MF000000400";
+        public const string TAMIZAJE_DERMATOLOGIO_ACTUALMENTE_LESION_ID = "N009-MF000000401";
+        public const string TAMIZAJE_DERMATOLOGIO_SI_DONDE_LOCALIZA_ID = "N009-MF000000402";
+        public const string TAMIZAJE_DERMATOLOGIO_CUANTO_TIENE_LESION_ID = "N009-MF000000403";
+        public const string TAMIZAJE_DERMATOLOGIO_PRESENTA_COLORACION_PIEL_ID = "N009-MF000000404";
+        public const string TAMIZAJE_DERMATOLOGIO_LESIONES_REPITE_VARIAS_ANIOS_ID = "N009-MF000000405";
+        public const string TAMIZAJE_DERMATOLOGIO_ENRROJECIMIENTO_PARTE_CUERPO_ID = "N009-MF000000406";
+        public const string TAMIZAJE_DERMATOLOGIO_ENRROJECIMIENTO_SI_DONDE_LOCALIZA_ID = "N009-MF000000407";
+        public const string TAMIZAJE_DERMATOLOGIO_TIENE_COMEZON_ID = "N009-MF000000408";
+        public const string TAMIZAJE_DERMATOLOGIO_COMEZON_LOCALIZA_ID = "N009-MF000000409";
+        public const string TAMIZAJE_DERMATOLOGIO_HINCHAZON_PARTE_CUERPO_ID = "N009-MF000000410";
+        public const string TAMIZAJE_DERMATOLOGIO_HINCHAZON_PARTE_CUERPO_DONDE_LOCALIZA_ID = "N009-MF000000411";
+        public const string TAMIZAJE_DERMATOLOGIO_ALERGIA_ASMA_ID = "N009-MF000000412";
+        public const string TAMIZAJE_DERMATOLOGIO_USA_EPP_ID = "N009-MF000000413";
+
+        public const string TAMIZAJE_DERMATOLOGIO_SI_TIPO_PROTECCION_USA_ID = "N009-MF000001009";
+        public const string TAMIZAJE_DERMATOLOGIO_PRESENTA_CAMBIO_UNAS_ID = "N009-MF000001010";
+        public const string TAMIZAJE_DERMATOLOGIO_TOMANDO_ALGUNA_MEDICACION_ID = "N009-MF000001011";
+        public const string TAMIZAJE_DERMATOLOGIO_SI_COMO_SE_LLAMA_ID = "N009-MF000001012";
+        public const string TAMIZAJE_DERMATOLOGIO_DOSIS_FRECUENCIA_ID = "N009-MF000001013";
+        public const string TAMIZAJE_DERMATOLOGIO_DESCRIPCION1_ID = "N009-MF000001014";
+        public const string TAMIZAJE_DERMATOLOGIO_DERMATOPIA_ID = "N009-MF000001015";
+        public const string TAMIZAJE_DERMATOLOGIO_NIKOLSKY_ID = "N009-MF000001016";
+        #endregion
+      
+        public const string EXAMEN_MAMA_ID = "N009-ME000000012";
+        public const string EXAMEN_MAMA_HALLAZGOS_ID = "N009-MF000000511";
+        
+        public const string AUDIOMETRIA_OTOSCOPIA_OD = "N002-MF000000178";
+        public const string AUDIOMETRIA_OTOSCOPIA_OI = "N002-MF000000179";
+        public const string AUDIOMETRIA_ID = "N002-ME000000005";
+
+        #region Espirometria
+              
+        public const string AUDIOMETRIA_CONCLUSIONES_ID = "N009-MF000000226";
+
+        public const string ESPIROMETRIA_ID = "N002-ME000000031";
+        public const string ESPIROMETRIA_CONCLUSION_2017 = "N003-MF000000016";
+        public const string ESPIROMETRIA_CUESTIONARIO_ID = "CE";
+
+        public const string ESPIROMETRIA_FUNCION_RESPIRATORIA_ABS_CVF = "N002-MF000000286";
+        public const string ESPIROMETRIA_FUNCIÓN_RESPIRATORIA_ABS_VEF_1 = "N002-MF000000287";
+        public const string ESPIROMETRIA_FUNCIÓN_RESPIRATORIA_ABS_VEF_1_CVF = "N002-MF000000169";
+        public const string ESPIROMETRIA_FUNCIÓN_RESPIRATORIA_ABS_FEF_25_75 = "N002-MF000000171";
+
+        public const string ESPIROMETRIA_FUNCIÓN_RESPIRATORIA_ABS_RESULTADOS = "N009-MF000000205";
+        public const string ESPIROMETRIA_FUNCIÓN_RESPIRATORIA_ABS_OBSERVACION = "N009-MF000000228";
+
+
+        public const string ESPIROMETRIA_CVF_ID = "N009-ME000000578";
+        public const string ESPIROMETRIA_VEF1_ID = "N009-ME000000579";
+        public const string ESPIROMETRIA_VEF_CVF_ID = "N009-ME000000580";
+        //public const string ESPIROMETRIA_VEF_CVF_ID = "N002-ME000000171";
+        public const string ESPIROMETRIA_ORIGEN_ETNICO = "N009-MF000000622";
+        public const string ESPIROMETRIA_TABAQUISMO = "N009-MF000000623"; 
+
+        public const string ESPIROMETRIA_RESULTADO_ID = "N009-MF000000205";
+        public const string ESPIROMETRIA_OBSERVACION_ID = "N009-MF000000228";
+
+        public const string ESPIROMETRIA_TIEMPO_TRABAJO_ID = "N009-MF000001038";
+
+        public const string ESPIROMETRIA_FUNCION_RESPIRATORIA_FET = "N002-MF000000170";
+        public const string ESPIROMETRIA_FUNCION_RESPIRATORIA_PEF = "N002-MF000000168";
+        public const string ESPIROMETRIA_FUNCION_RESPIRATORIA_DESCRIPCION_CVF = "N009-MF000000578";
+        public const string ESPIROMETRIA_FUNCION_RESPIRATORIA_DESCRIPCION_VEF_1 = "N009-MF000000579";
+        public const string ESPIROMETRIA_FUNCION_RESPIRATORIA_DESCRIPCION_VEF_1_CVF = "N009-MF000000580";
+        public const string ESPIROMETRIA_FUNCION_RESPIRATORIA_DESCRIPCION_FET = "N009-MF000000582";
+        public const string ESPIROMETRIA_FUNCION_RESPIRATORIA_DESCRIPCION_F_25_75 = "N009-MF000000581";
+        public const string ESPIROMETRIA_FUNCION_RESPIRATORIA_DESCRIPCION_PEF = "N009-MF000000583";
+        public const string ESPIROMETRIA_FUNCION_RESPIRATORIA_EDAD_PULMONAR_ESTIMADA = "N009-MF000000600";
+
+        // CUESTIONARIO
+        public const string ESPIROMETRIA_CUESTIONARIO_DE_EXCLUSION_1 = "N002-MF000000199";
+        public const string ESPIROMETRIA_CUESTIONARIO_DE_EXCLUSION_2 = "N002-MF000000200";
+        public const string ESPIROMETRIA_CUESTIONARIO_DE_EXCLUSION_3 = "N002-MF000000201";
+        public const string ESPIROMETRIA_CUESTIONARIO_DE_EXCLUSION_4 = "N002-MF000000202";
+        public const string ESPIROMETRIA_CUESTIONARIO_DE_EXCLUSION_5 = "N002-MF000000203";
+
+
+        public const string PIROMETRIA_ANTECEDENTES_HEMOSTISIS = "N009-MF000000112";
+        public const string ESPIROMETRIA_ANTECEDENTES_PNEUMOTORAX = "N009-MF000000113";
+        public const string ESPIROMETRIA_ANTECEDENTES_TRAQUEOSTOMIA = "N009-MF000000114";
+        public const string ESPIROMETRIA_ANTECEDENTES_SONDA_PLEURAL = "N009-MF000000115";
+        public const string ESPIROMETRIA_ANTECEDENTES_ANEURISMA_CEREBRAL = "N009-MF000000118";
+        public const string ESPIROMETRIA_ANTECEDENTES_EMBOLIA_PULMONAR = "N009-MF000000119";
+        public const string ESPIROMETRIA_ANTECEDENTES_INFARTO_RECIENTE = "N009-MF000000116";
+        public const string ESPIROMETRIA_ANTECEDENTES_INESTABILIDAD_CV = "N009-MF000000574";
+        public const string ESPIROMETRIA_ANTECEDENTES_FIEBRE_NAUSEAS = "N009-MF000000117";
+        public const string ESPIROMETRIA_ANTECEDENTES_EMBARAZO_AVANZADO = "N009-MF000000120";
+        public const string ESPIROMETRIA_ANTECEDENTES_EMBARAZO_COMPLICADO = "N009-MF000000121";
+
+
+        public const string ESESPIROMETRIA_CUESTIONARIO_PARA_1 = "N002-MF000000207";
+        public const string ESPIROMETRIA_CUESTIONARIO_PARA_2 = "N002-MF000000284";
+        public const string ESPIROMETRIA_CUESTIONARIO_PARA_3 = "N002-MF000000204";
+        public const string ESPIROMETRIA_CUESTIONARIO_PARA_4 = "N002-MF000000206";
+        public const string ESPIROMETRIA_CUESTIONARIO_PARA_5 = "N002-MF000000208";
+        public const string ESPIROMETRIA_CUESTIONARIO_PARA_6 = "N002-MF000000205";
+        public const string ESPIROMETRIA_CUESTIONARIO_PARA_7 = "N002-MF000000285";
+
+        // NUEVO CUESTIONARIO (CRITERIOS DE EXCLUSION)  SIGESOFT   25/06/15
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_TUVO_DESPRENDIMIENTO_RETINA = "N002-MF000000386";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_TENIDO_ATAQUE_CARDIACO = "N002-MF000000387";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_ESTADO_HOSPITALIZADO = "N002-MF000000388";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_USANDO_MEDICAMENTOS = "N002-MF000000389";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_CASO_SER_MUJER = "N002-MF000000390";
+
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_HEMOPTISIS = "N002-MF000000391";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_NEUMOTORAX = "N002-MF000000392";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_TRAQUEOSTOMIA = "N002-MF000000393";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_SONDA_PLEURAL = "N002-MF000000394";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_ANEURISMA_ABDOMEN = "N002-MF000000395";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_EMBOLIA_PULMONAR = "N002-MF000000396";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_INFARTO_RECIENTE = "N002-MF000000397";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_INESTABILIDAD_CV = "N002-MF000000398";
+
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_FIEBRE_NAUSEA_VOMITO = "N002-MF000000399";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_EMBARAZO_COMPLICADO = "N002-MF000000400";
+        public const string ESPIROMETRIA_CUESTIONARIO_EXCLUSION_EMBARAZO_AVANZADO= "N009-MF000001584";
+        
+
+        // CUESTIONARIO DE QUIENES DEBEN HACER LA ESPIROMETRIA
+        public const string ESPIROMETRIA_CUESTIONARIO_DEBEN_HACER_TUVO_INFECCION_RESPIRATORIA = "N002-MF000000401";
+        public const string ESPIROMETRIA_CUESTIONARIO_DEBEN_HACER_TUVO_INFECCION_OIDO = "N002-MF000000402";
+        public const string ESPIROMETRIA_CUESTIONARIO_DEBEN_HACER_USA_AEROSOLES = "N002-MF000000403";
+        public const string ESPIROMETRIA_CUESTIONARIO_DEBEN_HACER_USADO_MEDICAMENTO_BRONCODILATADOR = "N002-MF000000404";
+        public const string ESPIROMETRIA_CUESTIONARIO_DEBEN_HACER_FUMO_TIPO_DE_CIGARRO = "N002-MF000000405";
+        public const string ESPIROMETRIA_CUESTIONARIO_DEBEN_HACER_CUANTOS = "N002-MF000000406";
+        public const string ESPIROMETRIA_CUESTIONARIO_DEBEN_HACER_REALIZO_EJERCICIO_FUERTE = "N002-MF000000407";
+
+        public const string ESPIROMETRIA_CF_FVC = "N003-MF000000012";
+        public const string ESPIROMETRIA_CF_FEV1 = "N003-MF000000013";
+        public const string ESPIROMETRIA_CF_DIV_FEV = "N003-MF000000014";
+        public const string ESPIROMETRIA_CF_FEF2575 = "N003-MF000000015";
+        public const string ESPIROMETRIA_CF_CONCLUSION = "N003-MF000000016";
+
+        #endregion
+
+        #region Electrocardiograma OLD
+        public const string ELECTROCARDIOGRAMA_ID = "N002-ME000000025";
+        //Antecedentes
+        public const string ELECTROCARDIOGRAMA_ATAQUE_CORAZON_ID = "N009-MF000000128";
+        public const string ELECTROCARDIOGRAMA_CANSANCIO_RAPIDO_ID = "N009-MF000000123";
+        public const string ELECTROCARDIOGRAMA_DIABETES_ID = "N009-MF000000132";
+        public const string ELECTROCARDIOGRAMA_DISLIPIDEMIA_ID = "N009-MF000000133";
+        public const string ELECTROCARDIOGRAMA_DOLOR_PRECORDIAL_ID = "N009-MF000000126";
+        public const string ELECTROCARDIOGRAMA_MAREOS_ID = "N009-MF000000125";
+        public const string ELECTROCARDIOGRAMA_OBESIDAD_ID = "N009-MF000000130";
+        public const string ELECTROCARDIOGRAMA_OTROS1_ESPECIFICAR_ID = "N009-MF000000136";
+        public const string ELECTROCARDIOGRAMA_PALPITACIONES_ID = "N009-MF000000127";
+        public const string ELECTROCARDIOGRAMA_PERDIDA_CONCIENCIA_ID = "N009-MF000000129";
+        public const string ELECTROCARDIOGRAMA_PRESION_ALTA_ID = "N009-MF000000124";
+        public const string ELECTROCARDIOGRAMA_SEDENTARISMO_ID = "N009-MF000000135";
+        public const string ELECTROCARDIOGRAMA_SOPLO_CARDIACO_ID = "N009-MF000000122";
+        public const string ELECTROCARDIOGRAMA_TABAQUISMO_ID = "N009-MF000000131";
+        //SINTOMAS
+        public const string ELECTROCARDIOGRAMA_CLAUDICAC_INTERMITENTE_ID = "N009-MF000000142";
+        public const string ELECTROCARDIOGRAMA_DESMAYOS_ID = "N009-MF000000138";
+        public const string ELECTROCARDIOGRAMA_DISNEA_PAROXISTICA_ID = "N009-MF000000140";
+        public const string ELECTROCARDIOGRAMA_DOLOR_PRECORDIAL1_ID = "N009-MF000000137";
+        public const string ELECTROCARDIOGRAMA_MAREOS1_ID = "N009-MF000000141";
+        public const string ELECTROCARDIOGRAMA_OTROS2_ID = "N009-MF000000143";
+        public const string ELECTROCARDIOGRAMA_PALPITACIONES2_ID = "N009-MF000000139";
+        public const string ELECTROCARDIOGRAMA_VARICES_PIERNAS_ID = "N009-MF000000134";
+        //VALORES NUMERICOS
+        public const string ELECTROCARDIOGRAMA_INTERVALO_PR_ID = "N002-MF000000187";
+        public const string ELECTROCARDIOGRAMA_INTERVALO_QRS_ID = "N002-MF000000188";
+        public const string ELECTROCARDIOGRAMA_INTERVALO_QT_ID = "N002-MF000000189";
+        public const string ELECTROCARDIOGRAMA_RITMO_SINUAL_ID = "N002-MF000000186";
+        //INFORME DESCRIPTIVO
+        public const string ELECTROCARDIOGRAMA_COMPLEJO_QRS_ID = "N002-MF000000197";
+        public const string ELECTROCARDIOGRAMA_COMPLEJO_QRS_ANORMAL_ID = "N009-MF000000225";
+        public const string ELECTROCARDIOGRAMA_OBSERVACION_ID = "N009-MF000001008";
+        public const string ELECTROCARDIOGRAMA_ONDA_P_ID = "N002-MF000000190";
+        public const string ELECTROCARDIOGRAMA_ONDA_P_ANORMAL_ID = "N002-MF000000195";
+        public const string ELECTROCARDIOGRAMA_ONDA_T_ID = "N002-MF000000194";
+        public const string ELECTROCARDIOGRAMA_ONDA_T_ANORMAL_ID = "N002-MF000000193";
+        public const string ELECTROCARDIOGRAMA_SEGMENTO_ST_ID = "N002-MF000000196";
+        public const string ELECTROCARDIOGRAMA_SEGMENTO_ST_ANORMAL_ID = "N009-MF000001006";
+        //INFORME DESCRIPTIVO1
+        public const string ELECTROCARDIOGRAMA_TRANSTORNOS_CONDUCCION_ID = "N002-MF000000192";
+        public const string ELECTROCARDIOGRAMA_TRANSTORNOS_RITMO_ID = "N002-MF000000191";
+        //CONCLUSION
+        public const string ELECTROCARDIOGRAMA_DESCRIPCION_ID = "N009-MF000000227";
+        #endregion
+
+        #region Electrocardiograma New
+     
+        //Antecedentes    
+     
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_SOPLO_CARDIACO_ID = "N002-MF000000428";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_PRESION_ALTA_ID = "N002-MF000000429";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_DOLOR_PRECORDIAL_ID = "N002-MF000000430";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_IMAS_ID = "N002-MF000000431";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_OBESIDAD_ID = "N002-MF000000432";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_CANSANCIO_RAPIDO_ID = "N002-MF000000433";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_MAREOS_ID = "N002-MF000000434";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_PALPITACIONES_ID = "N002-MF000000435";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_PERDIDA_CONCIENCIA_ID = "N002-MF000000436";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_TABAQUISMO_ID = "N002-MF000000437";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_DIABETES_ID = "N002-MF000000438";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_DISLIPIDEMIA_ID = "N002-MF000000439";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_VARICES_ID = "N002-MF000000440";
+        public const string ELECTROCARDIOGRAMA_ANTECEDENTES_OTROS_ID = "N002-MF000000441";
+
+        //SINTOMAS
+        public const string ELECTROCARDIOGRAMA_SINTOMAS_ASINTOMATICO_ID = "N002-MF000000442";
+        public const string ELECTROCARDIOGRAMA_SINTOMAS_DOLOR_PRECORDIAL_ID = "N002-MF000000443";
+        public const string ELECTROCARDIOGRAMA_SINTOMAS_PALPITACIONES_ID = "N002-MF000000444";
+        public const string ELECTROCARDIOGRAMA_SINTOMAS_LIPOTIMIAS_ID = "N002-MF000000445";
+        public const string ELECTROCARDIOGRAMA_SINTOMAS_DISNEA_PAROXISTICA_ID = "N002-MF000000446";
+        public const string ELECTROCARDIOGRAMA_SINTOMAS_MAREOS_ID = "N002-MF000000447";
+        public const string ELECTROCARDIOGRAMA_SINTOMAS_CLAUDICAC_INTERMITENTE_ID = "N002-MF000000448";
+        public const string ELECTROCARDIOGRAMA_SINTOMAS_OTROS_ID = "N002-MF000000449";
+
+     
+        //SIGNOS DE INTERPRETACION
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_RITMO_ID = "N002-MF000000453";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_INTERVALO_PR_ID = "N002-MF000000454";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_INTERVALO_QRS_ID = "N002-MF000000455";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_INTERVALO_QT_ID = "N002-MF000000456";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_ONDA_P_ID = "N002-MF000000457";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_ONDA_Q_ID = "N002-MF000000458";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_ONDA_R_ID = "N002-MF000000459";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_ONDA_S_ID = "N002-MF000000460";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_ONDA_T_ID = "N002-MF000000461";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_ONDA_U_ID = "N002-MF000000462";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_SEGMENTO_ST_ID = "N002-MF000000463";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_EJE_QRS_ID = "N002-MF000000464";
+        public const string ELECTROCARDIOGRAMA_SIGNOS_INTER_ECG_FC_ID = "N002-MF000000486";
+
+        public const string ELECTROCARDIOGRAMA_DESCRIPCION_INTERPRETACION_ID = "N002-MF000000465";
+
+        public const string ELECTROCARDIOGRAMA_PACIENTE_ENCUENTRA_APTO_TRAB_FORZADO_ID = "N002-MF000000466";
+        public const string ELECTROCARDIOGRAMA_PACIENTE_ENCUENTRA_APTO_TRAB_ALTURA_MAY_2500_ID = "N002-MF000000467";
+
+        public const string ELECTROCARDIOGRAMA_EXAMEN_FISICO_PREF_EXA_CORAZON_ID = "N002-MF000000451";
+        public const string ELECTROCARDIOGRAMA_EXAMEN_FISICO_PREF_OTROS_HALLAZGOS_ID = "N002-MF000000452";
+        public const string ELECTROCARDIOGRAMA_EXAMEN_FISICO_PREF_PAS_ID = "N002-MF000000484";
+        public const string ELECTROCARDIOGRAMA_EXAMEN_FISICO_PREF_PAD_ID = "N002-MF000000485";
+
+       
+     
+      
+        #endregion
+
+        #region PRUEBA ESFUERZO  OLD
+        
+     
+        //public const string PRUEBA_ESFUERZO_ID = "N002-ME000000029";
+        public const string PRUEBA_ESFUERZO_DESCRIPCION_ID = "N002-MF000000370";
+    //Antecedentes
+        public const string PRUEBA_ESFUERZO_FUMADOR_ID = "N002-MF000000344";
+        public const string PRUEBA_ESFUERZO_DIABETICO_ID = "N002-MF000000345";
+        public const string PRUEBA_ESFUERZO_INFARTO_ID = "N002-MF000000346";
+        public const string PRUEBA_ESFUERZO_ANTECEDENTE_FAMILIAR_ID = "N002-MF000000347";
+        public const string PRUEBA_ESFUERZO_PRIOR_ID = "N002-MF000000348";
+        public const string PRUEBA_ESFUERZO_ANGINA_ID = "N002-MF000000349";
+       
+        
+        //RESUMEN
+        public const string PRUEBA_ESFUERZO_CPVS_ID = "N002-MF000000363";
+        public const string PRUEBA_ESFUERZO_TIEMPO_EJERCICIO_ID = "N002-MF000000364";
+        public const string PRUEBA_ESFUERZO_DERIV_100_UVST_ID = "N002-MF000000365";
+        //VALORES MAXIMOS
+        public const string PRUEBA_ESFUERZO_VELOCIDAD_ID = "N002-MF000000366";
+        public const string PRUEBA_ESFUERZO_PENDIENTE_ID = "N002-MF000000367";
+        public const string PRUEBA_ESFUERZO_METS_ID = "N002-MF000000368";
+        public const string PRUEBA_ESFUERZO_F_CARDIACA_ID = "N009-MF000000974";
+        public const string PRUEBA_ESFUERZO_P_SISTOLICA_ID = "N009-MF000000975";
+        public const string PRUEBA_ESFUERZO_DIASTOLICA_ID = "N009-MF000000976";
+        public const string PRUEBA_ESFUERZO_FCXTA_ID = "N009-MF000000977";
+        public const string PRUEBA_ESFUERZO_INDICE_STFC_ID = "N009-MF000000978";
+        public const string PRUEBA_ESFUERZO_OBJETIVO_ID = "N009-MF000000979";
+        //CONCLUSIONES
+        public const string PRUEBA_ESFUERZO_RAZONES_FINALIZAR_ID = "N002-MF000000369";
+        public const string PRUEBA_ESFUERZO_CONCLUSIONES_ID = "N002-MF000000370";
+        public const string PRUEBA_ESFUERZO_SINTOMAS_ID = "N009-MF000000992";
+        //PRUEBA DE ESFUERZO
+
+
+        public const string PRUEBA_ESFUERZO_P_REPOSO_INICIO_ID = "N002-MF000000357";
+        public const string PRUEBA_ESFUERZO_P_REPOSO_DURACION_ID = "N002-MF000000358";
+        public const string PRUEBA_ESFUERZO_P_REPOSO_VELOCIDAD_ID = "N002-MF000000359";
+        public const string PRUEBA_ESFUERZO_P_REPOSO_INCLINACION_ID = "N002-MF000000360";
+        public const string PRUEBA_ESFUERZO_P_REPOSO_MTS_ID = "N009-MF000000927";
+        public const string PRUEBA_ESFUERZO_P_REPOSO_FC_ID = "N009-MF000000928";
+        public const string PRUEBA_ESFUERZO_P_REPOSO_PAS_ID = "N009-MF000000929";
+        public const string PRUEBA_ESFUERZO_P_REPOSO_PRODUCTO_ID = "N009-MF000000930";
+        public const string PRUEBA_ESFUERZO_P_REPOSO_COMENTARIO_ID = "N009-MF000000931";
+
+
+        public const string PRUEBA_ESFUERZO_P_ESFUERZO_INICIO_ID = "N002-MF000000362";
+        public const string PRUEBA_ESFUERZO_P_ESFUERZO_DURACION_ID = "N009-MF000000887";
+        public const string PRUEBA_ESFUERZO_P_ESFUERZO_VELOCIDAD_ID = "N009-MF000000888";
+        public const string PRUEBA_ESFUERZO_P_ESFUERZO_INCLINACION_ID = "N009-MF000000889";
+        public const string PRUEBA_ESFUERZO_P_ESFUERZO_MTS_ID = "N009-MF000000933";
+        public const string PRUEBA_ESFUERZO_P_ESFUERZO_FC_ID = "N009-MF000000934";
+        public const string PRUEBA_ESFUERZO_P_ESFUERZO_PAS_ID = "N009-MF000000935";
+        public const string PRUEBA_ESFUERZO_P_ESFUERZO_PRODUCTO_ID = "N009-MF000000936";
+        public const string PRUEBA_ESFUERZO_P_ESFUERZO_COMENTARIO_ID = "N009-MF000000937";
+
+        public const string PRUEBA_ESFUERZO_S_ESFUERZO_INICIO_ID = "N009-MF000000891";
+        public const string PRUEBA_ESFUERZO_S_ESFUERZO_DURACION_ID = "N009-MF000000892";
+        public const string PRUEBA_ESFUERZO_S_ESFUERZO_VELOCIDAD_ID = "N009-MF000000893";
+        public const string PRUEBA_ESFUERZO_S_ESFUERZO_INCLINACION_ID = "N009-MF000000894";
+        public const string PRUEBA_ESFUERZO_S_ESFUERZO_MTS_ID = "N009-MF000000939";
+        public const string PRUEBA_ESFUERZO_S_ESFUERZO_FC_ID = "N009-MF000000940";
+        public const string PRUEBA_ESFUERZO_S_ESFUERZO_PAS_ID = "N009-MF000000941";
+        public const string PRUEBA_ESFUERZO_S_ESFUERZO_PRODUCTO_ID = "N009-MF000000942";
+        public const string PRUEBA_ESFUERZO_S_ESFUERZO_COMENTARIO_ID = "N009-MF000000943";
+
+        public const string PRUEBA_ESFUERZO_T_ESFUERZO_INICIO_ID = "N009-MF000000896";
+        public const string PRUEBA_ESFUERZO_T_ESFUERZO_DURACION_ID = "N009-MF000000897";
+        public const string PRUEBA_ESFUERZO_T_ESFUERZO_VELOCIDAD_ID = "N009-MF000000898";
+        public const string PRUEBA_ESFUERZO_T_ESFUERZO_INCLINACION_ID = "N009-MF000000899";
+        public const string PRUEBA_ESFUERZO_T_ESFUERZO_MTS_ID = "N009-MF000000945";
+        public const string PRUEBA_ESFUERZO_T_ESFUERZO_FC_ID = "N009-MF000000946";
+        public const string PRUEBA_ESFUERZO_T_ESFUERZO_PAS_ID = "N009-MF000000947";
+        public const string PRUEBA_ESFUERZO_T_ESFUERZO_PRODUCTO_ID = "N009-MF000000948";
+        public const string PRUEBA_ESFUERZO_T_ESFUERZO_COMENTARIO_ID = "N009-MF000000949";
+
+        public const string PRUEBA_ESFUERZO_C_ESFUERZO_INICIO_ID = "N009-MF000000901";
+        public const string PRUEBA_ESFUERZO_C_ESFUERZO_DURACION_ID = "N009-MF000000902";
+        public const string PRUEBA_ESFUERZO_C_ESFUERZO_VELOCIDAD_ID = "N009-MF000000903";
+        public const string PRUEBA_ESFUERZO_C_ESFUERZO_INCLINACION_ID = "N009-MF000000904";
+        public const string PRUEBA_ESFUERZO_C_ESFUERZO_MTS_ID = "N009-MF000000951";
+        public const string PRUEBA_ESFUERZO_C_ESFUERZO_FC_ID = "N009-MF000000952";
+        public const string PRUEBA_ESFUERZO_C_ESFUERZO_PAS_ID = "N009-MF000000953";
+        public const string PRUEBA_ESFUERZO_C_ESFUERZO_PRODUCTO_ID = "N009-MF000000954";
+        public const string PRUEBA_ESFUERZO_C_ESFUERZO_COMENTARIO_ID = "N009-MF000000955";
+        
+        public const string PRUEBA_ESFUERZO_P_RECUPERACION_INICIO_ID = "N009-MF000000906";
+        public const string PRUEBA_ESFUERZO_P_RECUPERACION_DURACION_ID = "N009-MF000000907";
+        public const string PRUEBA_ESFUERZO_P_RECUPERACION_VELOCIDAD_ID = "N009-MF000000908";
+        public const string PRUEBA_ESFUERZO_P_RECUPERACION_INCLINACION_ID = "N009-MF000000909";
+        public const string PRUEBA_ESFUERZO_P_RECUPERACION_MTS_ID = "N009-MF000000957";
+        public const string PRUEBA_ESFUERZO_P_RECUPERACION_FC_ID = "N009-MF000000958";
+        public const string PRUEBA_ESFUERZO_P_RECUPERACION_PAS_ID = "N009-MF000000959";
+        public const string PRUEBA_ESFUERZO_P_RECUPERACION_PRODUCTO_ID = "N009-MF000000960";
+        public const string PRUEBA_ESFUERZO_P_RECUPERACION_COMENTARIO_ID = "N009-MF000000961";
+        
+        public const string PRUEBA_ESFUERZO_S_RECUPERACION_INICIO_ID = "N009-MF000000911";
+        public const string PRUEBA_ESFUERZO_S_RECUPERACION_DURACION_ID = "N009-MF000000912";
+        public const string PRUEBA_ESFUERZO_S_RECUPERACION_VELOCIDAD_ID = "N009-MF000000913";
+        public const string PRUEBA_ESFUERZO_S_RECUPERACION_INCLINACION_ID = "N009-MF000000914";
+        public const string PRUEBA_ESFUERZO_S_RECUPERACION_MTS_ID = "N009-MF000000963";
+        public const string PRUEBA_ESFUERZO_S_RECUPERACION_FC_ID = "N009-MF000000964";
+        public const string PRUEBA_ESFUERZO_S_RECUPERACION_PAS_ID = "N009-MF000000965";
+        public const string PRUEBA_ESFUERZO_S_RECUPERACION_PRODUCTO_ID = "N009-MF000000966";
+        public const string PRUEBA_ESFUERZO_S_RECUPERACION_COMENTARIO_ID = "N009-MF000000967";
+
+        public const string PRUEBA_ESFUERZO_S_REPOSO_INICIO_ID = "N009-MF000000916";
+        public const string PRUEBA_ESFUERZO_S_REPOSO_DURACION_ID = "N009-MF000000917";
+        public const string PRUEBA_ESFUERZO_S_REPOSO_VELOCIDAD_ID = "N009-MF000000918";
+        public const string PRUEBA_ESFUERZO_S_REPOSO_INCLINACION_ID = "N009-MF000000919";
+        public const string PRUEBA_ESFUERZO_S_REPOSO_MTS_ID = "N009-MF000000969";
+        public const string PRUEBA_ESFUERZO_S_REPOSO_FC_ID = "N009-MF000000970";
+        public const string PRUEBA_ESFUERZO_S_REPOSO_PAS_ID = "N009-MF000000971";
+        public const string PRUEBA_ESFUERZO_S_REPOSO_PRODUCTO_ID = "N009-MF000000972";
+        public const string PRUEBA_ESFUERZO_S_REPOSO_COMENTARIO_ID = "N009-MF000000973";
+
+        //MAXIMO ST
+        public const string PRUEBA_ESFUERZO_ELEVACION_ST_ID = "N009-MF000000980";
+        public const string PRUEBA_ESFUERZO_ELEVACION_ST_EN_ID = "N009-MF000000981";
+        public const string PRUEBA_ESFUERZO_ELEVACION_ST_ALOS_ID = "N009-MF000000982";
+        
+        public const string PRUEBA_ESFUERZO_DEPRESION_ST_ID = "N009-MF000000983";
+        public const string PRUEBA_ESFUERZO_DEPRESION_ST_EN_ID = "N009-MF000000984";
+        public const string PRUEBA_ESFUERZO_DEPRESION_ST_ALOS_ID = "N009-MF000000985";
+
+        //MAXIMO CAMBIOS
+        public const string PRUEBA_ESFUERZO_CAMBIO_ELEVACION_ST_ID = "N009-MF000000986";
+        public const string PRUEBA_ESFUERZO_CAMBIO_ELEVACION_ST_EN_ID = "N009-MF000000987";
+        public const string PRUEBA_ESFUERZO_CAMBIO_ELEVACION_ST_ALOS_ID = "N009-MF000000988";
+
+        public const string PRUEBA_ESFUERZO_CAMBIO_DEPRESION_ST_ID = "N009-MF000000989";
+        public const string PRUEBA_ESFUERZO_CAMBIO_DEPRESION_ST_EN_ID = "N009-MF000000990";
+        public const string PRUEBA_ESFUERZO_CAMBIO_DEPRESION_ST_ALOS_ID = "N009-MF000000991";
+
+        #endregion
+
+        #region Ficha Ergonometrica
+
+        //***************************************************************************************************
+        public const string PRUEBA_ESFUERZO_ID = "N002-ME000000029";
+        public const string PRUEBA_ESFUERZO_DIAGNOSTICO_CLINICO_ID = "N002-MF000000475";
+        public const string PRUEBA_ESFUERZO_MEDICACION_ID = "N002-MF000000476";
+        public const string PRUEBA_ESFUERZO_EKG_BASAL_ID = "N002-MF000000477";
+        public const string PRUEBA_ESFUERZO_METODO_ID = "N002-MF000000478";
+        public const string PRUEBA_ESFUERZO_PROTOCOLO_ID = "N002-MF000000479";
+        public const string PRUEBA_ESFUERZO_FC_MAX_ID = "N002-MF000000480";
+        public const string PRUEBA_ESFUERZO_FC_SUB_MAX_ID = "N002-MF000000481";
+        public const string PRUEBA_ESFUERZO_PA_INICIAL_ID = "N002-MF000000482";
+        public const string PRUEBA_ESFUERZO_FC_INICIAL_ID = "N002-MF000000483";
+
+        public const string PRUEBA_ESFUERZO_ETAPA_1_MIN_ID = "N002-MF000000488";
+        public const string PRUEBA_ESFUERZO_ETAPA_1_PA_ID = "N002-MF000000489";
+        public const string PRUEBA_ESFUERZO_ETAPA_1_FC_ID = "N002-MF000000490";
+        public const string PRUEBA_ESFUERZO_ETAPA_1_ST_ID = "N002-MF000000491";
+        public const string PRUEBA_ESFUERZO_ETAPA_1_ARRITMIA_ID = "N002-MF000000492";
+        public const string PRUEBA_ESFUERZO_ETAPA_1_SINTOMAS_ID = "N002-MF000000493";
+
+        public const string PRUEBA_ESFUERZO_ETAPA_2_MIN_ID = "N002-MF000000495";
+        public const string PRUEBA_ESFUERZO_ETAPA_2_PA_ID = "N002-MF000000496";
+        public const string PRUEBA_ESFUERZO_ETAPA_2_FC_ID = "N002-MF000000497";
+        public const string PRUEBA_ESFUERZO_ETAPA_2_ST_ID = "N002-MF000000498";
+        public const string PRUEBA_ESFUERZO_ETAPA_2_ARRITMIA_ID = "N002-MF000000499";
+        public const string PRUEBA_ESFUERZO_ETAPA_2_SINTOMAS_ID = "N002-MF000000500";
+
+        public const string PRUEBA_ESFUERZO_ETAPA_3_MIN_ID = "N002-MF000000502";
+        public const string PRUEBA_ESFUERZO_ETAPA_3_PA_ID = "N002-MF000000503";
+        public const string PRUEBA_ESFUERZO_ETAPA_3_FC_ID = "N002-MF000000504";
+        public const string PRUEBA_ESFUERZO_ETAPA_3_ST_ID = "N002-MF000000505";
+        public const string PRUEBA_ESFUERZO_ETAPA_3_ARRITMIA_ID = "N002-MF000000506";
+        public const string PRUEBA_ESFUERZO_ETAPA_3_SINTOMAS_ID = "N002-MF000000507";
+
+        public const string PRUEBA_ESFUERZO_ETAPA_4_MIN_ID = "N002-MF000000509";
+        public const string PRUEBA_ESFUERZO_ETAPA_4_PA_ID = "N002-MF000000510";
+        public const string PRUEBA_ESFUERZO_ETAPA_4_FC_ID = "N002-MF000000511";
+        public const string PRUEBA_ESFUERZO_ETAPA_4_ST_ID = "N002-MF000000512";
+        public const string PRUEBA_ESFUERZO_ETAPA_4_ARRITMIA_ID = "N002-MF000000513";
+        public const string PRUEBA_ESFUERZO_ETAPA_4_SINTOMAS_ID = "N002-MF000000514";
+
+        public const string PRUEBA_ESFUERZO_ETAPA_5_MIN_ID = "N002-MF000000516";
+        public const string PRUEBA_ESFUERZO_ETAPA_5_PA_ID = "N002-MF000000517";
+        public const string PRUEBA_ESFUERZO_ETAPA_5_FC_ID = "N002-MF000000518";
+        public const string PRUEBA_ESFUERZO_ETAPA_5_ST_ID = "N002-MF000000519";
+        public const string PRUEBA_ESFUERZO_ETAPA_5_ARRITMIA_ID = "N002-MF000000520";
+        public const string PRUEBA_ESFUERZO_ETAPA_5_SINTOMAS_ID = "N002-MF000000521";
+
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_1_MIN_ID = "N002-MF000000523";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_1_PA_ID = "N002-MF000000524";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_1_FC_ID = "N002-MF000000525";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_1_ST_ID = "N002-MF000000526";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_1_ARRITMIA_ID = "N002-MF000000527";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_1_SINTOMAS_ID = "N002-MF000000528";
+
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_2_MIN_ID = "N002-MF000000530";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_2_PA_ID = "N002-MF000000531";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_2_FC_ID = "N002-MF000000532";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_2_ST_ID = "N002-MF000000533";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_2_ARRITMIA_ID = "N002-MF000000534";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_2_SINTOMAS_ID = "N002-MF000000535";
+
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_3_MIN_ID = "N002-MF000000537";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_3_PA_ID = "N002-MF000000538";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_3_FC_ID = "N002-MF000000539";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_3_ST_ID = "N002-MF000000540";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_3_ARRITMIA_ID = "N002-MF000000541";
+        public const string PRUEBA_ESFUERZO_RECUPERACION_ETAPA_3_SINTOMAS_ID = "N002-MF000000542";
+
+
+        public const string PRUEBA_ESFUERZO_OBSERVACIONES_ID = "N002-MF000000544";
+        public const string PRUEBA_ESFUERZO_CAPACIDAD_FUNCIONAL_ID = "N002-MF000000545";
+        public const string PRUEBA_ESFUERZO_RESPUESTA_PRESORA_ID = "N002-MF000000546";
+        public const string PRUEBA_ESFUERZO_RESPUESTA_CONOTROPICA_ID = "N002-MF000000547";
+        public const string PRUEBA_ESFUERZO_RESPUESTA_ISQUEMICA_ID = "N002-MF000000548";
+        public const string PRUEBA_ESFUERZO_SUGERENCIA_ID = "N002-MF000000549";
+
+        #endregion
+
+
+        #region ASCENSO GRANDES ALTURAS 7D
+
+
+        public const string ALTURA_7D_ID = "N002-ME000000046";
+        public const string ALTURA_7D_ANEMIA_ID = "N002-MF000000321";
+        public const string ASCENSO_GRANDES_ALTURAS_CIRUGIA_MAYOR_CRECIENTE_ID = "N002-MF000000313";
+        public const string ASCENSO_GRANDES_ALTURAS_DESORDENES_COAGULACION_ID = "N002-MF000000310";
+        public const string ASCENSO_GRANDES_ALTURAS_DIABETES_MELLITUS_ID = "N002-MF000000317";
+        public const string ASCENSO_GRANDES_ALTURAS_HIPERTENSION_ARTERIAL_ID = "N002-MF000000315";
+        public const string ASCENSO_GRANDES_ALTURAS_EMBARAZO_ID = "N002-MF000000319";
+        public const string ASCENSO_GRANDES_ALTURAS_PROBLEMAS_NEUROLOGICOS_ID = "N002-MF000000312";
+        public const string ASCENSO_GRANDES_ALTURAS_INFECCIONES_RECIENTES_ID = "N002-MF000000314";
+        public const string ASCENSO_GRANDES_ALTURAS_OBESIDAD_MORBIDA_ID = "N002-MF000000316";
+        public const string ASCENSO_GRANDES_ALTURAS_PROBLEMAS_CARDIACOS_ID = "N002-MF000000307";
+        public const string ASCENSO_GRANDES_ALTURAS_PROBLEMAS_RESPIRATORIOS_ID = "N002-MF000000311";
+        public const string ASCENSO_GRANDES_ALTURAS_PROBLEMAS_OFTALMOLOGICOS_ID = "N002-MF000000308";
+        public const string ASCENSO_GRANDES_ALTURAS_PROBLEMAS_DIGESTIVOS_ID = "N002-MF000000309";
+        public const string ASCENSO_GRANDES_ALTURAS_APNEA_SUEÑO_ID = "N002-MF000000318";
+        public const string ASCENSO_GRANDES_ALTURAS_OTRA_CONDICON_ID = "N002-MF000000325";
+        public const string ASCENSO_GRANDES_ALTURAS_ALERGIAS_ID = "N002-MF000000320";
+        public const string ASCENSO_GRANDES_ALTURAS_USO_MEDICACION_ACTUAL_ID = "N002-MF000000322";
+        public const string ASCENSO_GRANDES_ALTURAS_APTO_ASCENDER_GRANDES_ALTURAS_ID = "N002-MF000000328";
+        public const string ASCENSO_GRANDES_ALTURAS_ACTIVIDAD_REALIZAR_DESCRIPCION_ID = "N002-MF000000306";
+
+
+        public const string ALTURA_7D_DESCRIPCION_ID = "N009-MF000000230";
+
+        #endregion
+
+
+        #region ODONTOGRAMA
+
+
+        //public const string ODONTOGRAMA_OTROS_ANTECEDENTES_ID = "N002-MF000000027";
+        public const string ODONTOGRAMA_PIEZAS_CURACION_ID = "N002-MF000000027";
+        //public const string ODONTOGRAMA_CORONA_ID = "N002-MF000000027";
+        //public const string ODONTOGRAMA_EXODONCIA_ID = "N002-MF000000027";
+        //public const string ODONTOGRAMA_IMPLANTE_ID = "N002-MF000000027";
+
+        //public const string ODONTOGRAMA_PPR_ID = "N002-MF000000027";
+        //public const string ODONTOGRAMA_PROTESIS_TOTAL_ID = "N002-MF000000027";
+        //public const string ODONTOGRAMA_PLACA_BACTERIANA_ID = "N002-MF000000027";
+        //public const string ODONTOGRAMA_REMANENTES_RETICULARES_ID = "N002-MF000000027";
+        //public const string ODONTOGRAMA_DIAGNOSTICOS_ID = "N002-MF000000027";
+        public const string ODONTOGRAMA_APTITUD_ID = "N002-ODO00000198";
+        public const string ODONTOGRAMA_OTROS_EXAMEN_ID = "N002-ODO00000195";
+        public const string ODONTOGRAMA_PIEZAS_CARIES_ID = "N002-ODO00000193";
+        public const string ODONTOGRAMA_PIEZAS_AUSENTES_ID = "N002-ODO00000194";
+
+        public const string ODONTOGRAMA_ID = "N002-ME000000027";
+        public const string ODONTOGRAMA_TABACO_ID = "N009-MF000000040";
+        public const string ODONTOGRAMA_DIABETES_ID = "N009-MF000000210";        
+        public const string ODONTOGRAMA_TBC_ID = "N009-MF000000208";
+        public const string ODONTOGRAMA_ETS_ID = "N009-MF000000211";
+        public const string ODONTOGRAMA_HEMATOPATIAS_ID = "N009-MF000000209";
+        public const string ODONTOGRAMA_OBESIDAD_ID = "N009-MF000000212";
+        public const string ODONTOGRAMA_PERIODONTITIS_ID = "N009-MF000001591";
+        public const string ODONTOGRAMA_MOVILIDAD_ID = "N009-MF000000216";
+        public const string ODONTOGRAMA_RECESION_ID = "N009-MF000000214";
+        public const string ODONTOGRAMA_EXUDACION_ID = "N009-MF000000217";
+        public const string ODONTOGRAMA_GINGIVITIS_ID = "N009-MF000001590";
+        public const string ODONTOGRAMA_BOLSA_PERIODONTALES_ID = "N009-MF000001591";
+        public const string ODONTOGRAMA_PLACA_BACTERIANA_ID = "N009-MF000001587";
+        public const string ODONTOGRAMA_REMANENTES_RETICULARES_ID = "N009-MF000001588";
+        public const string ODONTOGRAMA_SARRO_DENTAL_ID = "N009-MF000001586";
+        public const string ODONTOGRAMA_NECROSIS_PULPAR_ID = "N009-MF000001589";
+        public const string ODONTOGRAMA_CONCLUSIONES_DESCRIPCION_ID = "N009-MF000000377";
+
+
+
+        #endregion
+
+        public const string EVALUACION_ERGONOMICA_ID = "N009-ME000000036";
+        public const string EVALUACION_ERGONOMICA_CONCLUSION_ID = "N009-MF000000317";
+        public const string EVALUACION_ERGONOMICA_DESCRIPCION_ID = "N009-MF000000316";
+
+        public const string ALTURA_GEOGRAFICA_ID = "N002-ME000000045";
+        public const string ALTURA_GEOGRAFICA_APTO_ID = "N002-MF000000323";
+        public const string ALTURA_GEOGRAFICA_DESCRIPCION_ID = "N009-MF000000230";
+
+        #region EXAMEN FISICO 7C
+        
+      
+        public const string EXAMEN_FISICO_7C_ID = "N009-ME000000052";
+        public const string EXAMEN_FISICO_7C_RUIDO_ID = "N009-MF000000667";
+        public const string EXAMEN_FISICO_7C_CANCERIGENOS_ID = "N009-MF000000668";
+        public const string EXAMEN_FISICO_7C_TEMPERATURA_ID = "N009-MF000000669";
+        public const string EXAMEN_FISICO_7C_CARGAS_ID = "N009-MF000000670";
+        public const string EXAMEN_FISICO_7C_POLVO_ID = "N009-MF000000671";
+        public const string EXAMEN_FISICO_7C_MUTAGENICOS_ID = "N009-MF000000672";
+        public const string EXAMEN_FISICO_7C_BIOLOGICOS_ID = "N009-MF000000673";
+        public const string EXAMEN_FISICO_7C_MOV_REPETITIVOS_ID = "N009-MF000000674";
+        public const string EXAMEN_FISICO_7C_VIG_SEGMENTARIA_ID = "N009-MF000000675";
+        public const string EXAMEN_FISICO_7C_SOLVENTES_ID = "N009-MF000000676";
+        public const string EXAMEN_FISICO_7C_POSTURAS_ID = "N009-MF000000677";
+        public const string EXAMEN_FISICO_7C_PVD_ID = "N009-MF000000678";
+        public const string EXAMEN_FISICO_7C_Vid_Total_ID = "N009-MF000000679";
+
+        public const string EXAMEN_FISICO_7C_METAL_PESADO_ID = "N009-MF000000683";
+        public const string EXAMEN_FISICO_7C_TURNOS_ID = "N009-MF000000684";
+        public const string EXAMEN_FISICO_7C_OTROS_ID = "N009-MF000000685";
+        public const string EXAMEN_FISICO_7C_DESCRIBIR_ID = "N009-MF000000686";
+
+        public const string EXAMEN_FISICO_7C_EXAMENFISICO_ABDOMEN_DESCRIPCION = "N009-MF000000697" ;
+         public const string EXAMEN_FISICO_7C_EXAMENFISICO_ANILLOS_INGUINALES_DESCRIPCION = "N009-MF000000698";
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_BOCA_ADMIGDALA_FARINGE_LARINGE_DESCRIPCION = "N009-MF000000690"; 
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_CABEZA_DESCRIPCION = "N009-MF000000687";
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_COLUMNA_DESCRIPCION = "N009-MF000000696" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_CUELLO_DESCRIPCION = "N009-MF000000688" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_GANGLIOS_DESCRIPCION = "N009-MF000000702" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_HERNIAS_DESCRIPCION = "N009-MF000000699" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_MARCHA_DESCRIPCION = "N009-MF000000695" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_MIEMBROS_INFERIORES_DESCRIPCION = "N009-MF000000693" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_MIEMBROS_SUPERIORES_DESCRIPCION = "N009-MF000000692" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_NARIZ_DESCRIPCION = "N009-MF000000689" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_ORGANOS_GENITALES_DESCRIPCION = "N009-MF000000701" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_REFLEJOS_OSTEO_TENDINOSOS_DESCRIPCION = "N009-MF000000694" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_REFLEJOS_PUPILARES_DESCRIPCION = "N009-MF000000691" ;
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_VARICES_DESCRIPCION = "N009-MF000000700";
+
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_PULMONES_NORMAL = "N009-MF000000660";
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_PULMONES_ANORMAL = "N009-MF000000661";
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_PULMONES_DESCRIPCION = "N009-MF000000662";
+
+
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_TACTO_RECTAL_NORMAL = "N009-MF000000663";
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_TACTO_RECTAL_ANORMAL = "N009-MF000000664";
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_TACTO_RECTAL_DESCRIPCION = "N009-MF000000665";
+         public const string EXAMEN_FISICO_7C_EXAMEN_FISICO_TACTO_RECTAL_NO_RELIZADO = "N009-MF000000666";
+        
+        // COMBOS ***
+        public const string EXAMEN_FISICO_7C_CABEZA_ID = "N009-MF000000626";
+        public const string EXAMEN_FISICO_7C_CUELLO_ID = "N009-MF000000627";
+        public const string EXAMEN_FISICO_7C_NARIZ_ID = "N009-MF000000628";
+        public const string EXAMEN_FISICO_7C_BOCA_ID = "N009-MF000000629";
+        public const string EXAMEN_FISICO_7C_REFLEJOS_PUPILARES_ID = "N009-MF000000648";    
+        public const string EXAMEN_FISICO_7C_MIEMBROS_SUPERIORES = "N009-MF000000649";
+        public const string EXAMEN_FISICO_7C_MIEMBROS_INFERIORES = "N009-MF000000650";
+        public const string EXAMEN_FISICO_7C_REFLEJOS_OSTEO = "N009-MF000000651";
+        public const string EXAMEN_FISICO_7C_MARCHA = "N009-MF000000652";
+        public const string	EXAMEN_FISICO_7C_COLUMNA = "N009-MF000000653";
+        public const string	EXAMEN_FISICO_7C_ABDOMEN = "N009-MF000000654";
+        public const string	EXAMEN_FISICO_7C_ANILLOS_IMGUINALES = "N009-MF000000655";
+        public const string	EXAMEN_FISICO_7C_HERNIAS = "N009-MF000000656";
+        public const string EXAMEN_FISICO_7C_VARICES = "N009-MF000000657";
+        public const string	EXAMEN_FISICO_7C_ORGANOS_GENITALES = "N009-MF000000658";
+        public const string	EXAMEN_FISICO_7C_GANGLIOS = "N009-MF000000659";
+        //***
+
+        //20171221 DAVID CF EXAMEN FISICO N002-ME000000022
+        public const string EXAMEN_FISICO_SL_ID = "N002-ME000000022";
+        public const string EXAMEN_FISICO_SL_CABEZA = "N002-MF000000121";
+        public const string EXAMEN_FISICO_SL_BOCA = "N002-MF000000122";
+        public const string EXAMEN_FISICO_SL_FARINGE = "N002-MF000000123";
+        public const string EXAMEN_FISICO_SL_NARIZ = "N002-MF000000124";
+        public const string EXAMEN_FISICO_SL_PULMONES = "N002-MF000000125";
+        public const string EXAMEN_FISICO_SL_CUELLO = "N002-MF000000126";
+        public const string EXAMEN_FISICO_SL_GANGLIOS = "N002-MF000000127";
+        public const string EXAMEN_FISICO_SL_PIEL = "N002-MF000000128";
+        public const string EXAMEN_FISICO_SL_CARDIOVASCULAR = "N002-MF000000129";
+        public const string EXAMEN_FISICO_SL_VENASPERIFERICAS = "N002-MF000000130";
+        public const string EXAMEN_FISICO_SL_ABDOMEN = "N002-MF000000131";
+        public const string EXAMEN_FISICO_SL_ANILLOSINGUINALES = "N002-MF000000132";
+        public const string EXAMEN_FISICO_SL_GENITALES = "N002-MF000000133";
+        public const string EXAMEN_FISICO_SL_TACTORECTAL = "N002-MF000000134";
+        public const string EXAMEN_FISICO_SL_EXTREMIDADES = "N002-MF000000135";
+        public const string EXAMEN_FISICO_SL_COLUMNA = "N002-MF000000136";
+        public const string EXAMEN_FISICO_SL_NEUROLOGICO = "N002-MF000000137";
+        public const string EXAMEN_FISICO_SL_TORAX = "N003-MF000000008";
+        public const string EXAMEN_FISICO_SL_HERNIAS = "N003-MF000000009";
+        public const string EXAMEN_FISICO_SL_ECTOSCOPIA = "N003-MF000000030";
+        public const string EXAMEN_FISICO_SL_ESTADOMENTAL = "N003-MF000000031";
+        public const string EXAMEN_FISICO_SL_ALTERADOS = "N002-MF000000138";
+
+        public const string EXAMEN_FISICO_7C_HALLAZGOS_ID = "N009-MF000000703";
+
+        
+
+        #endregion
+
+        public const string MAMOGRAFIA_ID = "N009-ME000000014";
+        public const string MAMOGRAFIA_DERECHA_ID = "N009-MF000000023";
+        public const string MAMOGRAFIA_IZQUIERDA_ID = "N009-MF000000024";
+
+        #region Papanicolao
+        
+        public const string PAPANICOLAU_ID = "N009-ME000000013";
+        public const string PAPANICOLAU_HALLAZGOS = "N009-MF000000446";
+        public const string PAPANICOLAU_RADIOGRAFIA_HALLAZGOS = "N009-MF000001139";
+
+        #endregion
+
+        #region MyRegion
+
+        // Cuadrante 1
+        public const string  D11_1 = "N002-ODO00000001";
+        public const string  D11_2 = "N002-ODO00000002";
+        public const string  D11_3 = "N002-ODO00000003";
+        public const string  D11_4 = "N002-ODO00000004";
+        public const string  D11_5 = "N002-ODO00000005";
+        public const string  D11_6 = "N002-ODO00000006";
+
+        public const string  D12_1 = "N002-ODO00000007";
+        public const string  D12_2 = "N002-ODO00000008";
+        public const string  D12_3 = "N002-ODO00000009";
+        public const string  D12_4 = "N002-ODO00000010";
+        public const string  D12_5 = "N002-ODO00000011";
+        public const string  D12_6 = "N002-ODO00000012";
+
+        public const string  D13_1 = "N002-ODO00000013";
+        public const string  D13_2 = "N002-ODO00000014";
+        public const string  D13_3 = "N002-ODO00000015";
+        public const string  D13_4 = "N002-ODO00000016";
+        public const string  D13_5 = "N002-ODO00000017";
+        public const string  D13_6 = "N002-ODO00000018";
+
+        public const string  D14_1 = "N002-ODO00000019";
+        public const string  D14_2 = "N002-ODO00000020";
+        public const string  D14_3 = "N002-ODO00000021";
+        public const string  D14_4 = "N002-ODO00000022";
+        public const string  D14_5 = "N002-ODO00000023";
+        public const string  D14_6 = "N002-ODO00000024";
+
+        public const string  D15_1 = "N002-ODO00000025";
+        public const string  D15_2 = "N002-ODO00000026";
+        public const string  D15_3 = "N002-ODO00000027";
+        public const string  D15_4 = "N002-ODO00000028";
+        public const string  D15_5 = "N002-ODO00000029";
+        public const string  D15_6 = "N002-ODO00000030";
+
+        public const string  D16_1 = "N002-ODO00000031";
+        public const string  D16_2 = "N002-ODO00000032";
+        public const string  D16_3 = "N002-ODO00000033";
+        public const string  D16_4 = "N002-ODO00000034";
+        public const string  D16_5 = "N002-ODO00000035";
+        public const string  D16_6 = "N002-ODO00000036";
+
+        public const string  D17_1 = "N002-ODO00000037";
+        public const string  D17_2 = "N002-ODO00000038";
+        public const string  D17_3 = "N002-ODO00000039";
+        public const string  D17_4 = "N002-ODO00000040";
+        public const string  D17_5 = "N002-ODO00000041";
+        public const string  D17_6 = "N002-ODO00000042";
+
+        public const string  D18_1 = "N002-ODO00000043";
+        public const string  D18_2 = "N002-ODO00000044";
+        public const string  D18_3 = "N002-ODO00000045";
+        public const string  D18_4 = "N002-ODO00000046";
+        public const string  D18_5 = "N002-ODO00000047";
+        public const string  D18_6 = "N002-ODO00000048";
+
+
+        // Cuandrante 2
+
+        public const string  D21_1 = "N002-ODO00000049";
+        public const string  D21_2 = "N002-ODO00000050";
+        public const string  D21_3 = "N002-ODO00000051";
+        public const string  D21_4 = "N002-ODO00000052";
+        public const string  D21_5 = "N002-ODO00000053";
+        public const string  D21_6 = "N002-ODO00000054";
+
+        public const string  D22_1 = "N002-ODO00000055";
+        public const string  D22_2 = "N002-ODO00000056";
+        public const string  D22_3 = "N002-ODO00000057";
+        public const string  D22_4 = "N002-ODO00000058";
+        public const string  D22_5 = "N002-ODO00000059";
+        public const string  D22_6 = "N002-ODO00000060";
+
+        public const string  D23_1 = "N002-ODO00000061";
+        public const string  D23_2 = "N002-ODO00000062";
+        public const string  D23_3 = "N002-ODO00000063";
+        public const string  D23_4 = "N002-ODO00000064";
+        public const string  D23_5 = "N002-ODO00000065";
+        public const string  D23_6 = "N002-ODO00000066";
+
+        public const string  D24_1 = "N002-ODO00000067";
+        public const string  D24_2 = "N002-ODO00000068";
+        public const string  D24_3 = "N002-ODO00000069";
+        public const string  D24_4 = "N002-ODO00000070";
+        public const string  D24_5 = "N002-ODO00000071";
+        public const string  D24_6 = "N002-ODO00000072";
+
+        public const string  D25_1 = "N002-ODO00000073";
+        public const string  D25_2 = "N002-ODO00000074";
+        public const string  D25_3 = "N002-ODO00000075";
+        public const string  D25_4 = "N002-ODO00000076";
+        public const string  D25_5 = "N002-ODO00000077";
+        public const string  D25_6 = "N002-ODO00000078";
+
+        public const string  D26_1 = "N002-ODO00000079";
+        public const string  D26_2 = "N002-ODO00000080";
+        public const string  D26_3 = "N002-ODO00000081";
+        public const string  D26_4 = "N002-ODO00000082";
+        public const string  D26_5 = "N002-ODO00000083";
+        public const string  D26_6 = "N002-ODO00000084";
+
+        public const string  D27_1 = "N002-ODO00000085";
+        public const string  D27_2 = "N002-ODO00000086";
+        public const string  D27_3 = "N002-ODO00000087";
+        public const string  D27_4 = "N002-ODO00000088";
+        public const string  D27_5 = "N002-ODO00000089";
+        public const string  D27_6 = "N002-ODO00000090";
+
+        public const string  D28_1 = "N002-ODO00000091";
+        public const string  D28_2 = "N002-ODO00000092";
+        public const string  D28_3 = "N002-ODO00000093";
+        public const string  D28_4 = "N002-ODO00000094";
+        public const string  D28_5 = "N002-ODO00000095";
+        public const string  D28_6 = "N002-ODO00000096";
+
+        // Cuandrante 3
+
+        public const string  D31_1 = "N002-ODO00000097";
+        public const string  D31_2 = "N002-ODO00000098";
+        public const string  D31_3 = "N002-ODO00000099";
+        public const string  D31_4 = "N002-ODO00000100";
+        public const string  D31_5 = "N002-ODO00000101";
+        public const string  D31_6 = "N002-ODO00000102";
+
+        public const string  D32_1 = "N002-ODO00000103";
+        public const string  D32_2 = "N002-ODO00000104";
+        public const string  D32_3 = "N002-ODO00000105";
+        public const string  D32_4 = "N002-ODO00000106";
+        public const string  D32_5 = "N002-ODO00000107";
+        public const string  D32_6 = "N002-ODO00000108";
+
+        public const string  D33_1 = "N002-ODO00000109";
+        public const string  D33_2 = "N002-ODO00000110";
+        public const string  D33_3 = "N002-ODO00000111";
+        public const string  D33_4 = "N002-ODO00000112";
+        public const string  D33_5 = "N002-ODO00000113";
+        public const string  D33_6 = "N002-ODO00000114";
+
+        public const string  D34_1 = "N002-ODO00000115";
+        public const string  D34_2 = "N002-ODO00000116";
+        public const string  D34_3 = "N002-ODO00000117";
+        public const string  D34_4 = "N002-ODO00000118";
+        public const string  D34_5 = "N002-ODO00000119";
+        public const string  D34_6 = "N002-ODO00000120";
+
+        public const string  D35_1 = "N002-ODO00000121";
+        public const string  D35_2 = "N002-ODO00000122";
+        public const string  D35_3 = "N002-ODO00000123";
+        public const string  D35_4 = "N002-ODO00000124";
+        public const string  D35_5 = "N002-ODO00000125";
+        public const string  D35_6 = "N002-ODO00000126";
+
+        public const string  D36_1 = "N002-ODO00000127";
+        public const string  D36_2 = "N002-ODO00000128";
+        public const string  D36_3 = "N002-ODO00000129";
+        public const string  D36_4 = "N002-ODO00000130";
+        public const string  D36_5 = "N002-ODO00000131";
+        public const string  D36_6 = "N002-ODO00000132";
+
+        public const string  D37_1 = "N002-ODO00000133";
+        public const string  D37_2 = "N002-ODO00000134";
+        public const string  D37_3 = "N002-ODO00000135";
+        public const string  D37_4 = "N002-ODO00000136";
+        public const string  D37_5 = "N002-ODO00000137";
+        public const string  D37_6 = "N002-ODO00000138";
+
+        public const string  D38_1 = "N002-ODO00000139";
+        public const string  D38_2 = "N002-ODO00000140";
+        public const string  D38_3 = "N002-ODO00000141";
+        public const string  D38_4 = "N002-ODO00000142";
+        public const string  D38_5 = "N002-ODO00000143";
+        public const string  D38_6 = "N002-ODO00000144";
+
+        // Cuandrante 4
+
+        public const string  D41_1 = "N002-ODO00000145";
+        public const string  D41_2 = "N002-ODO00000146";
+        public const string  D41_3 = "N002-ODO00000147";
+        public const string  D41_4 = "N002-ODO00000148";
+        public const string  D41_5 = "N002-ODO00000149";
+        public const string  D41_6 = "N002-ODO00000150";
+
+        public const string  D42_1 = "N002-ODO00000151";
+        public const string  D42_2 = "N002-ODO00000152";
+        public const string  D42_3 = "N002-ODO00000153";
+        public const string  D42_4 = "N002-ODO00000154";
+        public const string  D42_5 = "N002-ODO00000155";
+        public const string  D42_6 = "N002-ODO00000156";
+
+        public const string  D43_1 = "N002-ODO00000157";
+        public const string  D43_2 = "N002-ODO00000158";
+        public const string  D43_3 = "N002-ODO00000159";
+        public const string  D43_4 = "N002-ODO00000160";
+        public const string  D43_5 = "N002-ODO00000161";
+        public const string  D43_6 = "N002-ODO00000162";
+
+        public const string  D44_1 = "N002-ODO00000163";
+        public const string  D44_2 = "N002-ODO00000164";
+        public const string  D44_3 = "N002-ODO00000165";
+        public const string  D44_4 = "N002-ODO00000166";
+        public const string  D44_5 = "N002-ODO00000167";
+        public const string  D44_6 = "N002-ODO00000168";
+
+        public const string  D45_1 = "N002-ODO00000169";
+        public const string  D45_2 = "N002-ODO00000170";
+        public const string  D45_3 = "N002-ODO00000171";
+        public const string  D45_4 = "N002-ODO00000172";
+        public const string  D45_5 = "N002-ODO00000173";
+        public const string  D45_6 = "N002-ODO00000174";
+
+        public const string  D46_1 = "N002-ODO00000175";
+        public const string  D46_2 = "N002-ODO00000176";
+        public const string  D46_3 = "N002-ODO00000177";
+        public const string  D46_4 = "N002-ODO00000178";
+        public const string  D46_5 = "N002-ODO00000179";
+        public const string  D46_6 = "N002-ODO00000180";
+
+        public const string  D47_1 = "N002-ODO00000181";
+        public const string  D47_2 = "N002-ODO00000182";
+        public const string  D47_3 = "N002-ODO00000183";
+        public const string  D47_4 = "N002-ODO00000184";
+        public const string  D47_5 = "N002-ODO00000185";
+        public const string  D47_6 = "N002-ODO00000186";
+
+        public const string  D48_1 = "N002-ODO00000187";
+        public const string  D48_2 = "N002-ODO00000188";
+        public const string  D48_3 = "N002-ODO00000189";
+        public const string  D48_4 = "N002-ODO00000190";
+        public const string  D48_5 = "N002-ODO00000191";
+        public const string  D48_6 = "N002-ODO00000192";
+
+        public const string PiezaCaries = "N002-ODO00000193";
+        public const string PiezaAusentes = "N002-ODO00000194";
+        public const string PiezaCariesAdd = "N002-ODO00000199";
+        public const string PiezaAusentesAdd = "N002-ODO00000200";
+        public const string Otros = "N002-ODO00000195";
+        public const string chkBacteriana = "N002-ODO00000196";
+        public const string chkRadiculares = "N002-ODO00000197";
+        public const string Aptitud = "N002-ODO00000198";
+
+      
+        #endregion
+
+        public const string CONSULTAMEDICA = "N009-PR000000044";
+
+        #region Ginecología
+
+        public const string GINECOLOGIA_ID = "N009-ME000000029";
+        public const string GINECOLOGIA_HALLAZGOS_ID = "N009-MF000000492";
+
+        public const string GINECOLOGIA_SINTOMAS_LEUCORREA = "N009-MF000000441";
+        public const string GINECOLOGIA_SINTOMAS_DISPAREUNIA = "N009-MF000000485";
+        public const string GINECOLOGIA_SINTOMAS_INCONTINENCIA_URINARIA = "N009-MF000000486";
+        public const string GINECOLOGIA_SINTOMAS_OTROS = "N009-MF000000487";
+
+        // Descripciones ****************************************************
+        public const string GINECOLOGIA_SINTOMAS_LEUCORREA_COMENTARIO = "N009-MF000001125";
+        public const string GINECOLOGIA_SINTOMAS_DISPAREUNIA_COMENTARIO = "N009-MF000001126";
+        public const string GINECOLOGIA_SINTOMAS_INCONTINENCIA_URINARIA_COMENTARIO = "N009-MF000001127";
+        public const string GINECOLOGIA_SINTOMAS_OTROS_COMENTARIO = "N009-MF000001128";
+
+        //**********************************************************************
+
+        public const string ISTAS_21_ABREVIADA = "N009-ME000000059";
+        public const string GINECOLOGIA_HALLAZGOS_HALLAZGOS = "N009-MF000000492";
+        public const string GINECOLOGIA_EX_MAMA_HALLAZGOS_HALLAZGOS = "N009-MF000000511";
+      
+        public const string ANTECEDENTES_PERSONALES_FECHA_ULTIMA_MAMOGRAFIA = "N009-MF000001156";
+        public const string GINECOLOGIA_ANTECEDENTES_FAMILIARES = "N009-MF000001159";
+        public const string GINECOLOGIA_ANTECEDENTES_PERSONALES_FECHA_ULTIMO_PAP = "N009-MF000001155";
+
+        public const string GINECOLOGIA_ANTECEDENTES_PERSONALES_ANTECEDENTES = "N009-MF000001143";
+
+        public const string EVALUACION_GINECOLOGICA_ANTECEDENTES_FECHA_ULTIMO_PAP = "N009-MF000001160";
+        public const string EVALUACION_GINECOLOGICA_ANTECEDENTES_FECHA_ULTIMA_MAMOGRAFIA = "N009-MF000001161";
+        //RESULTADOS_DE_MAMOGRAFIA_HALLAZGOS = N009-MF000001139;
+
+        #endregion
+
+        #region Resultados de Mamografia
+
+        public const string RESULTADOS_MAMOGRAFIA_ID = "N009-ME000000056";
+
+	    #endregion
+
+        //#region CAMPOS UC AUDIOMETRIA OLD
+
+        //// Audiometría
+
+        //public const string UserControlAudimetria = "N002-MF000000175";
+
+        ////Vía Aérea OD
+        //public const string txt_VA_OD_500 = "N002-AUD00000001";
+        //public const string txt_VA_OD_1000 = "N002-AUD00000002";
+        //public const string txt_VA_OD_2000 = "N002-AUD00000003";
+        //public const string txt_VA_OD_3000 = "N002-AUD00000004";
+        //public const string txt_VA_OD_4000 = "N002-AUD00000005";
+        //public const string txt_VA_OD_6000 = "N002-AUD00000006";
+        //public const string txt_VA_OD_8000 = "N002-AUD00000007";
+
+        ////Vía Ósea OD
+        //public const string txt_VO_OD_500 = "N002-AUD00000008";
+        //public const string txt_VO_OD_1000 = "N002-AUD00000009";
+        //public const string txt_VO_OD_2000 = "N002-AUD00000010";
+        //public const string txt_VO_OD_3000 = "N002-AUD00000011";
+        //public const string txt_VO_OD_4000 = "N002-AUD00000012";
+        //public const string txt_VO_OD_6000 = "N002-AUD00000013";
+        //public const string txt_VO_OD_8000 = "N002-AUD00000014";
+
+        ////Vía Aérea OI
+        //public const string txt_VA_OI_500 = "N002-AUD00000015";
+        //public const string txt_VA_OI_1000 = "N002-AUD00000016";
+        //public const string txt_VA_OI_2000 = "N002-AUD00000017";
+        //public const string txt_VA_OI_3000 = "N002-AUD00000018";
+        //public const string txt_VA_OI_4000 = "N002-AUD00000019";
+        //public const string txt_VA_OI_6000 = "N002-AUD00000020";
+        //public const string txt_VA_OI_8000 = "N002-AUD00000021";
+
+        ////Vía Ósea OI
+        //public const string txt_VO_OI_500 = "N002-AUD00000022";
+        //public const string txt_VO_OI_1000 = "N002-AUD00000023";
+        //public const string txt_VO_OI_2000 = "N002-AUD00000024";
+        //public const string txt_VO_OI_3000 = "N002-AUD00000025";
+        //public const string txt_VO_OI_4000 = "N002-AUD00000026";
+        //public const string txt_VO_OI_6000 = "N002-AUD00000027";
+        //public const string txt_VO_OI_8000 = "N002-AUD00000028";
+
+        //// Dx automatico
+        //public const string txt_AUD_DX_OCUPACIONAL_AUTO_OD = "N009-MF000001311";
+        //public const string txt_AUD_DX_OCUPACIONAL_AUTO_OI = "N009-MF000001312";
+
+        //public const string txt_AUD_DX_CLINICO_AUTO_OD = "N002-AUD00000031";
+        //public const string txt_AUD_DX_CLINICO_AUTO_OI = "N002-AUD00000032";
+
+
+        ////
+        //public const string txt_MULTIMEDIA_FILE_OD = "N002-AUD00000033";
+        //public const string txt_MULTIMEDIA_FILE_OI = "N002-AUD00000034";
+
+        //public const string txt_SERVICE_COMPONENT_MULTIMEDIA_OD = "N002-AUD00000035";
+        //public const string txt_SERVICE_COMPONENT_MULTIMEDIA_OI = "N002-AUD00000036";
+
+        //// Campos dinamicos (Manager componentes)      
+        //// Requisitos para la audiometria
+        //public const string AUDIOMETRIA_REQUISITOS_CAMBIOS_ALTITUD = "N009-MF000001299";
+        //public const string AUDIOMETRIA_REQUISITOS_EXPUESTO_RUIDO = "N009-MF000001300";
+        //public const string AUDIOMETRIA_REQUISITOS_PROCESO_INFECCIOSO = "N009-MF000001301";
+        //public const string AUDIOMETRIA_REQUISITOS_DURMIO_NOCHE_PREVIA = "N009-MF000001302";
+        //public const string AUDIOMETRIA_REQUISITOS_CONSUMIO_ALCOHOL_DIA_PREVIO = "N009-MF000001303";
+        //public const string AUDIOMETRIA_REQUISITOS_TIEMPO_DE_TRABAJO = "N009-MF000001378";
+
+        //// Antecedentes Medicos de importancia
+        //public const string AUDIOMETRIA_ANTECEDENTES_RINITIS_SINUSITIS = "N009-MF000000089";
+        //public const string AUDIOMETRIA_ANTECEDENTES_USO_MEDICAMENTOS = "N009-MF000000090";
+        //public const string AUDIOMETRIA_ANTECEDENTES_SARAMPION = "N009-MF000000098";
+        //public const string AUDIOMETRIA_ANTECEDENTES_TEC = "N009-MF000001305";
+        //public const string AUDIOMETRIA_ANTECEDENTES_OTITIS_MEDIA_CRONICA = "N009-MF000000091";
+        //public const string AUDIOMETRIA_ANTECEDENTES_DIABETES_MELLITUS = "N009-MF000000095";
+        //public const string AUDIOMETRIA_ANTECEDENTES_SORDERA = "N009-MF000000101";
+        //public const string AUDIOMETRIA_ANTECEDENTES_SORDERA_FAMILIAR = "N009-MF000001306";
+        //public const string AUDIOMETRIA_ANTECEDENTES_MENINGITIS = "N009-MF000000097";
+        //public const string AUDIOMETRIA_ANTECEDENTES_DISLIPIDEMIA = "N009-MF000000100";
+        //public const string AUDIOMETRIA_ANTECEDENTES_ENF_TIROIDEA = "N009-MF000001304";
+        //public const string AUDIOMETRIA_ANTECEDENTES_SUST_QUIMICAS = "N009-MF000001307";
+
+        //// Hobbies
+        //public const string AUDIOMETRIA_HOBBIES_USO_MP3 = "N009-MF000001308";
+        //public const string AUDIOMETRIA_HOBBIES_PRACTICA_TIRO = "N009-MF000001309";
+        //public const string AUDIOMETRIA_HOBBIES_OTROS = "N009-MF000001310";
+
+        //// Sintomas actuales
+        //public const string AUDIOMETRIA_SINTOMAS_ACTUALES_SORDERA = "N009-MF000000092";
+        //public const string AUDIOMETRIA_SINTOMAS_ACTUALES_OTALGIA = "N009-MF000000096";
+        //public const string AUDIOMETRIA_SINTOMAS_ACTUALES_ACUFENOS = "N009-MF000000093";
+        //public const string AUDIOMETRIA_SINTOMAS_ACTUALES_SECRECION_OTICA = "N009-MF000000099";
+        //public const string AUDIOMETRIA_SINTOMAS_ACTUALES_VERTIGOS = "N009-MF000000094";
+
+        //// Otoscopia
+        //public const string AUDIOMETRIA_OTOSCOPIA_OIDO_IZQUIERDO = "N002-MF000000178";
+        //public const string AUDIOMETRIA_OTOSCOPIA_OIDO_DERECHO = "N002-MF000000179";
+
+
+        //public const string AUDIOMETRIA_DATOS_DEL_AUDIOMETRO_MARCA = "N009-MF000000082";
+        //public const string AUDIOMETRIA_DATOS_DEL_AUDIOMETRO_MODELO = "N009-MF000000083";
+        //public const string AUDIOMETRIA_DATOS_DEL_AUDIOMETRO_CALIBRACION = "N009-MF000000084";
+
+       
+
+        //#endregion
+
+        #region CAMPOS UC AUDIOMETRIA
+
+        // Audiometría
+
+        //Vía Aérea OD
+        public const string txt_VA_OD_125 = "N002-AUD00000101";
+        public const string txt_VA_OD_250 = "N002-AUD00000102";
+
+        public const string txt_VA_OD_500 = "N002-AUD00000001";
+        public const string txt_VA_OD_1000 = "N002-AUD00000002";
+        public const string txt_VA_OD_2000 = "N002-AUD00000003";
+        public const string txt_VA_OD_3000 = "N002-AUD00000004";
+        public const string txt_VA_OD_4000 = "N002-AUD00000005";
+        public const string txt_VA_OD_6000 = "N002-AUD00000006";
+        public const string txt_VA_OD_8000 = "N002-AUD00000007";
+
+        //Vía Ósea OD
+        public const string txt_VO_OD_125 = "N002-AUD00000103";
+        public const string txt_VO_OD_250 = "N002-AUD00000104";
+
+        public const string txt_VO_OD_500 = "N002-AUD00000008";
+        public const string txt_VO_OD_1000 = "N002-AUD00000009";
+        public const string txt_VO_OD_2000 = "N002-AUD00000010";
+        public const string txt_VO_OD_3000 = "N002-AUD00000011";
+        public const string txt_VO_OD_4000 = "N002-AUD00000012";
+        public const string txt_VO_OD_6000 = "N002-AUD00000013";
+        public const string txt_VO_OD_8000 = "N002-AUD00000014";
+
+        //Vía Aérea OI
+        public const string txt_VA_OI_125 = "N002-AUD00000105";
+        public const string txt_VA_OI_250 = "N002-AUD00000106";
+
+        public const string txt_VA_OI_500 = "N002-AUD00000015";
+        public const string txt_VA_OI_1000 = "N002-AUD00000016";
+        public const string txt_VA_OI_2000 = "N002-AUD00000017";
+        public const string txt_VA_OI_3000 = "N002-AUD00000018";
+        public const string txt_VA_OI_4000 = "N002-AUD00000019";
+        public const string txt_VA_OI_6000 = "N002-AUD00000020";
+        public const string txt_VA_OI_8000 = "N002-AUD00000021";
+
+        //Vía Ósea OI
+        public const string txt_VO_OI_125 = "N002-AUD00000107";
+        public const string txt_VO_OI_250 = "N002-AUD00000108";
+
+        public const string txt_VO_OI_500 = "N002-AUD00000022";
+        public const string txt_VO_OI_1000 = "N002-AUD00000023";
+        public const string txt_VO_OI_2000 = "N002-AUD00000024";
+        public const string txt_VO_OI_3000 = "N002-AUD00000025";
+        public const string txt_VO_OI_4000 = "N002-AUD00000026";
+        public const string txt_VO_OI_6000 = "N002-AUD00000027";
+        public const string txt_VO_OI_8000 = "N002-AUD00000028";
+
+        //CHECKs de Enmascaramiento
+        public const string chk_VA_OD = "N002-AUD00000109";
+        public const string chk_VA_OI = "N002-AUD00000110";
+
+        //CHECKs de Umbral
+        public const string chk_VA_ODU1 = "N002-AUD00000111";
+        public const string chk_VA_ODU2 = "N002-AUD00000112";
+        public const string chk_VA_ODU3 = "N002-AUD00000113";
+        public const string chk_VA_ODU4 = "N002-AUD00000114";
+        public const string chk_VA_ODU5 = "N002-AUD00000115";
+        public const string chk_VA_ODU6 = "N002-AUD00000116";
+        public const string chk_VA_ODU7 = "N002-AUD00000117";
+        public const string chk_VA_ODU8 = "N002-AUD00000118";
+        public const string chk_VA_ODU9 = "N002-AUD00000119";
+        public const string chk_VA_OIU10 = "N002-AUD00000120";
+        public const string chk_VA_OIU11 = "N002-AUD00000121";
+        public const string chk_VA_OIU12 = "N002-AUD00000122";
+        public const string chk_VA_OIU13 = "N002-AUD00000123";
+        public const string chk_VA_OIU14 = "N002-AUD00000124";
+        public const string chk_VA_OIU15 = "N002-AUD00000125";
+        public const string chk_VA_OIU16 = "N002-AUD00000126";
+        public const string chk_VA_OIU17 = "N002-AUD00000127";
+        public const string chk_VA_OIU18 = "N002-AUD00000128";
+
+        // Dx Automático
+        public const string txt_AUD_DX_OCUPACIONAL_AUTO_OD = "N002-MF000000814";
+        public const string txt_AUD_DX_OCUPACIONAL_AUTO_OI = "N002-MF000000815";
+
+        public const string txt_AUD_DX_CLINICO_AUTO_OD = "N002-AUD00000031";
+        public const string txt_AUD_DX_CLINICO_AUTO_OI = "N002-AUD00000032";
+
+
+        //
+        public const string txt_MULTIMEDIA_FILE_OD = "N002-AUD00000033";
+        public const string txt_MULTIMEDIA_FILE_OI = "N002-AUD00000034";
+
+        public const string txt_SERVICE_COMPONENT_MULTIMEDIA_OD = "N002-AUD00000035";
+        public const string txt_SERVICE_COMPONENT_MULTIMEDIA_OI = "N002-AUD00000036";
+
+        // Campos dinamicos (Manager componentes)    
+  
+        //Antecedentes para minera
+        public const string AUDIOMETRIA_MINERA_USA_PROT = "N009-MF000001573";
+        public const string AUDIOMETRIA_MINERA_TIPO_PROT = "N009-MF000001550";
+        public const string AUDIOMETRIA_MINERA_TIEMPO_PUESTO = "N009-MF000001562";
+        public const string AUDIOMETRIA_MINERA_EXP_DIARIA = "N009-MF000001563";
+        public const string AUDIOMETRIA_MINERA_EXPO_RUI = "N009-MF000001564";
+        public const string AUDIOMETRIA_MINERA_FRE_EPP = "N009-MF000001568";
+        public const string AUDIOMETRIA_MINERA_FUENTE = "N009-MF000001565";
+        public const string AUDIOMETRIA_MINERA_NIVEL = "N009-MF000001566";
+        public const string AUDIOMETRIA_MINERA_APRE_RUI = "N009-MF000001551";
+
+        // Requisitos para la audiometria
+        public const string AUDIOMETRIA_REQUISITOS_CAMBIOS_ALTITUD = "N002-MF000000283";
+        public const string AUDIOMETRIA_REQUISITOS_EXPUESTO_RUIDO = "N002-MF000000284";
+        public const string AUDIOMETRIA_REQUISITOS_PROCESO_INFECCIOSO = "N002-MF000000285";
+        public const string AUDIOMETRIA_REQUISITOS_DURMIO_NOCHE_PREVIA = "N002-MF000000286";
+        public const string AUDIOMETRIA_REQUISITOS_CONSUMIO_ALCOHOL_DIA_PREVIO = "N002-MF000000287";
+
+        // Antecedentes Medicos de importancia
+
+        public const string AUDIOMETRIA_ANTECEDENTES_TEC = "N002-MF000000297";
+        public const string AUDIOMETRIA_ANTECEDENTES_RINITIS = "N002-MF000000288";
+        public const string AUDIOMETRIA_ANTECEDENTES_SINOSITIS = "N009-MF000001559";
+        public const string AUDIOMETRIA_ANTECEDENTES_SORDERA = "N002-MF000000295";
+        public const string AUDIOMETRIA_ANTECEDENTES_PAROTIDITIS = "N009-MF000001557";
+
+        public const string AUDIOMETRIA_ANTECEDENTES_MENINGITIS = "N002-MF000000290";
+        public const string AUDIOMETRIA_ANTECEDENTES_SARAMPION = "N002-MF000000294";
+        public const string AUDIOMETRIA_ANTECEDENTES_OTOTOXICO = "N002-MF000000291";
+        public const string AUDIOMETRIA_ANTECEDENTES_SORDERA_FAMILIAR = "N002-MF000000298";
+        public const string AUDIOMETRIA_ANTECEDENTES_DISLIPIDEMIA = "N002-MF000000293";
+
+        public const string AUDIOMETRIA_ANTECEDENTES_TRAUMA_ACUSTICO = "N009-MF000001583";
+        public const string AUDIOMETRIA_ANTECEDENTES_DIABETES_MELLITUS = "N002-MF000000292";
+        public const string AUDIOMETRIA_ANTECEDENTES_ENF_TIROIDEA = "N002-MF000000296";
+        public const string AUDIOMETRIA_ANTECEDENTES_OTITIS_MEDIA_CRONICA = "N002-MF000000289";
+        
+        public const string AUDIOMETRIA_ANTECEDENTES_OTROS = "N009-MF000001560";
+       
+        public const string AUDIOMETRIA_ANTECEDENTES_SUST_QUIMICAS = "N002-MF000000299";
+
+        // Hobbies
+        public const string AUDIOMETRIA_HOBBIES_USO_MP3 = "N002-MF000000300";
+        public const string AUDIOMETRIA_HOBBIES_PRACTICA_TIRO = "N002-MF000000301";
+        public const string AUDIOMETRIA_HOBBIES_DISCOTECAS = "N002-MF000000302";
+        public const string AUDIOMETRIA_HOBBIES_SERVICIO_MILITAR = "N009-MF000001553";
+        public const string AUDIOMETRIA_HOBBIES_CONSUMO_TABACO = "N009-MF000001558";
+
+        // Sintomas actuales
+        public const string AUDIOMETRIA_SINTOMAS_ACTUALES_SORDERA = "N002-MF000000303";
+        public const string AUDIOMETRIA_SINTOMAS_ACTUALES_ACUFENOS = "N002-MF000000304";
+        public const string AUDIOMETRIA_SINTOMAS_ACTUALES_VERTIGOS = "N002-MF000000305";
+        public const string AUDIOMETRIA_SINTOMAS_ACTUALES_OTALGIA = "N002-MF000000306";
+        public const string AUDIOMETRIA_SINTOMAS_ACTUALES_SECRECION_OTICA = "N002-MF000000307";
+        public const string AUDIOMETRIA_SINTOMAS_ACTUALES_OTROS = "N009-MF000001556";
+
+        // Otoscopia
+        public const string AUDIOMETRIA_OTOSCOPIA_OIDO_IZQUIERDO = "N002-MF000000308";
+        public const string AUDIOMETRIA_OTOSCOPIA_OIDO_DERECHO = "N002-MF000000309";
+
+
+        #endregion
+
+        #region  CAMPOS UC OIT
+
+        public const string txt_Placa = "N003-OIT00000001";
+        public const string txt_HCL = "N003-OIT00000002";
+        public const string txt_Lector = "N003-OIT00000003";
+        public const string dtp_FLectura = "N003-OIT00000004";
+        public const string dtp_FRadiografia = "N003-OIT00000005";
+        public const string cb_Calidad_Radiografica = "N003-OIT00000006";
+        public const string chk_Sobreexposicion = "N003-OIT00000007";
+        public const string chk_Subexposicion = "N003-OIT00000008";
+        public const string chk_PosicionCentrado = "N003-OIT00000009";
+        public const string chk_Inspiracion = "N003-OIT00000010";
+        public const string chk_Escapula = "N003-OIT00000011";
+
+        public const string chk_Artefacto = "N003-OIT00000012";
+        public const string chk_Otros = "N003-OIT00000013";
+        public const string txt_Comentario1 = "N003-OIT00000014";
+        public const string cb_Hay_anormalidades_Parenquimatosas = "N003-OIT00000015";
+        public const string cb_Primario = "N003-OIT00000016";
+        public const string cb_Superior = "N003-OIT00000017";
+        public const string cb_Profusion = "N003-OIT00000018";
+        public const string cb_OpacGrandes = "N003-OIT00000019";
+        public const string cb_Secundario = "N003-OIT00000020";
+        public const string cb_Media = "N003-OIT00000021";
+        public const string cb_Inferior = "N003-OIT00000022";
+
+        public const string cb_Existe_anomalia_Pleural = "N003-OIT00000023";
+        public const string cb_LocalizPerfil1 = "N003-OIT00000024";
+        public const string cb_CalciPerfil1 = "N003-OIT00000025";
+        public const string cb_LocalizFrente1 = "N003-OIT00000026";
+        public const string cb_CalciFrente1 = "N003-OIT00000027";
+        public const string cb_LocalizDiafragma = "N003-OIT00000028";
+        public const string cb_CalciDiafragma1 = "N003-OIT00000029";
+        public const string cb_ExtenDerecha1 = "N003-OIT00000030";
+        public const string cb_AnchuDerecha1 = "N003-OIT00000031";
+        public const string cb_ObliteraDerecha = "N003-OIT00000032";
+        public const string cb_LocalizOtros = "N003-OIT00000033";
+        public const string cbCalciOtros1 = "N003-OIT00000034";
+        public const string cb_ExtenIzquierda1 = "N003-OIT00000035";
+        public const string cb_AnchuIzquierda1 = "N003-OIT00000036";
+        public const string cb_ObliteraIzquierda = "N003-OIT00000037";
+
+        public const string cb_LocalizPerfil2 = "N003-OIT00000038";
+        public const string cb_CalciPerfil2 = "N003-OIT00000039";
+        public const string cb_ExtenDerecha2 = "N003-OIT00000040";
+        public const string cb_AnchuDerecha2 = "N003-OIT00000041";
+
+        public const string cb_LocalizFrente2 = "N003-OIT00000042";
+        public const string cb_CalciFrente2 = "N003-OIT00000043";
+        public const string cb_ExtenIzquierda2 = "N003-OIT00000044";
+        public const string cb_AnchuIzquierda2 = "N003-OIT00000045";
+        public const string cb_Otros_Hallazgos_radio_anormales = "N003-OIT00000046";
+
+        public const string txt_Hallazgos = "N003-OIT00000047";
+        public const string txt_ComentarioTotal = "N003-OIT00000048";
+      
+        #endregion
+
+
+
+        #region CIE10
+
+        public const string ALERGIA_NO_ESPECIFICADA = "N002-DD000000272";
+      
+        public const string TUBERCULOSIS = "N002-DD000000253";
+        public const string HEPATITISB = "N002-DD000000255";
+        public const string ASMA = "N002-DD000000176";
+        public const string HTA = "N002-DD000000008";
+        public const string ITS = "N002-DD000000256";
+        public const string TIFOIDEA = "N002-DD000000259";
+        public const string BRONQUITIS = "N002-DD000000178";
+
+        public const string NEOPLASIAS = "N009-DD000000169";
+        public const string CONVULSIONES = "N009-DD000000166";
+
+        public const string QUEMADURAS = "N009-DD000000145";
+        public const string CIRUGIAS = "N009-DD000000167";
+        public const string INTOXICACIONES = "N009-DD000000168";
+
+        // Dx que expresan normalidad
+        public const string NORMOACUSIA_OIDO_IZQUIERDO = "N009-DD000000305";
+        public const string NORMOACUSIA_OIDO_DERECHO = "N009-DD000000304";
+        public const string EMETROPE = "N002-DD000000414";
+        public const string NORMOPESO = "N002-DD000000146";
+        public const string NORMOACUSIA = "N002-DD000000145";
+        public const string EXAMEN_DE_SALUD_SIN_ALTERACION = "N009-DD000000190";
+
+        public const string NORMOACUSIA_UC_AUDIOMETRIA_OIDO_IZQUIERDO = "N009-DD000000422";
+        public const string NORMOACUSIA_UC_AUDIOMETRIA_OIDO_DERECHO = "N009-DD000000423";
+
+        #region Audiometria
+
+        #region OÍDO DERECHO
+
+        public const string TRAUMA_ACUSTICO_LEVE_OD = "N002-DD000000058";
+        public const string TRAUMA_ACUSTICO_AVANZADO_OD = "N002-DD000000353";
+        public const string HIPOACUSIA_INDUCIDA_POR_RUIDO_LEVE_OD = "N002-DD000000354";
+        public const string HIPOACUSIA_INDUCIDA_POR_RUIDO_MODERADA_OD = "N002-DD000000403";
+        public const string HIPOACUSIA_INDUCIDA_POR_RUIDO_AVANZADA_OD = "N002-DD000000356";
+
+        public const string OTRAS_ALTERACIONES_NDR_AUDICIÓN_INFRANORMAL_CONDUCTIVA_OD = "N002-DD000000361";
+        public const string OTRAS_ALTERACIONES_NDR_AUDICIÓN_INFRANORMAL_NEUROSENSORIAL_OD = "N002-DD000000362";
+        public const string OTRAS_ALTERACIONES_NDR_AUDICIÓN_INFRANORMAL_MIXTA_OD = "N002-DD000000363";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_LIGERA_CONDUCTIVA_OD = "N002-DD000000364";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_LIGERA_NEUROSENSORIAL_OD = "N002-DD000000365";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_LIGERA_MIXTA_OD = "N002-DD000000366";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_1ER_GRADO_CONDUCTIVA_OD = "N002-DD000000367";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_1ER_GRADO_NEUROSENSORIAL_OD = "N002-DD000000368";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_1ER_GRADO_MIXTA_OD = "N002-DD000000369";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_2DO_GRADO_CONDUCTIVA_OD = "N002-DD000000370";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_2DO_GRADO_NEUROSENSORIAL_OD = "N002-DD000000371";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_2DO_GRADO_MIXTA_OD = "N002-DD000000372";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_1ER_GRADO_CONDUCTIVA_OD = "N002-DD000000373";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_1ER_GRADO_NEUROSENSORIAL_OD = "N002-DD000000374";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_1ER_GRADO_MIXTA_OD = "N002-DD000000375";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_2DO_GRADO_CONDUCTIVA_OD = "N002-DD000000376";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_2DO_GRADO_NEUROSENSORIAL_OD = "N002-DD000000377";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_2DO_GRADO_MIXTA_OD = "N002-DD000000378";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_PROFUNDA_CONDUCTIVA_OD = "N002-DD000000379";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_PROFUNDA_NEUROSENSORIAL_OD = "N002-DD000000380";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_PROFUNDA_MIXTA_OD = "N002-DD000000381";
+
+
+        #endregion
+
+        #region OÍDO IZQUIERDO
+
+        public const string TRAUMA_ACUSTICO_LEVE_OI = "N002-DD000000355";
+        public const string TRAUMA_ACUSTICO_AVANZADO_OI = "N002-DD000000357";
+        public const string HIPOACUSIA_INDUCIDA_POR_RUIDO_LEVE_OI = "N002-DD000000358";
+        public const string HIPOACUSIA_INDUCIDA_POR_RUIDO_MODERADA_OI = "N002-DD000000359";
+        public const string HIPOACUSIA_INDUCIDA_POR_RUIDO_AVANZADA_OI = "N002-DD000000360";
+
+        public const string OTRAS_ALTERACIONES_NDR_AUDICIÓN_INFRANORMAL_CONDUCTIVA_OI = "N002-DD000000382";
+        public const string OTRAS_ALTERACIONES_NDR_AUDICIÓN_INFRANORMAL_NEUROSENSORIAL_OI = "N002-DD000000383";
+        public const string OTRAS_ALTERACIONES_NDR_AUDICIÓN_INFRANORMAL_MIXTA_OI = "N002-DD000000384";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_LIGERA_CONDUCTIVA_OI = "N002-DD000000385";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_LIGERA_NEUROSENSORIAL_OI = "N002-DD000000386";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_LIGERA_MIXTA_OI = "N002-DD000000387";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_1ER_GRADO_CONDUCTIVA_OI = "N002-DD000000388";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_1ER_GRADO_NEUROSENSORIAL_OI = "N002-DD000000389";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_1ER_GRADO_MIXTA_OI = "N002-DD000000390";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_2DO_GRADO_CONDUCTIVA_OI = "N002-DD000000391";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_2DO_GRADO_NEUROSENSORIAL_OI = "N002-DD000000392";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_MEDIANA_2DO_GRADO_MIXTA_OI = "N002-DD000000393";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_1ER_GRADO_CONDUCTIVA_OI = "N002-DD000000394";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_1ER_GRADO_NEUROSENSORIAL_OI = "N002-DD000000395";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_1ER_GRADO_MIXTA_OI = "N002-DD000000396";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_2DO_GRADO_CONDUCTIVA_OI = "N002-DD000000397";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_2DO_GRADO_NEUROSENSORIAL_OI = "N002-DD000000398";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_SEVERA_2DO_GRADO_MIXTA_OI = "N002-DD000000399";
+
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_PROFUNDA_CONDUCTIVA_OI = "N002-DD000000400";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_PROFUNDA_NEUROSENSORIAL_OI = "N002-DD000000401";
+        public const string OTRAS_ALTERACIONES_NDR_DEFICIENCIA_AUDITIVA_PROFUNDA_MIXTA_OI = "N002-DD000000402";
+
+
+        #endregion
+
+        #region Antecedentes
+
+        public const string RINITIS_SINUSITIS = "N002-DD000000283";
+        public const string OTITIS_MEDIA_CRONICA = "N002-DD000000284";
+        public const string MENINGITIS = "N002-DD000000285";
+        public const string USO_MEDICAMENTOS = "N002-DD000000477";
+        public const string DIABETES_MELLITUS = "N002-DD000000288";
+        public const string DISLIPIDEMIA = "N002-DD000000445";
+        public const string SARAMPION = "N002-DD000000447";
+        public const string SORDERA = "N002-DD000000282";
+        public const string ENFERMEDAD_TIROIDEA = "N002-DD000000269";
+        public const string TEC = "N002-DD000000448";
+        public const string SORDERA_FAMILIAR = "N002-DD000000471";
+        public const string SUSTANCIAS_QUIMICAS = "N002-DD000000478";
+
+        #endregion
+
+        #endregion
+
+        #region Oftalmologia
+
+        public const string VISIÓN_MONOCULAR_EMÉTROPE_OD = "N002-DD000000404";
+        public const string VISIÓN_MONOCULAR_AMETROPÍA_LEVE_OD = "N002-DD000000405";
+        public const string VISIÓN_MONOCULAR_AMETROPÍA_NO_CORREGIDA_OD = "N002-DD000000406";
+        public const string VISIÓN_MONOCULAR_AMETROPÍA_CORREGIDA_OD = "N002-DD000000407";
+        public const string VISIÓN_MONOCULAR_AMETROPÍA_PARCIALMENTE_CORREGIDA_OD = "N002-DD000000408";
+
+        public const string VISIÓN_MONOCULAR_EMÉTROPE_OI = "N002-DD000000409";
+        public const string VISIÓN_MONOCULAR_AMETROPÍA_LEVE_OI = "N002-DD000000410";
+        public const string VISIÓN_MONOCULAR_AMETROPÍA_NO_CORREGIDA_OI = "N002-DD000000411";
+        public const string VISIÓN_MONOCULAR_AMETROPÍA_CORREGIDA_OI = "N002-DD000000412";
+        public const string VISIÓN_MONOCULAR_AMETROPÍA_PARCIALMENTE_CORREGIDA_OI = "N002-DD000000413";
+
+        public const string EMÉTROPE = "N002-DD000000414";
+        public const string AMETROPÍA_LEVE = "N002-DD000000415";
+        public const string AMETROPÍA_CORREGIDA = "N002-DD000000416";
+        public const string AMETROPÍA_NO_CORREGIDA = "N002-DD000000417";
+        public const string AMETROPÍA_PARCIALMENTE_CORREGIDA = "N002-DD000000418";
+
+        #endregion
+
+        #region Espirometria
+
+        public const string OBSTRUCCIÓN_VARIANTE_FISIOLÓGICA = "N002-DD000000419";
+        public const string OBSTRUCCIÓN_LEVE = "N002-DD000000420";
+        public const string OBSTRUCCIÓN_MODERADA = "N002-DD000000421";
+        public const string OBSTRUCCIÓN_MODERADAMENTE_GRAVE = "N002-DD000000422";
+        public const string OBSTRUCCIÓN_GRAVE = "N002-DD000000423";
+        public const string OBSTRUCCIÓN_MUY_GRAVE = "N002-DD000000424";
+        public const string RESTRICCIÓN_LEVE = "N002-DD000000425";
+        public const string RESTRICCIÓN_MODERADA = "N002-DD000000426";
+        public const string RESTRICCIÓN_MODERADAMENTE_GRAVE = "N002-DD000000427";
+        public const string RESTRICCIÓN_GRAVE = "N002-DD000000428";
+        public const string RESTRICCIÓN_MUY_GRAVE = "N002-DD000000429";
+        public const string PATRÓN_MIXTO_MUY_GRAVE = "N002-DD000000430";
+        public const string PATRÓN_MIXTO_GRAVE = "N002-DD000000431";
+        public const string PATRÓN_MIXTO_MODERADAMENTE_GRAVE = "N002-DD000000432";
+        public const string PATRÓN_MIXTO_MODERADO = "N002-DD000000433";
+        public const string PATRÓN_MIXTO_LEVE = "N002-DD000000434";
+
+        #endregion
+
+        #region Evaluación para ascenso a grandes alturas
+
+        #region Antecedentes
+
+        public const string ANEMIA = "N002-DD000000439";
+        public const string CIRUGIA_MAYOR_RECIENTE = "N002-DD000000460";
+        public const string DESORDENES_COAGULACION = "N002-DD000000292";
+        public const string HIPERTENSION_ARTERIAL = "N002-DD000000009";
+        public const string EMBARAZO = "N002-DD000000450";
+        public const string EPILEPSIA = "N002-DD000000225";
+        public const string VERTIGO = "N002-DD000000221";
+        public const string OTITIS = "N002-DD000000284";
+        public const string RINITIS = "N002-DD000000283";
+        public const string FARINGITIS = "N002-DD000000174";
+        public const string OBESIDAD_MORBIDA_MAYOR_35 = "N002-DD000000002";
+        public const string CORONARIOPATIAS = "N002-DD000000475";
+
+        public const string MARCAPASOS = "N002-DD000000184";
+        public const string ASMA_EPOC = "N002-DD000000176";
+        public const string GLAUCOMA = "N002-DD000000163";
+        public const string RETINOPATIA = "N002-DD000000165";
+        public const string HEPATITIS = "N002-DD000000479";
+        public const string ULCERA_PEPTICA = "N002-DD000000461";
+        public const string APNEA_SUEÑO = "N002-DD000000462";
+        public const string ALERGIAS = "N002-DD000000272";
+
+
+        #endregion
+
+        #endregion
+        
+        #endregion
+
+        #region OIT
+        //AGVR 13/11/2016
+        public const string OIT_ID = "N003-ME000000004";
+        public const string OIT_USER_CONTROL_ID = "N003-MF000000005";
+
+        public const string RX_CONCLUSIONES_OIT_ID = "N009-MF000000596";
+        public const string RX_CONCLUSIONES_OIT_DESCRIPCION_ID = "N009-MF000000597";     
+
+        #endregion
+
+
+        #region Evaluacion PsicoLaboral
+        public const string EVALUACION_PSICOLABORAL = "N009-ME000000072";
+
+        public const string _1 = "N009-MF000001243";
+        public const string _2 = "N009-MF000001244";
+        public const string _3 = "N009-MF000001245";
+        public const string _4 = "N009-MF000001246";
+        public const string _5 = "N009-MF000001247";
+        public const string _6 = "N009-MF000001248";
+        public const string _7 = "N009-MF000001249";
+        public const string _8 = "N009-MF000001251";
+        public const string _9 = "N009-MF000001252";
+        public const string _10 = "N009-MF000001253";
+        public const string _11 = "N009-MF000001254";
+        public const string _12 = "N009-MF000001255";
+        public const string _13 = "N009-MF000001256";
+        public const string _14 = "N009-MF000001257";
+        public const string _15 = "N009-MF000001259";
+        public const string _16 = "N009-MF000001260";
+        public const string _17 = "N009-MF000001261";
+        public const string _18 = "N009-MF000001262";
+        public const string _19 = "N009-MF000001263";
+        public const string _20 = "N009-MF000001264";
+        public const string _21 = "N009-MF000001265";
+        public const string _22 = "N009-MF000001267";
+        public const string _23 = "N009-MF000001268";
+        public const string _24 = "N009-MF000001269";
+        public const string _25 = "N009-MF000001270";
+        public const string _26 = "N009-MF000001271";
+        public const string _27 = "N009-MF000001272";
+        public const string _28 = "N009-MF000001273";
+
+
+        public const string EVALUACION_PSICOLABORAL_ESCALA_FATIGA_OBSERVACIONES = "N009-MF000001275";
+
+        public const string EVALUACION_PSICOLABORAL_ESCALA_FATIGA_RECOMENDACIONES = "N009-MF000001276";
+
+        public const string EVALUACION_PSICOLABORAL_ESCALA_SOMNOLENCIA = "N009-MF000001277";
+
+        public const string EVALUACION_PSICOLABORAL_CONCLUSION_FINAL_CONCLUSION = "N009-MF000001279";
+
+        public const string EVALUACION_PSICOLABORAL_CONCLUSION_FINAL_APTITUD = "N009-MF000001278";
+
+        public const string EVALUACION_PSICOLABORAL_RIESGO_ESTRES = "N009-MF000001274";
+        #endregion
+
+        #region Osteo
+   
+        #endregion
+
+        public const int ApplicationHierarchySistemaId = 8000;
+
+        //
+        public const string CONEXION_NAME = "ConexionDB";
+
+
+        #region UCSomnolencia
+        public const string SOMNOLENCIA_ID = "N009-ME000000126";
+        public const string SOMNOLENCIA_1_SENTADO_ID = "N009-SOM00000001";
+        public const string SOMNOLENCIA_2_MIRANDO_TV_ID = "N009-SOM00000002";
+        public const string SOMNOLENCIA_3_SENTADO_INACTIVO_ID = "N009-SOM00000003";
+        public const string SOMNOLENCIA_4_PASAJERO_ID = "N009-SOM00000004";
+        public const string SOMNOLENCIA_5_ACOSTADO_DESC_ID = "N009-SOM00000005";
+        public const string SOMNOLENCIA_6_ACOSTADO_CONVER_ID = "N009-SOM00000006";
+        public const string SOMNOLENCIA_7_SENTADO_TRANQUILO_ID = "N009-SOM00000007";
+        public const string SOMNOLENCIA_8_CARRO_TRACON_ID = "N009-SOM00000008";
+        public const string SOMNOLENCIA_1_RESULTADO_ID = "N009-SOM00000009";
+        public const string SOMNOLENCIA_2_RESULTADO_ID = "N009-SOM00000010";
+        public const string SOMNOLENCIA_3_RESULTADO_ID = "N009-SOM00000011";
+        public const string SOMNOLENCIA_4_RESULTADO_ID = "N009-SOM00000012";
+        public const string SOMNOLENCIA_5_RESULTADO_ID = "N009-SOM00000013";
+        public const string SOMNOLENCIA_6_RESULTADO_ID = "N009-SOM00000014";
+        public const string SOMNOLENCIA_7_RESULTADO_ID = "N009-SOM00000015";
+        public const string SOMNOLENCIA_8_RESULTADO_ID = "N009-SOM00000016";
+        public const string SOMNOLENCIA_TOTAL_ID = "N009-SOM00000017";
+        #endregion
+
+        #region Acumetria
+        public const string ACUMETRIA_ID = "N009-ME000000127";
+        public const string ACUMETRIA_PRUEBA_WEBER = "N009-ACU00000001";
+        public const string ACUMETRIA_OD_RINNER = "N009-ACU00000002";
+        public const string ACUMETRIA_OI_RINNER = "N009-ACU00000003";
+
+        public const string ACUMETRIA_WEBER = "N009-ACU00000004";
+
+        public const string ACUMETRIA_OD_RINNE = "N009-ACU00000005";
+        public const string ACUMETRIA_OI_RINNE = "N009-ACU00000006";
+
+        public const string ACUMETRIA_CONCLUSIONES = "N009-ACU00000007";
+        #endregion
+
+        #region Ergonomia
+        public const string EVA_ERGONOMICA_ID = "N009-ME000000128";
+
+        public const string EVA_ERGONOMICA_HOMBORS = "N009-EVA00000001";
+        public const string EVA_ERGONOMICA_CUELLO = "N009-EVA00000002";
+        public const string EVA_ERGONOMICA_ESPALDA = "N009-EVA00000003";
+        public const string EVA_ERGONOMICA_RODILLAS = "N009-EVA00000004";
+        public const string EVA_ERGONOMICA_RODILLAS_2 = "N009-EVA00000005";
+
+        public const string EVA_ERGONOMICA_BRAZO_MUNE = "N009-EVA00000006";
+        public const string EVA_ERGONOMICA_BRAZO_MUNE_2 = "N009-EVA00000007";
+        public const string EVA_ERGONOMICA_MANOS = "N009-EVA00000008";
+        public const string EVA_ERGONOMICA_RODILLAS_3 = "N009-EVA00000009";
+
+        public const string EVA_ERGONOMICA_CUELLOS_HOMB = "N009-EVA00000010";
+        public const string EVA_ERGONOMICA_CUELLOS_HOMB_2 = "N009-EVA00000011";
+
+        public const string EVA_ERGONOMICA_ZONA_LUMBAR = "N009-EVA00000012";
+        public const string EVA_ERGONOMICA_ZONA_LUMBAR_2 = "N009-EVA00000013";
+
+        public const string EVA_ERGONOMICA_MANOS_BRAZOS = "N009-EVA00000014";
+        public const string EVA_ERGONOMICA_MANOS_BRAZOS_2 = "N009-EVA00000015";
+
+        public const string EVA_ERGONOMICA_CONCLUSIONES = "N009-EVA00000016";
+
+        #endregion
+
+        #region Otoscopia
+
+        public const string OTOSCOPIA_ID = "N009-ME000000129";
+
+        public const string OTOSCOPIA_RUIDO = "N009-OTO00000001";
+        public const string OTOSCOPIA_QUIMICO = "N009-OTO00000002";
+        public const string OTOSCOPIA_DEPORTE = "N009-OTO00000003";
+        public const string OTOSCOPIA_RUIDO_EXCE = "N009-OTO00000004";
+        public const string OTOSCOPIA_MUSICA = "N009-OTO00000005";
+        public const string OTOSCOPIA_OTOXICOS = "N009-OTO00000006";
+        public const string OTOSCOPIA_MANIPULACION = "N009-OTO00000007";
+        public const string OTOSCOPIA_OTOLOGICOS = "N009-OTO00000008";
+
+        public const string OTOSCOPIA_ZUMBIDOS = "N009-OTO00000009";
+        public const string OTOSCOPIA_SECRECION = "N009-OTO00000010";
+        public const string OTOSCOPIA_MAREOS = "N009-OTO00000011";
+        public const string OTOSCOPIA_OTALGIA = "N009-OTO00000012";
+        public const string OTOSCOPIA_DISMINUCION = "N009-OTO00000013";
+        public const string OTOSCOPIA_TRACTO = "N009-OTO00000014";
+        public const string OTOSCOPIA_OTROS = "N009-OTO00000015";
+
+        public const string OTOSCOPIA_OD_1 = "N009-OTO00000016";
+        public const string OTOSCOPIA_OD_2 = "N009-OTO00000017";
+        public const string OTOSCOPIA_OD_3 = "N009-OTO00000018";
+        public const string OTOSCOPIA_OD_4 = "N009-OTO00000019";
+        public const string OTOSCOPIA_OI_1 = "N009-OTO00000020";
+        public const string OTOSCOPIA_OI_2 = "N009-OTO00000021";
+        public const string OTOSCOPIA_OI_3 = "N009-OTO00000022";
+        public const string OTOSCOPIA_OI_4 = "N009-OTO00000023";
+        public const string OTOSCOPIA_OD_DESC = "N009-OTO00000024";
+        public const string OTOSCOPIA_OI_DESC = "N009-OTO00000025";
+
+        #endregion
+
+        #region Sintomatico Respi
+        public const string SINTOMATICO_ID = "N009-ME000000131";
+
+        public const string SINTOMATICO_1 = "N009-RES00000001";
+        public const string SINTOMATICO_2 = "N009-RES00000002";
+        public const string SINTOMATICO_3 = "N009-RES00000003";
+        public const string SINTOMATICO_4 = "N009-RES00000004";
+        public const string SINTOMATICO_5 = "N009-RES00000005";
+        public const string SINTOMATICO_6 = "N009-RES00000006";
+        public const string SINTOMATICO_7 = "N009-RES00000007";
+        public const string SINTOMATICO_OBS = "N009-RES00000008";
+        public const string SINTOMATICO_SI_NO = "N009-RES00000009";
+        public const string SINTOMATICO_BK_1 = "N009-RES00000010";
+        public const string SINTOMATICO_BK_2 = "N009-RES00000011";
+        public const string SINTOMATICO_RX = "N009-RES00000012";
+
+        #endregion
+
+        #region LumboSacra
+        public const string LUMBOSACRA_ID = "N009-ME000000130";
+
+        public const string LUMBOSACRA_1 = "N009-RXL00000001";
+        public const string LUMBOSACRA_2 = "N009-RXL00000002";
+        public const string LUMBOSACRA_3 = "N009-RXL00000003";
+        public const string LUMBOSACRA_4 = "N009-RXL00000004";
+        public const string LUMBOSACRA_5 = "N009-RXL00000005";
+        public const string LUMBOSACRA_6 = "N009-RXL00000006";
+        public const string LUMBOSACRA_7 = "N009-RXL00000007";
+        public const string LUMBOSACRA_8 = "N009-RXL00000008";
+        #endregion
+
+        #region uc osteo
+
+
+        public const string UC_OSTEO_FLEXIBILIDAD = "N009-OTS00000001";
+        public const string UC_OSTEO_FLEXIBILIDAD_PTJ = "N009-OTS00000002";
+        public const string UC_OSTEO_FLEXIBILIDAD_OBS = "N009-OTS00000003";
+
+        public const string UC_OSTEO_CADERA = "N009-OTS00000004";
+        public const string UC_OSTEO_CADERA_PTJ = "N009-OTS00000005";
+        public const string UC_OSTEO_CADERA_OBS = "N009-OTS00000006";
+
+        public const string UC_OSTEO_MUSLO = "N009-OTS00000007";
+        public const string UC_OSTEO_MUSLO_PTJ = "N009-OTS00000008";
+        public const string UC_OSTEO_MUSLO_OBS = "N009-OTS00000009";
+
+        public const string UC_OSTEO_ABDOMEN = "N009-OTS00000010";
+        public const string UC_OSTEO_ABDOMEN_PTJ = "N009-OTS00000011";
+        public const string UC_OSTEO_ABDOMEN_OBS = "N009-OTS00000012";
+
+        public const string UC_OSTEO_ABD_180 = "N009-OTS00000013";
+        public const string UC_OSTEO_ABD_180_PTJ = "N009-OTS00000014";
+        public const string UC_OSTEO_ABD_180_SINO = "N009-OTS00000015";
+
+        public const string UC_OSTEO_ABD_60 = "N009-OTS00000016";
+        public const string UC_OSTEO_ABD_60_PTJ = "N009-OTS00000017";
+        public const string UC_OSTEO_ABD_60_SINO = "N009-OTS00000018";
+
+        public const string UC_OSTEO_ABD_90 = "N009-OTS00000019";
+        public const string UC_OSTEO_ABD_90_PTJ = "N009-OTS00000020";
+        public const string UC_OSTEO_ABD_90_SINO = "N009-OTS00000021";
+
+        public const string UC_OSTEO_ROTACION = "N009-OTS00000022";
+        public const string UC_OSTEO_ROTACION_PTJ = "N009-OTS00000023";
+        public const string UC_OSTEO_ROTACION_SINO = "N009-OTS00000024";
+
+        public const string UC_OSTEO_OBS = "N009-OTS00000025";
+
+        public const string UC_OSTEO_TOTAL1 = "N009-OTS00000026";
+        public const string UC_OSTEO_TOTAL2 = "N009-OTS00000027";
+        #endregion
+
+        #region uc ojo seco
+        public const string OJO_SECO_ID = "N009-ME000000133";
+
+        public const string OJO_SECO_ENROJECIMIENTO = "N009-OJS00000001";
+        public const string OJO_SECO_ENROJECIMIENTO_PTJ_1 = "N009-OJS00000006";
+
+        public const string OJO_SECO_BORDE = "N009-OJS00000007";
+        public const string OJO_SECO_BORDE_PTJ_2 = "N009-OJS00000012";
+
+        public const string OJO_SECO_ESCAMAS = "N009-OJS00000013";
+        public const string OJO_SECO_ESCAMAS_PTJ_3 = "N009-OJS00000018";
+
+        public const string OJO_SECO_OJOS = "N009-OJS00000019";
+        public const string OJO_SECO_OJOS_PTJ_4 = "N009-OJS00000024";
+
+        public const string OJO_SECO_SECRE = "N009-OJS00000025";
+        public const string OJO_SECO_SECRE_PTJ_5 = "N009-OJS00000030";
+
+        public const string OJO_SECO_SEQUEDAD = "N009-OJS00000031";
+        public const string OJO_SECO_SEQUEDAD_PTJ_6 = "N009-OJS00000036";
+
+        public const string OJO_SECO_ARENILLA = "N009-OJS00000037";
+        public const string OJO_SECO_ARENILLA_PTJ_7 = "N009-OJS00000042";
+
+        public const string OJO_SECO_EXTRANO = "N009-OJS00000043";
+        public const string OJO_SECO_EXTRANO_PTJ_8 = "N009-OJS00000048";
+
+        public const string OJO_SECO_ARDOR = "N009-OJS00000049";
+        public const string OJO_SECO_ARDOR_PTJ_9 = "N009-OJS00000054";
+
+        public const string OJO_SECO_PICOR = "N009-OJS00000055";
+        public const string OJO_SECO_PICOR_PTJ_10 = "N009-OJS00000060";
+
+        public const string OJO_SECO_MALESTAR = "N009-OJS00000061";
+        public const string OJO_SECO_MALESTAR_PTJ_11 = "N009-OJS00000066";
+
+        public const string OJO_SECO_DOLOR = "N009-OJS00000067";
+        public const string OJO_SECO_DOLOR_PTJ_12 = "N009-OJS00000072";
+
+        public const string OJO_SECO_LAGRIMEO = "N009-OJS00000073";
+        public const string OJO_SECO_LAGRIMEO_PTJ_13 = "N009-OJS00000078";
+
+        public const string OJO_SECO_LLOROSOS = "N009-OJS00000079";
+        public const string OJO_SECO_LLOROSOS_PTJ_14 = "N009-OJS00000084";
+
+        public const string OJO_SECO_SENSIBILIDAD = "N009-OJS00000085";
+        public const string OJO_SECO_SENSIBILIDAD_PTJ_15 = "N009-OJS00000090";
+
+        public const string OJO_SECO_VISION = "N009-OJS00000091";
+        public const string OJO_SECO_VISION_PTJ_16 = "N009-OJS00000096";
+
+        public const string OJO_SECO_CANSANCION = "N009-OJS00000097";
+        public const string OJO_SECO_CANSANCION_PTJ_17 = "N009-OJS00000102";
+
+        public const string OJO_SECO_PESADEZ = "N009-OJS00000103";
+        public const string OJO_SECO_PESADEZ_PTJ_18 = "N009-OJS00000108";
+
+        public const string OJO_SECO_TOTAL = "N009-OJS00000109";
+
+        #endregion
+
+    }
+}

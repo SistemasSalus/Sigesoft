@@ -1,0 +1,403 @@
+﻿<link href="~/plugins/css-loaders/css/css-loaders.css" rel="stylesheet">
+<link href="~/plugins/fooTable/css/footable.core.css" rel="stylesheet" />
+<link href="~/plugins/fooTable/css/footable.core.css" rel="stylesheet" />
+<link href="~/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+<style>
+    table {
+        display: block;
+        overflow-x: auto;
+        /*white-space: nowrap;*/
+    }
+</style>
+@model IEnumerable<Sigesoft.Node.WinClient.BE.ReporteViewModel>
+<div id="page-content">    
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">Salus Laboris - Lima</h3>   
+        </div>
+        <!-- Foo Table - Add & Remove Rows -->
+        <!--===================================================-->
+        <div class="panel-body">           
+            <table id="demo-foo-addrow"
+                   class="table table-bordered table-hover toggle-circle"
+                   data-page-size="999">
+                <thead>
+                    <tr>
+                        <th data-sort-initial="true" data-toggle="true">Tipo</th>
+                        <th>Centro Médico</th>                        
+                        <th data-hide="phone, tablet">Ciudad</th>
+                        <th data-hide="phone, tablet">Fecha</th>                        
+                        <th data-hide="phone, tablet">Empleador</th>
+                        <th data-hide="phone, tablet">Empresa principal</th>
+                        <th data-hide="phone, tablet">Sede</th>
+                        <th data-hide="phone, tablet">Tipo documento</th>
+                        <th data-hide="phone, tablet">Nro documento</th>
+                        <th data-hide="phone, tablet">Apellido paterno</th>
+
+                        <th data-hide="phone, tablet">Apellido materno</th>
+                        <th data-hide="phone, tablet">Nombres</th>
+                        <th data-hide="phone, tablet">Edad</th>
+                        <th data-hide="phone, tablet">Sexo</th>
+                        <th data-hide="phone, tablet">Celular</th>
+                        <th data-hide="phone, tablet">Otro teléfono</th>
+                        <th data-hide="phone, tablet">Domicilio o residencia</th>
+                        <th data-hide="phone, tablet">Dirección donde reside</th>
+                        <th data-hide="phone, tablet">Departamento/Provincia/Distrito</th>
+                        <th data-hide="phone, tablet">¿Ha viajado fuera del país?</th>
+
+                        <th data-hide="phone, tablet">¿Ha tenido usted un contacto directo con algún caso CONFIRMADO COVID19?</th>
+                        <th data-hide="phone, tablet">¿Ha visitado algún establecimiento de salud?</th>
+                        <th data-hide="phone, tablet">¿Está tomando alguna medicación?</th>
+                        <th data-hide="phone, tablet">Si la respuesta es SÍ especifique</th>
+                        <th data-hide="phone, tablet">Mayor 65</th>
+                        <th data-hide="phone, tablet">Diabetes</th>
+                        <th data-hide="phone, tablet">Enfermedad pulmonar crónica</th>
+                        <th data-hide="phone, tablet">Cáncer</th>
+                        <th data-hide="phone, tablet">Hipertensión arterial</th>
+                        <th data-hide="phone, tablet">Obesidad IMC >40</th>
+
+                        <th data-hide="phone, tablet">Insuficiencia renal crónica</th>
+                        <th data-hide="phone, tablet">Embarazo o puerperio</th>
+                        <th data-hide="phone, tablet">Enf. cardiovascular</th>
+                        <th data-hide="phone, tablet">Asma</th>
+                        <th data-hide="phone, tablet">Enf. o tratamiento inmunosupresor</th>
+                        <th data-hide="phone, tablet">Personal de salud</th>
+                        <th data-hide="phone, tablet">¿Es personal de salud?</th>
+                        <th data-hide="phone, tablet">¿Cuál es su profesión?</th>
+                        <th data-hide="phone, tablet">¿Tiene síntomas?</th>
+                        <th data-hide="phone, tablet">¿Fecha inicio de síntomas?</th>
+                        
+                        <th data-hide="phone, tablet">Tos</th>
+                        <th data-hide="phone, tablet">Fiebre/Escalofrio</th>
+                        <th data-hide="phone, tablet">Cefaléa</th>
+                        <th data-hide="phone, tablet">Dolor de garganta</th>
+                        <th data-hide="phone, tablet">Malestar general</th>
+                        <th data-hide="phone, tablet">Irritación/Confusión</th>
+                        <th data-hide="phone, tablet">Congestión nasal</th>
+                        <th data-hide="phone, tablet">Diarrea</th>
+                        <th data-hide="phone, tablet">Dolor</th>
+                        <th data-hide="phone, tablet">Dificultad respiratoria</th>
+
+                        <th data-hide="phone, tablet">Nauseas/Vómitos</th>
+                        <th data-hide="phone, tablet">Expectoración</th>
+                        <th data-hide="phone, tablet">Dolor muscular</th>
+                        <th data-hide="phone, tablet">Dolor abdominal</th>
+                        <th data-hide="phone, tablet">Dolor pecho</th>
+                        <th data-hide="phone, tablet">Dolor articulaciones</th>
+                        <th data-hide="phone, tablet">Otros síntomas(especificar)</th>
+                        <th data-hide="phone, tablet">Clasificación clínica de severidad</th>
+                        <th data-hide="phone, tablet">Temperatura</th>
+                        <th data-hide="phone, tablet">Peso</th>
+
+                        <th data-hide="phone, tablet">Talla</th>
+                        <th data-hide="phone, tablet">IMC</th>
+                        <th data-hide="phone, tablet">Procedencia de la Solicitud</th>                        
+                        <th data-hide="phone, tablet">Resultado prueba rápida</th>
+
+                        <th data-hide="phone, tablet">Resultado de segunda prueba rápida</th>
+                        <th data-hide="phone, tablet">Profesional quien realiza la prueba</th>
+                        <th data-hide="phone, tablet">Aptitud</th>
+
+                    </tr>
+                </thead>
+                <div class="pad-btm form-inline">
+                    <div class="row">
+                        <div class="col-sm-6 text-xs-center text-right">
+                            <div id="demo-dp-range">
+                              <div class="input-daterange input-group" id="datepicker">
+                                <input type="text" class="form-control" name="start" id="dtpStart" />
+                                <span class="input-group-addon">to</span>
+                                <input type="text" class="form-control" name="end" id="dtpEnd" />
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 text-xs-center text-right">
+                            <div class="form-group">
+                                <input id="demo-input-search2"
+                                       type="text"
+                                       placeholder="Buscador"
+                                       class="form-control"
+                                       autocomplete="off" />                                 
+                            </div>
+                            <div class="btn-group">
+					                        <button class="btn btn-default" id="btnFilter"><i class="glyphicon demo-pli-repeat-2"></i></button>
+					                        <div class="btn-group dropdown">
+					                            <button data-toggle="dropdown"  class="btn btn-default dropdown-toggle">
+					                                <i class="demo-pli-gear"></i>
+					                                <span class="caret"></span>
+					                            </button>
+					                            <ul role="menu" class="dropdown-menu dropdown-menu-right">
+					                                <li><a href="#" onclick="tableToExcel('demo-foo-addrow', 'W3C Example Table')">Descargar</a></li>
+					                                <li><a href="#">Enviar por correo</a></li>					                                
+					                            </ul>
+					                        </div>
+					                    </div>
+                        </div>
+                         
+                    </div>                    
+                </div>
+                 
+                <tbody>
+                      @foreach (var item in Model)
+                      {
+                          <tr>
+                                <td>@item.Tipo</td>
+                                <td>@item.Centro_medico </td>
+                                <td>@item.Ciudad</td>
+                                <td>@item.Fecha</td>                        
+                                <td>@item.Empleador</td>
+                                <td>@item.Empresa_principal</td>
+                                <td>@item.Sede</td>
+                                <td>@item.Tipo_documento</td>
+                                <td>@item.Nro_documento</td>
+                                <td>@item.Apellido_paterno</td>
+
+                                <td>@item.ApellidoMaterno</td>
+                                <td>@item.Nombres</td>
+                                <td>@item.Edad</td>
+                                <td>@item.Sexo</td>
+                                <td>@item.Celular</td>
+                                <td>@item.Otro_telefono</td>
+                                <td>@item.Domicilio_residencia</td>
+                                <td>@item.Direccion_donde_reside</td>
+                                <td>@item.Departamento_Provincia_Distrito</td>
+                                <td>@item.Ha_viajado_fuera_del_pais</td>
+
+                                <td>@item.Ha_tenido_usted_un_contacto_directo_con_algun_caso_CONFIRMADO_COVID19</td>
+                                <td>@item.Ha_visitado_algun_establecimiento_de_salud</td>
+                                <td>@item.Esta_tomando_alguna_medicacion</td>
+                                <td>@item.Si_la_respuesta_es_SI_especifique</td>
+                                <td>@item.Mayor_65</td>
+                                <td>@item.Diabetes</td>
+                                <td>@item.Enfermedad_pulmonar_cronica</td>
+                                <td>@item.Cancer</td>
+                                <td>@item.Hipertension_arterial</td>
+                                <td>@item.Obesidad_IMC_40</td>
+
+                                <td>@item.Insuficiencia_renal_cronica</td>
+                                <td>@item.Embarazo_o_puerperio</td>
+                                <td>@item.Enf_cardiovascular</td>
+                                <td>@item.Asma</td>
+                                <td>@item.Enf_o_tratamiento_inmunosupresor</td>
+                                <td>@item.Condicion_Personal_de_salud</td>
+                                <td>@item.Pregunta_Es_personal_de_salud</td>
+                                <td>@item.Cual_es_su_profesion</td>
+                                <td>@item.Tiene_sintomas</td>
+                                <td>@item.Fecha_inicio_de_sintomas</td>
+                        
+                                <td>@item.Tos</td>
+                                <td>@item.Fiebre_Escalofrio</td>
+                                <td>@item.Cefalea</td>
+                                <td>@item.Dolor_de_garganta</td>
+                                <td>@item.Malestar_general</td>
+                                <td>@item.Irritacion_Confusion</td>
+                                <td>@item.Congestion_nasal</td>
+                                <td>@item.Diarrea</td>
+                                <td>@item.Dolor</td>
+                                <td>@item.Dificultad_respiratoria</td>
+
+                                <td>@item.Nauseas_Vomitos</td>
+                                <td>@item.Expectoracion</td>
+                                <td>@item.Dolor_muscular</td>
+                                <td>@item.Dolor_abdominal</td>
+                                <td>@item.Dolor_pecho</td>
+                                <td>@item.Dolor_articulaciones</td>
+                                <td>@item.Otros_sintomas_especificar</td>
+                                <td>@item.Clasificacion_clinica_de_severidad</td>
+                                <td>@item.Temperatura</td>
+                                <td>@item.Peso</td>
+
+                                <td>@item.Talla</td>
+                                <td>@item.IMC</td>
+                                <td>@item.Procedencia_Solicitud</td>
+                                <td>@item.Resultado_prueba_rapida</td>
+
+                                <td>@item.Resultado_de_segunda_prueba_rapida</td>
+                                <td>@item.Profesional_quien_realiza_la_prueba</td>
+                                <td>@item.Aptitud</td>
+
+                          </tr>
+                      }
+                </tbody>             
+            </table>
+        </div>
+        <!--===================================================-->
+        <!-- End Foo Table - Add & Remove Rows -->
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog">
+ <div class="modal-dialog modal-dialog-centered text-center" role="document">
+     <div class="load6">
+		<div class="loader"></div>
+	    </div>
+    </div>
+</div>
+
+
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/plugins/fooTable/dist/footable.all.min.js"></script>
+<script src="~/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="~/Scripts/moment.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        setearRangoFechas();
+
+        $("#btnFilter").on('click', function () {
+            $("tbody").empty();
+            var datos = {
+                "FechaInicio": $("#dtpStart").val(),
+                "FechaFin": $("#dtpEnd").val()
+            }
+
+            $('.modal').modal('show');
+            $.ajax({
+                type: "POST",
+                url: "/Reports/Filter",
+                dataType: "json",
+                data: datos,
+                success: function (data) {
+                    var content;
+                    data.map(item => {
+                        content +="<tr>",
+                        content +=  "<td>"+item.Tipo+"</td>",
+                        content +=  "<td>"+item.Centro_medico +"</td>",
+                        content +=  "<td>"+item.Ciudad +"</td>",
+                        content +=  "<td>"+item.Fecha +"</td>",
+                        content +=  "<td>"+item.Empleador +"</td>",
+                        content +=  "<td>"+item.Empresa_principal +"</td>",
+                        content +=  "<td>"+item.Sede +"</td>",
+                        content +=  "<td>"+item.Tipo_documento +"</td>",
+                        content +=  "<td>"+item.Nro_documento +"</td>",
+                        content +=  "<td>"+item.Apellido_paterno +"</td>",
+
+                        content +=  "<td>"+item.ApellidoMaterno +"</td>",
+                        content +=  "<td>"+item.Nombres +"</td>",
+                        content +=  "<td>"+item.Edad +"</td>",
+                        content +=  "<td>"+item.Sexo +"</td>",
+                        content +=  "<td>"+item.Celular +"</td>",
+                        content +=  "<td>"+item.Otro_telefono +"</td>",
+                        content +=  "<td>"+item.Domicilio_residencia +"</td>",
+                        content +=  "<td>"+item.Direccion_donde_reside +"</td>",
+                        content +=  "<td>"+item.Departamento_Provincia_Distrito +"</td>",
+                        content +=  "<td>"+item.Ha_viajado_fuera_del_pais +"</td>",
+
+                        content +=  "<td>"+item.Ha_tenido_usted_un_contacto_directo_con_algun_caso_CONFIRMADO_COVID19 +"</td>",
+                        content +=  "<td>"+item.Ha_visitado_algun_establecimiento_de_salud +"</td>",
+                        content +=  "<td>"+item.Esta_tomando_alguna_medicacion +"</td>",
+                        content +=  "<td>"+item.Si_la_respuesta_es_SI_especifique +"</td>",
+                        content +=  "<td>"+item.Mayor_65 +"</td>",
+                        content +=  "<td>"+item.Diabetes +"</td>",
+                        content +=  "<td>"+item.Enfermedad_pulmonar_cronica +"</td>",
+                        content +=  "<td>"+item.Cancer +"</td>",
+                        content +=  "<td>"+item.Hipertension_arterial +"</td>",
+                        content +=  "<td>"+item.Obesidad_IMC_40 +"</td>",
+
+                        content +=  "<td>"+item.Insuficiencia_renal_cronica +"</td>",
+                        content +=  "<td>"+item.Embarazo_o_puerperio +"</td>",
+                        content +=  "<td>"+item.Enf_cardiovascular +"</td>",
+                        content +=  "<td>"+item.Asma +"</td>",
+                        content +=  "<td>"+item.Enf_o_tratamiento_inmunosupresor +"</td>",
+                        content +=  "<td>"+item.Condicion_Personal_de_salud +"</td>",
+                        content +=  "<td>"+item.Pregunta_Es_personal_de_salud +"</td>",
+                        content +=  "<td>"+item.Cual_es_su_profesion +"</td>",
+                        content +=  "<td>"+item.Tiene_sintomas +"</td>",
+                        content +=  "<td>"+item.Fecha_inicio_de_sintomas +"</td>",
+
+                        content +=  "<td>"+item.Tos +"</td>",
+                        content +=  "<td>"+item.Fiebre_Escalofrio +"</td>",
+                        content +=  "<td>"+item.Cefalea +"</td>",
+                        content +=  "<td>"+item.Dolor_de_garganta +"</td>",
+                        content +=  "<td>"+item.Malestar_general +"</td>",
+                        content +=  "<td>"+item.Irritacion_Confusion +"</td>",
+                        content +=  "<td>"+item.Congestion_nasal +"</td>",
+                        content +=  "<td>"+item.Diarrea +"</td>",
+                        content +=  "<td>"+item.Dolor +"</td>",
+                        content +=  "<td>"+item.Dificultad_respiratoria +"</td>",
+
+                        content +=  "<td>"+item.Nauseas_Vomitos +"</td>",
+                        content +=  "<td>"+item.Expectoracion +"</td>",
+                        content +=  "<td>"+item.Dolor_muscular +"</td>",
+                        content +=  "<td>"+item.Dolor_abdominal +"</td>",
+                        content +=  "<td>"+item.Dolor_pecho +"</td>",
+                        content +=  "<td>"+item.Dolor_articulaciones +"</td>",
+                        content +=  "<td>"+item.Otros_sintomas_especificar +"</td>",
+                        content +=  "<td>"+item.Clasificacion_clinica_de_severidad +"</td>",
+                        content +=  "<td>"+item.Temperatura +"</td>",
+                        content +=  "<td>"+item.Peso +"</td>",
+
+                        content +=  "<td>"+item.Talla +"</td>",
+                        content +=  "<td>"+item.IMC +"</td>",
+                        content +=  "<td>"+item.Procedencia_Solicitud +"</td>",                        
+                        content +=  "<td>"+item.Resultado_prueba_rapida +"</td>",
+
+                        content +=  "<td>"+item.Resultado_de_segunda_prueba_rapida +"</td>",
+                        content +=  "<td>"+item.Profesional_quien_realiza_la_prueba +"</td>",
+                        content +=  "<td>"+item.Aptitud +"</td>",
+
+                        content +="</tr>"
+                    });                    
+                    
+
+                    $("#demo-foo-addrow tbody").html(content);
+
+                    updateFootable();
+                    $('.modal').modal('hide');
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Status: " + textStatus); alert("Error: " + errorThrown);
+                    $('.modal').modal('hide');
+                }
+            });
+        });
+
+        function updateFootable() {
+            var paramTable = $('.footable');
+            paramTable.trigger('footable_initialize');
+        }
+
+        function setearRangoFechas() {
+            var date = new Date();
+            var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+            var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+
+            $("#dtpStart").val(moment(firstDay).format("DD-MM-YYYY"));
+            $("#dtpEnd").val(moment(lastDay).format("DD-MM-YYYY"));
+        }
+    });
+    
+
+    $(document).on('nifty.ready', function () {
+
+        $('#demo-dp-range .input-daterange').datepicker({
+            format: "dd-mm-yyyy",
+            todayBtn: "linked",
+            autoclose: true,
+            todayHighlight: true
+        });
+
+        var addrow = $('#demo-foo-addrow');
+        addrow.footable();
+    });
+
+ 
+
+</script>
+
+<script type="text/javascript">
+    var tableToExcel = (function() {
+        var uri = 'data:application/vnd.ms-excel;base64,'
+          , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--><meta http-equiv="content-type" content="text/plain; charset=UTF-8"/></head><body><table>{table}</table></body></html>'
+          , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+          , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+        return function(table, name) {
+            if (!table.nodeType) table = document.getElementById(table)
+            var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+            window.location.href = uri + base64(format(template, ctx))
+        }
+    })()
+</script>

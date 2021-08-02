@@ -1,0 +1,885 @@
+﻿<link href="~/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+<link href="~/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+<link href="~/plugins/css-loaders/css/css-loaders.css" rel="stylesheet">
+@model IEnumerable<Sigesoft.Node.WinClient.BE.ListaCovid19>
+<link href="~/plugins/fooTable/css/footable.core.css" rel="stylesheet" />
+<link href="~/plugins/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet" />
+
+<div id="page-content">    
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">NODO: @ViewBag.NOMBRENODO</h3>
+        </div>
+					        <div class="panel-body">
+                                <div class="row">   
+                                    <div class="col-md-4">
+                                         <div class="form-group">
+                                            <label class="control-label">Fecha de servicio</label>
+                                             <div class="input-group date">
+                                                <input type="text" id="txtFechaServicioBuscador" class="form-control" placeholder="dd/mm/yyyy">                                    
+                                            </div>
+                                         </div>                                        
+                                    </div>	
+                                    <div class="col-md-4">
+                                           <div class="form-group">
+                                            <label class="control-label">Clínica-Provincia</label>
+                                            <select class="selectpicker form-control" id="ddlClinicaProvinciaBuscadorId">
+                                                <option value="130">SIGSO - AREQUIPA</option>       
+                                                <option value="131">SIGSO - Camana</option> 
+                                                <option value="160">SAN CARLOS - JULIACA</option>                                                       
+                                                <option value="132">OXIMEDIC - Juliaca</option>       
+                                                <option value="133">SAN PEDRO APOSTOL - Tacna</option>       
+                                                <option value="134">SAN PEDRO APOSTOL - Ilo</option>       
+                                                <option value="135">CAYETANO HEREDIA - Huancayo</option> 
+                                                <option value="136">SANTA ANITA - Iquitos</option>       
+                                                <option value="137">PARDO - Cuzco</option>       
+                                                <option value="138">JUAN PABLO II - Pucalpa</option>       
+                                                <option value="139">INVBIOMEDIC - Cajamarca</option>       
+                                                <option value="140">SALUS LABORIS - Chiclayo</option>       
+                                                <option value="141">SALUS LABORIS - Motupe</option>       
+                                                <option value="142">MEDICAL CENTER - Huaraz</option>       
+                                                <option value="143">EL NAZARENO - Ayacucho</option>       
+                                                <option value="144">SAN MARTIN - Tarapoto</option>       
+                                                <option value="145">MIRAFLORES - Piura</option>       
+                                                <option value="146">VIDA HUANCAVELICA - Huancavelica</option>       
+                                                <option value="147">DANIEL ALCIDES CARRION - Moyobamba</option>       
+                                                <option value="148">NORTHLAB - Tumbes</option>       
+                                                <option value="149">DANIEL ALCIDES CARRION - Yurimaguas</option>       
+                                                <option value="152">HUANBUCO - Huanuco</option>       
+                                                <option value="150">EUROCLINIC - Trujillo</option>
+                                                <option value="151">HEALTH AND SAFETY OCCUPATIONAL - Huancayo</option>
+                                                <option value="153">PUERTO MALDONADO - Puerto Maldonado</option>
+                                                <option value="154">CLÍNICA INTEGRAL SANTA LUCÍA - Tingo María</option>
+                                                <option value="155">CLÍNICA MEDES - Cajamarca</option>
+                                            </select>
+                                        </div>
+                                        </div>			          
+                                    <div class="col-md-4">                                   
+                                            <div class="form-group">
+                                                <label class="control-label">Empresa</label>
+                                                <select class="selectpicker form-control" id="ddlEmpresaBuscadorId">
+                                                    <option value="">UNIÓN DE CERVECERÍAS PERUANAS BACKUS Y JOHNSTON SOCIEDAD ANÓNIMA ABIERTA</option>                                        
+                                                </select>
+                                            </div>
+                                    </div>		
+                                        
+                                </div>
+                                
+                                <div class="row">                                 			          
+                                    <div class="col-md-4" style="display:none">
+                                        <div class="form-group">
+                                            <label class="control-label">Sede</label>
+                                            <select class="selectpicker form-control" id="ddlSedeBuscadorId">
+                                                    @foreach (var sedes in ViewBag.SEDESBACKUS)
+                                                    {
+                                                        <option value="@sedes.ValueSede">@sedes.v_LocationName</option>     
+                                                    }   
+                                            </select>
+                                        </div>
+                                    </div>		
+                                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <button class="btn btn-primary btn-rounded" id="btnAplicarFiltro">Aplicar Filtro</button>
+                                        </div>                                        
+                                    </div>
+                                    	
+                                </div>                                
+                            </div>
+				
+        <hr class="new-section-xs">
+
+        <div class="panel-body">                
+            <table id="demo-foo-addrow"
+                   class="table table-bordered table-hover toggle-circle"
+                   data-page-size="20">
+                <thead>
+                    <tr>
+                        <th data-sort-ignore="true" class="min-width"></th>
+                        <th data-sort-initial="true" data-toggle="true">
+                            Nombres
+                        </th>
+                        <th>Apellidos</th>                        
+                        <th data-hide="phone, tablet">Protocolo</th>
+                        <th data-hide="phone, tablet">Empresa</th>
+                        <th data-hide="phone, tablet">Puesto</th>
+                        <th data-hide="phone, tablet">Encuesta</th>
+                        <th data-hide="phone, tablet">Laboratorio</th>
+                        <th data-hide="phone, tablet">Teléfono</th>
+                        <th data-hide="phone, tablet">Imprimir</th>
+                        <th data-ignore="true" data-hide="all"></th>
+                        <th data-ignore="true" data-hide="all"></th>
+                        <th data-ignore="true" data-hide="all"></th>
+                        <th data-ignore="true" data-hide="all"></th>
+                        <th data-ignore="true" data-hide="all"></th>
+                    </tr>
+                </thead>
+              
+                <div class="pad-btm form-inline">
+                    <div class="col-sm-6 text-xs-center">
+                        <div class="form-group">
+                          <button class="btn btn-info" data-target="#demo-default-modal" data-toggle="modal">
+                            <i class="demo-pli-plus"></i> Registrar nuevo trabajador
+                          </button>
+                        </div>
+                      </div>
+                    <div class="col-sm-6 text-xs-center text-right">
+                        <div class="form-group">
+                            <input id="demo-input-search2"
+                                    type="text"
+                                    placeholder="Buscador"
+                                    class="form-control"
+                                    autocomplete="off" />                                 
+                        </div>
+                    </div>
+                    
+                </div>
+                @*<div class="pad-btm form-inline">
+                    <button class="btn btn-default btn-icon btn-circle" id="btnNegativo">@ViewBag.CountNegativo</button>Negativo        
+                    <button class="btn btn-primary btn-icon btn-circle" id="btnNoValido">@ViewBag.CountNoValido</button>No Válido
+                    <button class="btn btn-info btn-icon btn-circle" id="btnIgMPositivo">@ViewBag.CountIgMPositivo</button>IgM Positivo
+                    <button class="btn btn-warning btn-icon btn-circle" id="btnIgGPositivo">@ViewBag.CountIgGPositivo</button>IgG Positivo
+                    <button class="btn btn-danger btn-icon btn-circle" id="btnIgMIgGPositivo">@ViewBag.CountIgMIgGPositivo</button>IgM e IgG positivo
+                    <button class="btn btn-mint btn-icon">@Model.ToList().Count</button> total de servicios
+                </div>*@
+                 
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>    
+                                <button class="Link-Examen btn btn-primary btn-xs">
+                                    <i class="ion-edit"></i>
+                                </button>
+                            </td>
+                            <td >@Html.DisplayFor(modelItem => item.Nombres)</td>                            
+                            <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Protocolo)</td>  
+                            <td>@Html.DisplayFor(modelItem => item.Empresa)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Puesto)</td>  
+                            <td>
+                                @if (item.Estado == "No Aplica")
+                                {
+                                    <span class="badge badge-info">No aplica</span>
+                                }
+                                else if (item.Estado == "pendiente")
+                                {
+                                    <span class="badge badge-default">Pendiente</span>
+                                }
+                                else if (item.Estado == "realizado")
+                                {
+                                    <span class="badge badge-success">Realizado</span>
+                                }          
+                                
+                            </td>        
+                            <td>
+                               @if (item.EstadoLaboratorio == "No Aplica")
+                               {
+                                    <span class="badge badge-info">No aplica</span>
+                               }
+                               else if (item.EstadoLaboratorio == "pendiente")
+                               {
+                                    <span class="badge badge-default">Pendiente</span>
+                               }
+                               else if (item.EstadoLaboratorio == "realizado")
+                               {
+                                    <span class="badge badge-success">Realizado</span>
+                               }                                      
+                            </td>   
+                            <td>@Html.DisplayFor(modelItem => item.Telefono)</td>  
+                            <td>
+                                <button class="Link-PDF btn btn-danger btn-xs">
+                                    <i class="ion-printer">PDF</i>
+                                </button>
+                            </td>                                                                                  
+                            <td id="serviceComponentId" >@Html.DisplayFor(modelItem => item.ServiceComponentId)</td>      
+                            <td id="personId" >@Html.DisplayFor(modelItem => item.PersonId)</td>  
+                            <td id="serviceId" >@Html.DisplayFor(modelItem => item.ServiceId)</td>  
+                            <td id="componentId" >@Html.DisplayFor(modelItem => item.ComponentId)</td>  
+                            <td id="organizationId" >@Html.DisplayFor(modelItem => item.OrganizationId)</td>      
+                        </tr>
+                    }
+                </tbody>   
+                <tfoot>
+                    <tr>
+                      <td colspan="10" class="footable-visible">
+                        <div class="text-right">
+                          <ul class="pagination">
+                            <li class="footable-page-arrow">
+                                <a data-page="first" href="#first">«</a>
+                            </li>
+                            <li class="footable-page-arrow">
+                                <a data-page="prev" href="#prev">‹</a>
+                            </li>
+                            <li class="footable-page">
+                                <a data-page="0" href="#">1</a>
+                            </li>
+                            <li class="footable-page active">
+                                <a data-page="1" href="#">2</a>
+                            </li>
+                            <li class="footable-page-arrow disabled">
+                                <a data-page="next" href="#next">›</a>
+                            </li>
+                            <li class="footable-page-arrow disabled">
+                                <a data-page="last" href="#last">»</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tfoot>             
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog">
+ <div class="modal-dialog modal-dialog-centered text-center" role="document">
+     <div class="load6">
+		<div class="loader"></div>
+	    </div>
+    </div>
+</div>
+
+    <!--Default Bootstrap Modal-->
+    <!--===================================================-->
+    <div
+      class="modal fade"
+      id="demo-default-modal"
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="demo-default-modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal header-->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <i class="pci-cross pci-circle"></i>
+            </button>
+            <h4 class="modal-title">Registro de trabajador</h4>
+          </div>
+
+          <!--Modal body-->
+          <div class="modal-body">
+       
+			<!--Block Styled Form -->
+			<!--===================================================-->
+            <div class="panel-body">                     
+                <div class="row">	
+                    <div class="col-md-12">
+					    <div class="form-group">
+					        <label class="control-label label-warning">Fecha Servicio</label>
+                            <a href="#" id="dtpFechaServicio" data-type="combodate" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" ></a>
+					    </div>
+					</div>
+				</div>
+            </div>
+            
+			<form id="form-datos-personales" >
+				<div class="panel-body">          
+                @*<div class="row" >
+                    <div class="col-md-12">
+					    <div class="form-group">
+					        <label class="control-label">Fecha últ. prueba rápida: </label>
+                            <input type="text" class="form-control" id="lblFechaPruebaRapida" value="----" readonly>
+					    </div>
+					</div>					    
+                </div>
+
+                <div class="row"  >
+                    <div class="col-md-12">
+					    <div class="form-group">
+					        <label class="control-label">Resultado últ. prueba rápida: </label>
+                            <input type="text" class="form-control" id="lblResultadoPruebaRapida" value="----" readonly>
+					    </div>
+					</div>
+                </div>  *@        
+                    <div class="row">	
+                         <div class="col-md-4">
+					        <div class="form-group">
+					            <label class="control-label">Tipo Documento</label>
+					            <select class="selectpicker form-control" id="ddlTipoDocumento" name="validaTipoDocumento">
+                                  <option>  </option>
+                                  <option value="1" selected>DNI</option>
+                                  <option value="2">Pasaporte</option>
+                                  <option value="3">Licencia de Conducir</option>
+                                  <option value="4">Carnet de Extranjería</option>
+                                </select>
+					        </div>
+
+					    </div>
+					    <div class="col-md-4">
+					        <div class="form-group">
+					            <label class="control-label">Nro. Documento</label>
+					            <input type="text" class="form-control" id="txtNroDocumento" name="validaNroDocumento">
+					        </div>
+					    </div>				    
+					    <div class="col-md-4">
+					        <div class="form-group">
+					            <label class="control-label">Género</label>
+					            <select class="selectpicker form-control" id="ddlGenero" name="validaGenero">
+                                  <option>  </option>
+                                  <option value="1">Masculino</option>
+                                  <option value="2">Femenino</option>
+                                </select>
+					        </div>
+					    </div>
+					</div>
+					<div class="row">
+					    <div class="col-md-4">
+					        <div class="form-group">
+					            <label class="control-label">Nombres</label>
+					            <input type="text" class="form-control" id="txtNombres" name="validaNombres">
+					        </div>
+					    </div>
+					    <div class="col-md-4">
+					        <div class="form-group">
+					            <label class="control-label">Apellido Paterno</label>
+					            <input type="text" class="form-control" id="txtApePaterno" name="validaPaterno">
+					        </div>
+					    </div>
+                        <div class="col-md-4">
+					        <div class="form-group">
+					            <label class="control-label">Apellido Materno</label>
+					            <input type="text" class="form-control" id="txtApeMaterno" name="validaMaterno">
+					        </div>
+					    </div>
+					</div>                    
+					<div class="row">
+                        <div class="col-md-4">
+					        <div class="form-group">
+					            <label class="control-label">Fecha Nacimiento</label>
+                                    <div class="input-group date">
+                                    <input type="text" id="dtpFechaNacimiento" class="form-control" placeholder="dd/mm/yyyy">                                    
+                                    </div>
+					        </div>
+					    </div>
+					    <div class="col-md-4">
+					        <div class="form-group">
+					            <label class="control-label">Email</label>
+					            <input type="text" class="form-control" id="txtEmail" name="validaEmail">
+					        </div>
+					    </div>
+					    <div class="col-md-4">
+					        <div class="form-group">
+					            <label class="control-label">Celulares</label>
+					            <input type="text" class="form-control" id="txtCelulares" name="validaCelulares">
+					        </div>
+					    </div>
+					</div>  
+                    <div class="row">
+                         <div class="col-md-4">
+					        <div class="form-group">
+					            <label class="control-label">Puesto Trabajo</label>
+					            <input type="text" class="form-control" id="txtPuesto" name="validaPuesto">
+					        </div>
+					    </div>
+                        <div class="col-md-8">
+					        <div class="form-group">
+					            <label class="control-label">Dirección</label>
+					            <input type="text" class="form-control" id="txtDireccion" name="validaDireccion">
+					        </div>
+					    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">					        
+                             <div class="form-group">
+                                    <label class="control-label">Clínica-Provincia</label>
+                                    <select class="selectpicker form-control" id="ddlClinicaProvinciaId" name="validaClinicaProvincia">
+                                        <option value="-1">    </option>
+                                        <option value="130">SIGSO - AREQUIPA</option>       
+                                        <option value="131">SIGSO - Camana</option>     
+                                        <option value="160">SAN CARLOS - JULIACA</option>       
+                                        <option value="132">OXIMEDIC - Juliaca</option>       
+                                        <option value="133">SAN PEDRO APOSTOL - Tacna</option>       
+                                        <option value="134">SAN PEDRO APOSTOL - Ilo</option>       
+                                        <option value="135">CAYETANO HEREDIA - Huancayo</option>       
+                                        <option value="136">SANTA ANITA - Iquitos</option>       
+                                        <option value="137">PARDO - Cuzco</option>       
+                                        <option value="138">JUAN PABLO II - Pucalpa</option>       
+                                        <option value="139">INVBIOMEDIC - Cajamarca</option>       
+                                        <option value="140">SALUS LABORIS - Chiclayo</option>       
+                                        <option value="141">SALUS LABORIS - Motupe</option>       
+                                        <option value="142">MEDICAL CENTER - Huaraz</option>       
+                                        <option value="143">EL NAZARENO - Ayacucho</option>       
+                                        <option value="144">SAN MARTIN - Tarapoto</option>       
+                                        <option value="145">MIRAFLORES - Piura</option>       
+                                        <option value="146">VIDA HUANCAVELICA - Huancavelica</option>       
+                                        <option value="147">DANIEL ALCIDES CARRION - Moyobamba</option>       
+                                        <option value="148">NORTHLAB - Tumbes</option>       
+                                        <option value="149">DANIEL ALCIDES CARRION - Yurimaguas</option>       
+                                        <option value="152">HUANBUCO - Huanuco</option>       
+                                        <option value="150">EUROCLINIC - Trujillo</option>
+                                        <option value="151">HEALTH AND SAFETY OCCUPATIONAL - Huancayo</option>
+                                        <option value="153">PUERTO MALDONADO - Puerto Maldonado</option>
+                                        <option value="154">CLÍNICA INTEGRAL SANTA LUCÍA - Tingo María</option>
+                                        <option value="155">CLÍNICA MEDES - Cajamarca</option>
+                                    </select>
+                            </div>
+                        </div>
+                         <div class="col-md-4">					        
+                             <div class="form-group">
+                                    <label class="control-label">Sede</label>
+                                    <select class="selectpicker form-control" id="ddlSede" name="validaSede">
+                                        <option value="-1">    </option>
+                                            @foreach (var sedes in ViewBag.SEDESBACKUS)
+                                                {
+                                                    <option value="@sedes.ValueSede">@sedes.v_LocationName</option>     
+                                                }   
+                                    </select>
+                            </div>
+					    </div>
+                        
+                        <div class="col-md-4">	                        
+                            <div class="form-group">
+					            <label class="control-label">Empleadora</label>
+					            <input type="text" class="form-control" id="txtEmpleadora" readonly>
+					        </div>
+                        </div>
+				</div>                                 
+                </div>
+				<div class="panel-footer text-right">
+					<button class="btn btn-success" id="saveRegistro" type="submit">Registrar</button>
+				</div>
+			</form>
+			<!--===================================================-->
+			<!--End Block Styled Form -->
+					
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--===================================================-->
+    <!--End Default Bootstrap Modal-->
+
+<div class="modal fade" tabindex="-1" role="dialog">
+ <div class="modal-dialog modal-dialog-centered text-center" role="document">
+     <div class="load6">
+		<div class="loader"></div>
+	    </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/Utils/Utils.js"></script>
+<script src="~/plugins/bootstrap-validator/bootstrapValidator.min.js"></script>       
+<script src="~/plugins/masked-input/jquery.maskedinput.min.js"></script>  
+<script src="~/plugins/bootstrap-select/bootstrap-select.min.js"></script>  
+<script src="~/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script> 
+<script src="~/plugins/bootbox/bootbox.min.js"></script> 
+<script src="~/plugins/fooTable/dist/footable.all.min.js"></script>
+<script src="~/plugins/masked-input/jquery.maskedinput.min.js"></script>
+<script src="~/Scripts/moment.js"></script>
+<script src="~/plugins/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        $('#dtpFechaServicio').editable({
+            mode: 'inline'
+        });
+
+        //$("#ddlSedeBuscadorId").val(163);
+
+        obtenerFechaActual();
+
+        function ObtenerDataHeadCount(nroDni) {
+            $.ajax({
+                type: "GET",
+                url: "/PruebaRapidaCovid19/GetDatosHeadCount?dni=" + nroDni,
+                success: function (data) {
+                    console.log("DATA", data);
+                    $("#txtNombres").val(data.v_NombrePila);
+                    $("#txtApePaterno").val(data.v_Apellido);
+                    $("#txtApeMaterno").val(data.v_SegundoApellido);
+
+                    $("#txtEmail").val(data.v_Mail);
+                    $("#txtCelulares").val(data.v_Telefon);
+                    $("#txtEmpleadora").val(data.Empleadora);
+
+                    if (data.v_ClaveSexo == "Masculino") {
+                        $('#ddlGenero').selectpicker('val', 1);
+                    } else if (data.v_ClaveSexo == null) {
+                        $('#ddlGenero').selectpicker('val', 1);
+                    }
+                    else {
+                        $('#ddlGenero').selectpicker('val', 2);
+                    }
+
+                    $('#ddlSede').selectpicker('val', data.SedeId);
+
+                    $("#dtpFechaNacimiento").val(moment(data.d_FechaNacimiento).format('DD/MM/YYYY'));
+                    $("#txtPuesto").val(data.v_PosicionNombre);
+                }
+            });
+        }
+
+        $("#form-datos-personales").submit(function (ev) { ev.preventDefault(); });
+
+        $("#txtNroDocumento").on('change', function () {
+            ObtenerDataHeadCount($("#txtNroDocumento").val());
+        });
+
+        $("#btnAplicarFiltro").on("click", function () {
+            Filter();
+        })
+
+        $("#saveRegistro").on("click", function () {
+            var bootstrapValidator = $("#form-datos-personales").data('bootstrapValidator');
+            bootstrapValidator.validate();
+            if (bootstrapValidator.isValid()) {
+
+                if ($("#dtpFechaNacimiento").val() == "") {
+                    alert("La fecha es requerida");
+                    return;
+                }
+
+                bootbox.confirm("¿Está seguro de registrar trabajador?", function (result) {
+
+                    var datos = poblarEntidadRegistroTrabajador();
+
+                    if (result) {
+                        $('.modal').modal('show');
+                        $.ajax({
+                            type: "POST",
+                            url: "/OtrasClinicas/RegitrarTrabajador",
+                            data: datos,
+                            success: function (data) {
+                                if (data == "FECHA INVALIDA") {
+                                    alert("ERROR! LA FECHA DE SERVICIO ES INVALIDAD");
+                                }
+                                $('.modal').modal('hide');
+                                LimpiarFormularioRegistro();
+                                Filter();
+                            }
+                        });
+                    } else {
+                        $.niftyNoty({
+                            type: 'danger',
+                            icon: 'pli-cross icon-2x',
+                            message: 'Se canceló la operación.',
+                            container: 'floating',
+                            timer: 3000
+                        });
+                    };
+                });
+            }
+            else {
+                console.log("FAIL ENCUESTA");
+                return;
+            }
+        });
+
+        $('#demo-default-modal')
+        .on('shown.bs.modal', function () {
+            $('#form-datos-personales').find('[name="validaNroDocumento"]').focus();
+            //obtenerFechaActual();
+
+            $("#ddlClinicaProvinciaId").val($("#ddlClinicaProvinciaBuscadorId").val());
+            $('#ddlClinicaProvinciaId').selectpicker('refresh')
+
+            //$("#ddlSede").val($("#ddlSedeBuscadorId").val());
+            $('#ddlSede').selectpicker('refresh')
+
+            var fechaBuscador = $("#txtFechaServicioBuscador").val();
+            $('#dtpFechaServicio').text(fechaBuscador);
+        })
+        .on('hidden.bs.modal', function () {
+            $('#form-datos-personales').bootstrapValidator('resetForm', true);
+            //obtenerFechaActual();
+        });
+
+    });
+
+    function obtenerFechaActual() {
+        var fechaActual = moment(Date.now()).format('DD/MM/YYYY');
+        $('#dtpFechaServicio').text(moment(Date.now()).format('DD/MM/YYYY'));
+        $('#txtFechaServicioBuscador').val(fechaActual);
+    }
+
+    function poblarEntidadRegistroTrabajador() {
+        return objData = {
+            "FechaServicio": $('#dtpFechaServicio').text(),
+            "Nombres": $("#txtNombres").val(),
+            "ApePaterno": $("#txtApePaterno").val(),
+            "ApeMaterno": $("#txtApeMaterno").val(),
+            "TipoDocumento": $("#ddlTipoDocumento").val(),
+            "NroDocumento": $("#txtNroDocumento").val(),
+            "Genero": $("#ddlGenero").val(),
+            "FechaNacimiento": $("#dtpFechaNacimiento").val(),
+            "Email": $("#txtEmail").val(),
+            "Celulares": $("#txtCelulares").val(),
+            "Puesto": $("#txtPuesto").val(),
+            "Direccion": $("#txtDireccion").val(),
+            "NombreSede": $("#ddlSede option:selected").text(),
+            "ClinicaExternad": $("#ddlClinicaProvinciaId").val()
+        }
+    }
+
+    function LimpiarFormularioRegistro() {
+
+        $("#txtNombres").val("");
+        $("#txtApePaterno").val("");
+        $("#txtApeMaterno").val("");
+        $("#ddlTipoDocumento").val("");
+        $("#txtNroDocumento").val("");
+        $("#ddlGenero").val("");
+        $("#dtpFechaNacimiento").val("");
+        $("#txtEmail").val("");
+        $("#txtCelulares").val("");
+        $("#txtPuesto").val("");
+        $("#txtDireccion").val("");
+
+        $("#lblFechaPruebaRapida").val("----");
+        $("#lblResultadoPruebaRapida").val("----");
+
+    }
+
+    function Filter() {
+
+        var fecha = $('#txtFechaServicioBuscador').val();
+        var clinicaId = $("#ddlClinicaProvinciaBuscadorId").val();
+        //var sede = $("#ddlSedeBuscadorId option:selected").text()
+
+        $.ajax({
+            type: "GET",
+            //url: "/OtrasClinicas/Index?fecha=" + fecha + "&&clinicaProvincia="+ clinicaId+ "&&sede="+  sede,
+            url: "/OtrasClinicas/Index?fecha=" + fecha + "&&clinicaProvincia="+ clinicaId,
+            dataType: 'html',
+            success: function (html) {
+                var doc = new DOMParser().parseFromString(html, "text/html");
+                var trs = doc.querySelectorAll("tbody > tr");
+
+                $("#demo-foo-addrow tbody").html(trs);
+
+                updateFootable();
+            }
+        });
+    }
+
+    function validarRangoFechaNacimiento(date_start, date_end, date_now) {
+        var fechaInicial = new Date(date_start);
+        var fechaFinal = new Date(date_end);
+        var fechaNacimiento = new Date(date_now);
+        if ((fechaNacimiento >= fechaInicial) && (fechaNacimiento <= fechaFinal))
+            return true;
+        return false;
+    }
+
+    function CerrarModal() {
+        $("#demo-default-modal").hide();
+        LimpiarFormularioRegistro();
+    }
+
+    function updateFootable() {
+        var paramTable = $('.footable');
+        paramTable.trigger('footable_initialize');
+    }
+
+    function validateDocType(typeDocumentId, value) {
+
+        if (typeDocumentId == 1) {
+            var ex_regular_dni;
+            ex_regular_dni = /^\d{8}(?:[-\s]\d{4})?$/;
+            if (ex_regular_dni.test(value) == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    function validaDNI(dni) {
+        var ex_regular_dni;
+        ex_regular_dni = /^\d{8}(?:[-\s]\d{4})?$/;
+        if (ex_regular_dni.test(dni) == true) {
+            alert('Dni corresponde');
+        } else {
+            alert('Dni erroneo, formato no válido');
+        }
+    }
+
+    function EsEditable(personId, serviceComponentId, serviceId) {
+
+        $.ajax({
+            type: "GET",
+            dataType: 'json',
+            url: "/OtrasClinicas/EsEditable?serviceComponentId=" + serviceComponentId,
+            success: function (data) {
+                console.log("data", data);
+                if (data) {
+                   
+                    window.location.href = '/OtrasClinicas/Examen?personId=' + personId + '&&serviceComponentId=' + serviceComponentId + '&&serviceId=' + serviceId;
+                    
+                } else {
+                    alert("Este servicio ya no es editable");
+                }
+            }
+        });
+
+    }
+
+
+    $(document).on('nifty.ready', function () {
+        $('#demo-dp-txtinput').mask('99/99/9999');
+        $('#dtpFechaNacimiento').mask('99/99/9999');
+
+        var faIcon = {
+            valid: 'fa fa-check-circle fa-lg text-success',
+            invalid: 'fa fa-times-circle fa-lg',
+            validating: 'fa fa-refresh'
+        }
+
+        $('#form-datos-personales').bootstrapValidator({
+            excluded: ':disabled',
+            feedbackIcons: faIcon,
+            fields: {
+                validaNombres: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El nombre es requerido'
+                        }
+                    }
+                },
+                validaPaterno: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El Ape. paterno es requerido'
+                        }
+                    }
+                },
+                validaMaterno: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El Ape. materno es requerido'
+                        }
+                    }
+                },
+                validaTipoDocumento: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El tipo documento es requerido'
+                        }
+                    }
+                },
+                validaNroDocumento: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El número documento es requerido'
+                        },
+                        callback: {
+                            callback: function (value, validator, $field) {
+                                var typeDocumentId = $("#ddlTipoDocumento").val();
+                                var docNumber = $("#txtNroDocumento").val();
+                                var isEMIDMatch = false;
+
+                                isEMIDMatch = validateDocType(typeDocumentId, value);
+
+                                if (isEMIDMatch) {
+                                    return {
+                                        valid: true,
+                                        message: 'Dni Correcto'
+                                    }
+                                } else {
+                                    return {
+                                        valid: false,
+                                        message: 'DNI solo 8 números'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                validaGenero: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El género es requerido'
+                        }
+                    }
+                },
+                validaEmail: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El email es requerido'
+                        },
+                        emailAddress: {
+                            message: 'El email no es válido'
+                        }
+                    }
+                },
+                validaCelulares: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El celular es requerido'
+                        }
+                    }
+                },
+                validaPuesto: {
+                    validators: {
+                        notEmpty: {
+                            message: 'El puesto es requerido'
+                        }
+                    }
+                },
+                validaDireccion: {
+                    validators: {
+                        notEmpty: {
+                            message: 'La dirección es requerido'
+                        }
+                    }
+                },
+                validaSede: {
+                    validators: {
+                        notEmpty: {
+                            message: 'La sede es requerido'
+                        }
+                    }
+                },
+                validaClinicaProvincia: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Clínica Provincia es requerido'
+                        }
+                    }
+                }
+            }
+        }).on('success.field.bv', function (e, data) {
+            var $parent = data.element.parents('.form-group');
+
+            // Remove the has-success class
+            $parent.removeClass('has-success');
+        });
+
+
+
+
+        $('#demo-input-search2').on('input', function (e) {
+            e.preventDefault();
+            addrow.trigger('footable_filter', { filter: $(this).val() });
+        });
+
+        var addrow = $('#demo-foo-addrow');
+        addrow.footable().on('click', '.Link-Examen', function () {
+            var personId = $(this).parent().parent().find("#personId").text();
+            var serviceComponentId = $(this).parent().parent().find("#serviceComponentId").text();
+            var serviceId = $(this).parent().parent().find("#serviceId").text();
+
+            EsEditable(personId, serviceComponentId, serviceId);
+            //window.location.href = '/OtrasClinicas/Examen?personId=' + personId + '&&serviceComponentId=' + serviceComponentId + '&&serviceId=' + serviceId;
+
+        }).on('click', '.Link-PDF', function () {
+            var serviceId = $(this).parent().parent().find("#serviceId").text();
+            window.location.href = '/PDF/Index?id=' + serviceId
+        });
+
+
+
+    });
+
+</script>
+

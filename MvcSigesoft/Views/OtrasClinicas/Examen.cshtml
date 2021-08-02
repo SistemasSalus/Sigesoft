@@ -1,0 +1,827 @@
+﻿<link href="~/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+<link href="~/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+<link href="~/plugins/css-loaders/css/css-loaders.css" rel="stylesheet">
+@using Sigesoft.Common
+@model IEnumerable<Sigesoft.Node.WinClient.BE.ServiceComponentFieldValuesList>
+@{
+    var ultimosServicios = (List<Sigesoft.Node.WinClient.BE.UltimoServicioBE>)@ViewBag.UltimosServicios;
+    var datos = Model.ToList();
+
+    var domicilioSI = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DOMICILIO_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DOMICILIO_ID).v_Value1 == "1" ? "selected" : "";
+    var domicilioNO = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DOMICILIO_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DOMICILIO_ID).v_Value1 == "2" ? "selected" : "";
+
+    var Geolocalizacion = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_GEOLOCALIZACION_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_GEOLOCALIZACION_ID).v_Value1;
+
+    var EsPersonalSaludSI = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ES_PERSONAL_SALUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ES_PERSONAL_SALUD_ID).v_Value1 == "1" ? "selected" : "";
+    var EsPersonalSaludNO = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ES_PERSONAL_SALUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ES_PERSONAL_SALUD_ID).v_Value1 == "0" ? "selected" : "";
+
+    var ProfesionMedico = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID).v_Value1 == "0" ? "selected" : "";
+    var ProfesionEnfermero = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID).v_Value1 == "1" ? "selected" : "";
+    var ProfesionObstetra = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID).v_Value1 == "2" ? "selected" : "";
+    var ProfesionBilogo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID).v_Value1 == "3" ? "selected" : "";
+    var ProfesionTecnologo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID).v_Value1 == "4" ? "selected" : "";
+    var ProfesionTecEnfermeria = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID).v_Value1 == "5" ? "selected" : "";
+    var ProfesionOtros = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROFESION_ID).v_Value1 == "6" ? "selected" : "";
+
+    var TieneSintomasSI = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_TIENE_SINTOMAS_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_TIENE_SINTOMAS_ID).v_Value1 == "1" ? "selected" : "";
+    var TieneSintomasNO = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_TIENE_SINTOMAS_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_TIENE_SINTOMAS_ID).v_Value1 == "0" ? "selected" : "";
+
+    var InicioSintomas = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_INICIO_SINTOMAS_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_INICIO_SINTOMAS_ID).v_Value1;
+
+    var Tos = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_TOS_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_TOS_ID).v_Value1 == "1" ? "checked" : "";
+    var DolorGarganta = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DOLOR_GARGANTA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DOLOR_GARGANTA_ID).v_Value1 == "1" ? "checked" : "";
+    var CongestionNasal = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CONGESTION_NASAL_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CONGESTION_NASAL_ID).v_Value1 == "1" ? "checked" : "";
+    var DificultadRespiratoria = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DIFIC_RESPIRA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DIFIC_RESPIRA_ID).v_Value1 == "1" ? "checked" : "";
+    var FiebreEscalofrio = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_FIEBRE_ESCALOFRIO_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_FIEBRE_ESCALOFRIO_ID).v_Value1 == "1" ? "checked" : "";
+    var MalestarGeneral = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_MALESTAR_GENERAL_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_MALESTAR_GENERAL_ID).v_Value1 == "1" ? "checked" : "";
+    var Diarrea = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DIARREA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DIARREA_ID).v_Value1 == "1" ? "checked" : "";
+    var NauseasVomitos = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_NAUSEAS_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_NAUSEAS_ID).v_Value1 == "1" ? "checked" : "";
+    var Cefalea = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CEFALEA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CEFALEA_ID).v_Value1 == "1" ? "checked" : "";
+    var IrritabilidadConfusion = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_IRRITABILIDAD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_IRRITABILIDAD_ID).v_Value1 == "1" ? "checked" : "";
+    var Dolor = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DOLOR_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DOLOR_ID).v_Value1 == "1" ? "checked" : "";
+    var Expectoracion = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_OTROS_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_OTROS_ID).v_Value1 == "1" ? "checked" : "";
+
+    var Muscular = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_MUSCULAR_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_MUSCULAR_ID).v_Value1 == "1" ? "checked" : "";
+    var Abdominal = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ABDOMINAL_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ABDOMINAL_ID).v_Value1 == "1" ? "checked" : "";
+    var Pecho = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PECHO_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PECHO_ID).v_Value1 == "1" ? "checked" : "";
+    var Articulaciones = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ARTICULACIONES_ID) == null ? "" : datos.Find(p =>p.v_ComponentFieldId == Constants.COVID_ARTICULACIONES_ID).v_Value1 == "1" ? "checked" : "";
+
+    var OtrosSintomas = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_OTROS_SINTOMAS_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_OTROS_SINTOMAS_ID).v_Value1;
+
+    var Diabetes = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DIABETES_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_DIABETES_ID).v_Value1 == "1" ? "checked" : "";
+    var EnfermedadPulmonarCronica = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ENF_PULMONAR_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ENF_PULMONAR_ID).v_Value1 == "1" ? "checked" : "";
+    var Cancer = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CANCER_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CANCER_ID).v_Value1 == "1" ? "checked" : "";
+    var HipertensionArterial = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_HIPERTENCION_ARTERIAL_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_HIPERTENCION_ARTERIAL_ID).v_Value1 == "1" ? "checked" : "";
+    var Obesidad = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_OBESIDAD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_OBESIDAD_ID).v_Value1 == "1" ? "checked" : "";
+    var Mayor65 = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_MAYOR_60_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_MAYOR_60_ID).v_Value1 == "1" ? "checked" : "";
+    var InsuficienciaRenalCronica = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_INSUFICIENCIA_RENAL_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_INSUFICIENCIA_RENAL_ID).v_Value1 == "1" ? "checked" : "";
+    var EmbarazoPuerperio = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_EMBARAZO_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_EMBARAZO_ID).v_Value1 == "1" ? "checked" : "";
+    var EnfermedadCardioVascular = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ENF_CARDIO_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ENF_CARDIO_ID).v_Value1 == "1" ? "checked" : "";
+    var Asma = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ASMA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_ASMA_ID).v_Value1 == "1" ? "checked" : "";
+    var EnfTratamientoInmunosupresor = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_INMUNOSUPRESOR_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_INMUNOSUPRESOR_ID).v_Value1 == "1" ? "checked" : "";
+    var ProfesionEsPersonalSalud = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PERSONAL_SALUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PERSONAL_SALUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.CERTIFICADO_COVID_PERSONAL_SALUD_ID || p.v_ComponentFieldId == Constants.COVID_PERSONAL_SALUD_ID).v_Value1 == "1" ? "checked" : "";
+
+    var FechaEjecucion = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_FECHA_EJECUCION_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_FECHA_EJECUCION_ID).v_Value1;
+
+    var Llamar113 = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID).v_Value1 == "0" ? "selected" : "";
+    var PersonalSalud = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID).v_Value1 == "1" ? "selected" : "";
+    var EstablecimientoSalud = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID).v_Value1 == "2" ? "selected" : "";
+    var ConctactoEnCasoConfirmado = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID).v_Value1 == "3" ? "selected" : "";
+    var ConctactoEnCasoSospechoso = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID).v_Value1 == "4" ? "selected" : "";
+    var Extranjero = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID).v_Value1 == "5" ? "selected" : "";
+    var OtroPriorizado = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_PROCEDENCIA_SOLICITUD_ID).v_Value1 == "6" ? "selected" : "";
+
+    var PrimeraNegativo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID).v_Value1 == "0" ? "selected" : "";
+    var PrimeraNoValido = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID).v_Value1 == "1" ? "selected" : "";
+    var PrimeraIGMpositivo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID).v_Value1 == "2" ? "selected" : "";
+    var PrimeraIGGpositivo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID).v_Value1 == "3" ? "selected" : "";
+    var PrimeraIGMeIGGpositivo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID).v_Value1 == "4" ? "selected" : "";
+    var PrimeraNoseRealizo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_1_PRUEBA_ID).v_Value1 == "5" ? "selected" : "";
+    
+    var SegundaNegativo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID).v_Value1 == "0" ? "selected" : "";
+    var SegundaNoValido = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID).v_Value1 == "1" ? "selected" : "";
+    var SegundaIGMpositivo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID).v_Value1 == "2" ? "selected" : "";
+    var SegundaIGGpositivo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID).v_Value1 == "3" ? "selected" : "";
+    var SegundaIGMeIGGpositivo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID).v_Value1 == "4" ? "selected" : "";
+    var SegundaNoseRealizo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_RES_2_PRUEBA_ID).v_Value1 == "5" ? "selected" : "";
+    
+    
+    var Leve = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CLASIFICACION_CLINICA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CLASIFICACION_CLINICA_ID).v_Value1 == "1" ? "selected" : "";
+    var Moderado = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CLASIFICACION_CLINICA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CLASIFICACION_CLINICA_ID).v_Value1 == "2" ? "selected" : "";
+    var Severo = datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CLASIFICACION_CLINICA_ID) == null ? "" : datos.Find(p => p.v_ComponentFieldId == Constants.COVID_CLASIFICACION_CLINICA_ID).v_Value1 == "3" ? "selected" : "";
+    
+}
+
+<input id="txtPersonId"  type="hidden" value="@ViewBag.PERSONID">
+<input id="txtServiceComponentId"  type="hidden" value="@ViewBag.SERVICECOMPONENTID">
+<input id="txtServiceId"  type="hidden" value="@ViewBag.SERVICEID">
+<input id="txtComponentId"  type="hidden" value="@ViewBag.COMPONENTID">
+<input id="txtOrganizationId"  type="hidden" value="@ViewBag.ORGANIZATIONID">
+
+<div id="page-content">
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title"></h3>
+        </div>
+        <!-- Foo Table - Add & Remove Rows -->
+        <!--===================================================-->
+        <div class="panel-body">
+            <div class="tab-base">
+
+                <!--Nav Tabs-->
+                <ul class="nav nav-tabs">                       
+                    <li class="tab-encuesta" >
+                        <a data-toggle="tab" href="#tab-encuesta">Encuesta</a>
+                    </li>                    
+                    <li class="tab-laboratorio">
+                        <a data-toggle="tab" href="#tab-laboratorio">Laboratorio</a>
+                    </li>
+                </ul>
+
+                <!--Tabs Content-->
+                <div class="tab-content">
+                    <div id="tab-encuesta" class="tab-pane fade">
+                  
+                            <form id="form-encuesta" >
+                                <div class="panel-body">                                 
+                                <p class="bord-btm pad-ver text-main text-bold">Datos generales</p>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">Domicilio o residencia</label>
+                                                <select class="selectpicker" id="ddlTipoDomicilio" name="ddlrequerido">
+                                                    <option>    </option>
+                                                    <option value="1" @domicilioSI>Domicilio</option>
+                                                    <option value="2" @domicilioNO>Residencia</option>                                  
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                                <div class="form-group">
+                                                <label class="control-label">Geolocalizacón del domicilio</label>
+                                                <input type="text" class="form-control" id="txtGeolocalizacion" name="localizacion" value="@Geolocalizacion" placeholder="Ingresar domicilio">					                            
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+
+                                <p class="bord-btm pad-ver text-main text-bold">Datos esspecíficos</p>
+                                <div class="row">   
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">¿Es personal de salud?</label>
+                                                <select class="selectpicker" id="ddlPersonalSalud" name="ddlrequerido">
+                                                    <option>    </option>
+                                                    <option value="1" @EsPersonalSaludSI>Sí</option>
+                                                    <option value="0" @EsPersonalSaludNO>No</option>                                  
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">¿Cuál es su profesión?</label>
+                                                <select class="selectpicker" id="ddlProfesion" name="ddlrequerido">
+                                                    <option>    </option>
+                                                    <option value="0" @ProfesionMedico>Médico</option>
+                                                    <option value="1" @ProfesionEnfermero>Enfermero(a)</option>    
+                                                    <option value="2" @ProfesionObstetra>Obstetra</option>                                  
+                                                    <option value="3" @ProfesionBilogo>Biólogo</option>
+                                                    <option value="4" @ProfesionTecnologo>Tecnólogo Médico</option>
+                                                    <option value="5" @ProfesionTecEnfermeria>Técnico de enfermería</option>                                                 
+                                                    <option value="6" @ProfesionOtros>Otros</option>
+                                                </select>
+                                        </div>
+                                    </div>  
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">¿Tiene síntomas?</label>
+                                                <select class="selectpicker" id="ddlSintomas" name="ddlrequerido">
+                                                    <option>    </option>
+                                                    <option value="1" @TieneSintomasSI>Sí</option>
+                                                    <option value="0" @TieneSintomasNO>No</option>                                  
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">                                        
+                                        <div class="form-group">
+                                            <label class="control-label">Inicio de síntomas</label>
+                                            <div id="dtpFechaInicioSintomas">
+                                                <div class="input-group date">
+                                                <input type="text" class="form-control" id="dtpInicioSintomas" value="@InicioSintomas" />
+                                                <span class="input-group-addon" ><i  class="demo-pli-calendar-4"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                
+                                <p class="bord-btm pad-ver text-main text-bold">Síntomas</p>
+                                <div class="row">   
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-tos" class="magic-checkbox" type="checkbox" @Tos>
+					                        <label for="checkbox-tos">Tos</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-dolor-garganta" class="magic-checkbox" type="checkbox" @DolorGarganta>
+					                        <label for="checkbox-dolor-garganta">Dolor de Garganta</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-congestion-nasal" class="magic-checkbox" type="checkbox" @CongestionNasal>
+					                        <label for="checkbox-congestion-nasal">Congestión nasal</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-dificultad-respiratoria" class="magic-checkbox" type="checkbox" @DificultadRespiratoria>
+					                        <label for="checkbox-dificultad-respiratoria">Dificultad respiratoria</label>
+					                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">   
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-fiebre-escalofrio" class="magic-checkbox" type="checkbox" @FiebreEscalofrio>
+					                        <label for="checkbox-fiebre-escalofrio">Fierbre-escalofrio</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-malestar-general" class="magic-checkbox" type="checkbox" @MalestarGeneral>
+					                        <label for="checkbox-malestar-general">Malestar general</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-diarrea" class="magic-checkbox" type="checkbox" @Diarrea>
+					                        <label for="checkbox-diarrea">Diarrea</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-nauseas-vomitos" class="magic-checkbox" type="checkbox" @NauseasVomitos>
+					                        <label for="checkbox-nauseas-vomitos">Nauseas-vómitos</label>
+					                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">   
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-cefalea" class="magic-checkbox" type="checkbox" @Cefalea>
+					                        <label for="checkbox-cefalea">Cefalea</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-irritabilidad-confusion" class="magic-checkbox" type="checkbox" @IrritabilidadConfusion>
+					                        <label for="checkbox-irritabilidad-confusion">Irritabilidad-confusión</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-dolor" class="magic-checkbox" type="checkbox" @Dolor>
+					                        <label for="checkbox-dolor">Dolor</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-expectoracion" class="magic-checkbox" type="checkbox" @Expectoracion>
+					                        <label for="checkbox-expectoracion">Expectoración</label>
+					                    </div>
+                                    </div>
+                                </div>
+
+                                 <p class="bord-btm pad-ver text-main text-bold">Tipo de dolor que presenta</p>
+                                 <div class="row">   
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-muscular" class="magic-checkbox" type="checkbox" @Muscular>
+					                        <label for="checkbox-muscular">Muscular</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-abdominal" class="magic-checkbox" type="checkbox" @Abdominal>
+					                        <label for="checkbox-abdominal">Abdominal</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-pecho" class="magic-checkbox" type="checkbox" @Pecho>
+					                        <label for="checkbox-pecho">Pecho</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-articularciones" class="magic-checkbox" type="checkbox" @Articulaciones>
+					                        <label for="checkbox-articularciones">Articulaciones</label>
+					                    </div>
+                                    </div>
+                                </div>
+
+                                <p class="bord-btm pad-ver text-main text-bold">Otros síntomas</p>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                            <div class="form-group">                                               
+                                                <textarea rows="9" id="txtOtrosSintomas" class="form-control" placeholder="Especificar" >@OtrosSintomas</textarea>
+                                            </div>
+                                        </div>
+                                </div>                               
+                                                                
+                                <p class="bord-btm pad-ver text-main text-bold">Condición de riesgo</p>
+                                <div class="row">   
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-diabetes" class="magic-checkbox" type="checkbox" @Diabetes >
+					                        <label for="checkbox-diabetes">Diabetes</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-enf-pulmonar-cronica" class="magic-checkbox" type="checkbox" @EnfermedadPulmonarCronica>
+					                        <label for="checkbox-enf-pulmonar-cronica">Enfermedad pulmonar crónica</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-cancer" class="magic-checkbox" type="checkbox" @Cancer>
+					                        <label for="checkbox-cancer">Cáncer</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-hipertension-arterial" class="magic-checkbox" type="checkbox" @HipertensionArterial>
+					                        <label for="checkbox-hipertension-arterial">Hipertensión arterial</label>
+					                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">   
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-obesidad" class="magic-checkbox" type="checkbox" @Obesidad>
+					                        <label for="checkbox-obesidad">Obesidad</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-mayor-65" class="magic-checkbox" type="checkbox" @Mayor65>
+					                        <label for="checkbox-mayor-65">Mayor de 65 años</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-insuficiencia-renal-cronica" class="magic-checkbox" type="checkbox" @InsuficienciaRenalCronica>
+					                        <label for="checkbox-insuficiencia-renal-cronica">Insuficiencia renal crónica</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-Embarazo" class="magic-checkbox" type="checkbox" @EmbarazoPuerperio>
+					                        <label for="checkbox-Embarazo">Embarazo-puerperio</label>
+					                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">   
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-enf-cardio" class="magic-checkbox" type="checkbox" @EnfermedadCardioVascular>
+					                        <label for="checkbox-enf-cardio">Enfermedad Cardiovascular</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-asma" class="magic-checkbox" type="checkbox" @Asma>
+					                        <label for="checkbox-asma">Asma</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-inmunosupresor" class="magic-checkbox" type="checkbox" @EnfTratamientoInmunosupresor>
+					                        <label for="checkbox-inmunosupresor">Enf. o tratamiento inmunosupresor</label>
+					                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="checkbox">
+					                        <input id="checkbox-personal-salud" class="magic-checkbox" type="checkbox" @ProfesionEsPersonalSalud>
+					                        <label for="checkbox-personal-salud">Personal de salud</label>
+					                    </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+					                <div class="row">
+					                    <div class="col-sm-9 col-sm-offset-3">
+                                            <button class="btn btn-warning" type="button" onclick="location.href='@Url.Action("Index", "OtrasClinicas")'" >Atrás</button>
+					                        <button class="btn btn-mint" type="submit" id="saveEncuesta"><i class="btn-label fa fa-save"></i> Grabar</button>		                                            
+					                    </div>
+					                </div>
+					            </div>
+                                      </div>
+                            </form>
+                  
+                    </div>
+
+                    <div id="tab-laboratorio" class="tab-pane fade">
+                        <div class="panel">
+                            <div class="table-responsive">
+					            <table class="table table-bordered">
+					                <thead>
+					                    <tr>					                        
+					                        <th>Fecha</th>
+					                        <th>Resultado</th>
+					                    </tr>
+					                </thead>
+					                <tbody>
+                                        @foreach (var item in ultimosServicios)
+                                        {
+                                            if (item.FechaServicio == null)
+                                            {
+                                            <tr>
+					                            <td colspan="2">sin servicios anteriores</td>
+					                        </tr>
+                                            }
+                                            else
+                                            {
+                                                <tr>
+					                                <td><a href="#" class="btn-link">@item.FechaServicio</a></td>
+					                                <td><span class="label label-info">@item.Resultado</span></td>
+					                            </tr>    
+                                            }
+                                        }				                    
+					                </tbody>
+					            </table>
+					        </div>
+                            <form id="form-laboratorio" >
+                                <div class="panel-body">   
+                                    <p class="text-main text-semibold">Datos de la prueba rápida</p>
+                                    <div class="row">   
+                                        <div class="col-md-3">                                                
+                                            <div class="form-group">
+                                                <label class="control-label">Fecha de ejecución</label>
+                                                <div id="FechaEjecucionControl">
+                                                    <div class="input-group date">
+                                                    <input type="text" class="form-control" id="dtpFechaEjecucion" name="FechaEjecucion" value="@FechaEjecucion" />
+                                                    <span class="input-group-addon"><i  class="demo-pli-calendar-4"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>                                        
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Procedencia de la solicitud</label>
+                                                    <select class="selectpicker" id="ddlProcedenciaSolicitudId" name="ddlrequerido">
+                                                        <option>    </option>
+                                                        <option value="0" @Llamar113>Llamada al 113 </option>
+                                                        <option value="1" @PersonalSalud>Personal de salud </option>                                  
+                                                        <option value="2" @EstablecimientoSalud>Prueba en establec de salud </option>
+                                                        <option value="3" @ConctactoEnCasoConfirmado>Contacto en caso confirmado</option>
+                                                        <option value="4" @ConctactoEnCasoSospechoso>Contacto con caso sospechoso </option>
+                                                        <option value="5" @Extranjero>Persona proveniente del extranjero</option>
+                                                        <option value="6" @OtroPriorizado>Otro priorizado   </option>
+
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Resultado de PRIMERA prueba</label>
+                                                    <select class="selectpicker" id="ddlResultadoPrimeraPruebaId" name="ddlrequerido">
+                                                        <option>    </option>
+                                                        <option value="0" @PrimeraNegativo>Negativo  </option>
+                                                        <option value="1" @PrimeraNoValido>No válido</option>                                  
+                                                        <option value="2" @PrimeraIGMpositivo>IgM Positivo</option>
+                                                        <option value="3" @PrimeraIGGpositivo>IgG Positivo</option>
+                                                        <option value="4" @PrimeraIGMeIGGpositivo>IgM e IgG positivo</option>
+                                                        <option value="5" @PrimeraNoseRealizo>No se realizó</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Resultado de SEGUNDA prueba</label>
+                                                    <select class="selectpicker" id="ddlResultadoSegundaPruebaId">
+                                                        <option>    </option>
+                                                        <option value="0" @SegundaNegativo>Negativo  </option>
+                                                        <option value="1" @SegundaNoValido>No válido</option>                                  
+                                                        <option value="2" @SegundaIGMpositivo>IgM Positivo</option>
+                                                        <option value="3" @SegundaIGGpositivo>IgG Positivo</option>
+                                                        <option value="4" @SegundaIGMeIGGpositivo>IgM e IgG positivo</option>
+                                                        <option value="5" @SegundaNoseRealizo>No se realizó</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="control-label">Clasificación clínica</label>
+                                                    <select class="selectpicker" id="ddlClasificacionClinicaId" name="ddlrequerido">
+                                                        <option>    </option>
+                                                        <option value="1" @Leve>Leve</option>
+                                                        <option value="2" @Moderado>Moderado</option>                                  
+                                                        <option value="3" @Severo>Severo</option>                                            
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4">
+                                            </div>
+                                    </div>
+                                    <div class="panel-footer">
+					                    <div class="row">
+					                        <div class="col-sm-9 col-sm-offset-3">
+                                                <button class="btn btn-warning" type="button" onclick="location.href='@Url.Action("Index", "OtrasClinicas")'" >Atrás</button>
+					                            <button class="btn btn-mint" type="submit" id="saveLaboratorio"><i class="btn-label fa fa-save"></i> Grabar</button>				
+					                        </div>
+					                    </div>
+					                </div>
+                                </div>                           
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--===================================================-->
+        <!-- End Foo Table - Add & Remove Rows -->
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog">
+ <div class="modal-dialog modal-dialog-centered text-center" role="document">
+     <div class="load6">
+		<div class="loader"></div>
+	    </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/Utils/Utils.js"></script>
+<script src="~/plugins/bootstrap-validator/bootstrapValidator.min.js"></script>       
+<script src="~/plugins/masked-input/jquery.maskedinput.min.js"></script>  
+<script src="~/plugins/bootstrap-select/bootstrap-select.min.js"></script>  
+<script src="~/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script> 
+<script src="~/plugins/bootbox/bootbox.min.js"></script> 
+
+
+<script>
+
+    $(document).ready(function () {
+
+        verificarPrimeraPrueba();
+
+        $(".panel-title").text('Prueba Rápida Covid-19');
+        $('.nav-tabs a[href="#tab-encuesta"]').tab('show');             
+
+        $("#form-encuesta").submit(function (ev) { ev.preventDefault(); });
+
+        $("#form-laboratorio").submit(function (ev) { ev.preventDefault(); });
+
+        $("#saveEncuesta").on("click", function () {
+            var bootstrapValidator = $("#form-encuesta").data('bootstrapValidator');
+            bootstrapValidator.validate();
+            if (bootstrapValidator.isValid()) {
+                bootbox.confirm("¿Está seguro de guardar?", function (result) {
+
+                    var datos = poblarEntidadEncuesta();
+
+                    if (result) {
+                        $('.modal').modal('show');
+                        $.ajax({
+                            type: "POST",
+                            url: "/OtrasClinicas/SaveEncuesta",
+                            data: datos,
+                            success: function (data) {
+                                $('.modal').modal('hide');
+                                redireccionar();
+                            }
+                        });                        
+                    } else {
+                        $.niftyNoty({
+                            type: 'danger',
+                            icon: 'pli-cross icon-2x',
+                            message: 'Se canceló la operación.',
+                            container: 'floating',
+                            timer: 3000
+                        });
+                    };
+                });  
+            }
+            else {
+                console.log("FAIL ENCUESTA");
+                return;
+            }
+        });
+
+       $("#saveLaboratorio").on("click", function () {
+            var bootstrapValidator = $("#form-laboratorio").data('bootstrapValidator');
+            bootstrapValidator.validate();
+            if (bootstrapValidator.isValid()) {
+                bootbox.confirm("¿Está seguro de guardar?", function (result) {
+
+                    var datos = poblarEntidadLaboratorio();
+                    
+                    if (result) {
+                                $('.modal').modal('show');
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/OtrasClinicas/SaveLaboratorio",
+                                    data: datos,
+                                    success: function (data) {
+                                        if (data == "La encuesta no ha sido culminada") {
+                                            alert("La encuesta no ha sido culminada");
+                                        } else if (data == "OK") {
+                                            console.log("ERROR PC", data);
+                                        }
+                                        $('.modal').modal('hide');
+                                        redireccionar();
+
+                                    },
+                                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                        alert("Status: " + textStatus); alert("Error: " + errorThrown);
+                                    }
+                                });
+                    } else {
+                        $.niftyNoty({
+                            type: 'danger',
+                            icon: 'pli-cross icon-2x',
+                            message: 'Se canceló la operación.',
+                            container: 'floating',
+                            timer: 3000
+                        });
+                    };
+                });
+            }
+            else {
+                console.log("FAIL LABORATORIO");
+                return;
+            }
+        });
+      
+    });
+
+    function poblarEntidadEncuesta() {
+        return objData = {
+            "ServiceComponentId": $("#txtServiceComponentId").val(),
+            "PersonId": $("#txtPersonId").val(),
+            "ComponentId": $("#txtComponentId").val(),
+
+            "TipoDomicilioId": $("#ddlTipoDomicilio option:selected").val(),
+            "Geolocalizacion": $("#txtGeolocalizacion").val(),
+            "PersonalSaludId": $("#ddlPersonalSalud option:selected").val(),
+            "ProfesionId": $("#ddlProfesion option:selected").val(),
+            "SintomasId": $("#ddlSintomas option:selected").val(),
+            "InicioSintomas": $("#dtpInicioSintomas").val(),
+
+            "TosId": $("#checkbox-tos").get(0).checked,
+            "DolorGargantaId": $("#checkbox-dolor-garganta").get(0).checked,
+            "CongestionNasalId": $("#checkbox-congestion-nasal").get(0).checked,
+            "DificultadRespiratoriaId": $("#checkbox-dificultad-respiratoria").get(0).checked,
+
+            "FiebreEscalofrioId": $("#checkbox-fiebre-escalofrio").get(0).checked,
+            "MalestarGeneralId": $("#checkbox-malestar-general").get(0).checked,
+            "DiarreaId": $("#checkbox-diarrea").get(0).checked,
+            "NauseasVomitosId": $("#checkbox-nauseas-vomitos").get(0).checked,
+
+            "CefaleaId": $("#checkbox-cefalea").get(0).checked,
+            "IrritabilidadConfusionId": $("#checkbox-irritabilidad-confusion").get(0).checked,
+            "DolorId": $("#checkbox-dolor").get(0).checked,
+            "ExpectoracionId": $("#checkbox-expectoracion").get(0).checked,
+
+            "MuscularId": $("#checkbox-muscular").get(0).checked,
+            "AbdominalId": $("#checkbox-abdominal").get(0).checked,
+            "PechoId": $("#checkbox-pecho").get(0).checked,
+            "ArticulacionesId": $("#checkbox-articularciones").get(0).checked,
+
+            "OtrosSintomas": $("#txtOtrosSintomas").val(),
+
+            "DiabetesId": $("#checkbox-diabetes").get(0).checked,
+            "PulmonarCronicaId": $("#checkbox-enf-pulmonar-cronica").get(0).checked,
+            "CancerId": $("#checkbox-cancer").get(0).checked,
+            "HipertensionArterialId": $("#checkbox-hipertension-arterial").get(0).checked,
+
+            "ObesidadId": $("#checkbox-obesidad").get(0).checked,
+            "Mayor65Id": $("#checkbox-mayor-65").get(0).checked,
+            "InsuficienciaRenalId": $("#checkbox-insuficiencia-renal-cronica").get(0).checked,
+            "EmbarazoPuerperioId": $("#checkbox-Embarazo").get(0).checked,
+
+            "EnfCardioVascularId": $("#checkbox-enf-cardio").get(0).checked,
+            "AsmaId": $("#checkbox-asma").get(0).checked,
+            "InmunosupresorId": $("#checkbox-inmunosupresor").get(0).checked,
+            "RiesgoPersonalSaludId": $("#checkbox-personal-salud").get(0).checked,
+        }
+    }
+
+    function poblarEntidadLaboratorio() {
+        var objData = {
+            "ServiceComponentId": $("#txtServiceComponentId").val(),
+            "PersonId": $("#txtPersonId").val(),
+            "ServiceId": $("#txtServiceId").val(),
+            "ComponentId": $("#txtComponentId").val(),
+            "OrganizationId": $("#txtOrganizationId").val(),            
+            "FechaEjecucion": $("#dtpFechaEjecucion").val(),
+            "ProcedenciaSolicitudId": $("#ddlProcedenciaSolicitudId option:selected").val(),
+            "ResultadoPrimeraPruebaId": $("#ddlResultadoPrimeraPruebaId option:selected").val(),
+            "ResultadoSegundaPruebaId": $("#ddlResultadoSegundaPruebaId option:selected").val(),
+            "ClasificacionClinicaId": $("#ddlClasificacionClinicaId option:selected").val(),
+        }
+        return objData;
+    }
+
+    function redireccionar() {
+        bootbox.confirm("¿Desea retornar a la bandeja?", function (result) {
+            if (result) {
+                window.location = "/OtrasClinicas/Index"
+            } else {
+
+            };
+        });
+    }
+
+    $("#ddlResultadoPrimeraPruebaId").on("change", function () {
+
+        var valorPrimeraPrueba = $("#ddlResultadoPrimeraPruebaId option:selected").val();
+        if (valorPrimeraPrueba == 1) {
+            console.log("habilitar segunda prueba");
+            $('#ddlResultadoSegundaPruebaId').prop('disabled', false);
+            $('#ddlResultadoSegundaPruebaId').selectpicker('refresh');
+        } else {
+            console.log("Deshabilitar segunda prueba");
+            $("#ddlResultadoSegundaPruebaId").val(-1);
+            $('#ddlResultadoSegundaPruebaId').prop('disabled', true);
+            $('#ddlResultadoSegundaPruebaId').selectpicker('refresh');
+        }
+    });
+
+    function verificarPrimeraPrueba() {
+        var valorPrimeraPrueba = $("#ddlResultadoPrimeraPruebaId option:selected").val();
+        if (valorPrimeraPrueba == "") {
+            $('#ddlResultadoSegundaPruebaId').prop('disabled', true);
+            $('#ddlResultadoSegundaPruebaId').selectpicker('refresh');
+        } else {
+            $('#ddlResultadoSegundaPruebaId').prop('disabled', false);
+            $('#ddlResultadoSegundaPruebaId').selectpicker('refresh');
+        }
+        console.log("valorPrimeraPrueba", valorPrimeraPrueba);
+    }
+
+    $(document).on('nifty.ready', function () {       
+
+        $('#dtpFechaInicioSintomas .input-group.date').datepicker({ autoclose: true, format: 'dd/mm/yyyy' });
+
+        $('#FechaEjecucionControl .input-group.date').datepicker({ autoclose: true, format: 'dd/mm/yyyy' });
+
+        var faIcon = {
+            valid: 'fa fa-check-circle fa-lg text-success',
+            invalid: 'fa fa-times-circle fa-lg',
+            validating: 'fa fa-refresh'
+        }   
+
+        $('#form-encuesta').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: faIcon,
+            fields: {
+                ddlrequerido: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Seleccione una opción'
+                        }
+                    }
+                },
+                localizacion: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Localización es requerida'
+                        }
+                    }
+                }
+
+            }
+        }).on('success.field.bv', function (e, data) {
+            var $parent = data.element.parents('.form-group');
+
+            $parent.removeClass('has-success');
+        });
+
+
+        $('#form-laboratorio').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: faIcon,
+            fields: {
+                FechaEjecucion: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Seleccione una fecha'
+                        }
+                    }
+                },
+                ddlrequerido: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Seleccione una opción'
+                        }
+                    }
+                },
+                localizacion: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Localización es requerida'
+                        }
+                    }
+                }
+
+            }
+        }).on('success.field.bv', function (e, data) {
+            
+            var $parent = data.element.parents('.form-group');
+
+            $parent.removeClass('has-success');
+        });
+        
+    
+    });
+</script>
